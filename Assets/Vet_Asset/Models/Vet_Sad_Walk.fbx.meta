@@ -1,0 +1,492 @@
+fileFormatVersion: 2
+guid: 26381dd7330ad84448d7219418236ee4
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: ball_grp
+    100002: ball_l
+    100004: ball_r
+    100006: Box001
+    100008: BTM
+    100010: BTM_LOD0
+    100012: BTM_LOD1
+    100014: BTM_LOD2
+    100016: calf_l
+    100018: calf_r
+    100020: clavicle_l
+    100022: clavicle_r
+    100024: EyeBone_l
+    100026: EyeBone_r
+    100028: EYES
+    100030: Eyes_LOD0
+    100032: Eyes_LOD1
+    100034: Eyes_LOD2
+    100036: FemaleScientist
+    100038: FemaleScientist_1
+    100040: foot_l
+    100042: foot_r
+    100044: Hair_A
+    100046: HairA_Fade_LOD0
+    100048: HairA_LOD0
+    100050: HairA_LOD1
+    100052: HairA_LOD2
+    100054: hand_l
+    100056: hand_r
+    100058: head
+    100060: index_01_l
+    100062: index_01_r
+    100064: index_02_l
+    100066: index_02_r
+    100068: index_03_l
+    100070: index_03_r
+    100072: JawBone
+    100074: lowerarm_l
+    100076: lowerarm_r
+    100078: lowerarm_twist_01_l
+    100080: lowerarm_twist_01_r
+    100082: Mesh
+    100084: middle_01_l
+    100086: middle_01_r
+    100088: middle_02_l
+    100090: middle_02_r
+    100092: middle_03_l
+    100094: middle_03_r
+    100096: neck_01
+    100098: pelvis
+    100100: pinky_01_l
+    100102: pinky_01_r
+    100104: pinky_02_l
+    100106: pinky_02_r
+    100108: pinky_03_l
+    100110: pinky_03_r
+    100112: PonytailA
+    100114: PonytailB
+    100116: PonytailC
+    100118: PonytailD
+    100120: ring_01_l
+    100122: ring_01_r
+    100124: ring_02_l
+    100126: ring_02_r
+    100128: ring_03_l
+    100130: ring_03_r
+    100132: root
+    100134: SKIN
+    100136: Skin_A_LOD0
+    100138: Skin_A_LOD1
+    100140: Skin_A_LOD2
+    100142: SkinA
+    100144: spine_01
+    100146: spine_02
+    100148: spine_03
+    100150: spine_curve
+    100152: thigh_l
+    100154: thigh_r
+    100156: thumb_01_l
+    100158: thumb_01_r
+    100160: thumb_02_l
+    100162: thumb_02_r
+    100164: thumb_03_l
+    100166: thumb_03_r
+    100168: TOP
+    100170: TOP_LOD0
+    100172: TOP_LOD1
+    100174: TOP_LOD2
+    100176: upperarm_l
+    100178: upperarm_r
+    100180: upperarm_twist_01_l
+    100182: upperarm_twist_01_r
+    100184: //RootNode
+    100186: Blink
+    400000: ball_grp
+    400002: ball_l
+    400004: ball_r
+    400006: Box001
+    400008: BTM
+    400010: BTM_LOD0
+    400012: BTM_LOD1
+    400014: BTM_LOD2
+    400016: calf_l
+    400018: calf_r
+    400020: clavicle_l
+    400022: clavicle_r
+    400024: EyeBone_l
+    400026: EyeBone_r
+    400028: EYES
+    400030: Eyes_LOD0
+    400032: Eyes_LOD1
+    400034: Eyes_LOD2
+    400036: FemaleScientist
+    400038: FemaleScientist_1
+    400040: foot_l
+    400042: foot_r
+    400044: Hair_A
+    400046: HairA_Fade_LOD0
+    400048: HairA_LOD0
+    400050: HairA_LOD1
+    400052: HairA_LOD2
+    400054: hand_l
+    400056: hand_r
+    400058: head
+    400060: index_01_l
+    400062: index_01_r
+    400064: index_02_l
+    400066: index_02_r
+    400068: index_03_l
+    400070: index_03_r
+    400072: JawBone
+    400074: lowerarm_l
+    400076: lowerarm_r
+    400078: lowerarm_twist_01_l
+    400080: lowerarm_twist_01_r
+    400082: Mesh
+    400084: middle_01_l
+    400086: middle_01_r
+    400088: middle_02_l
+    400090: middle_02_r
+    400092: middle_03_l
+    400094: middle_03_r
+    400096: neck_01
+    400098: pelvis
+    400100: pinky_01_l
+    400102: pinky_01_r
+    400104: pinky_02_l
+    400106: pinky_02_r
+    400108: pinky_03_l
+    400110: pinky_03_r
+    400112: PonytailA
+    400114: PonytailB
+    400116: PonytailC
+    400118: PonytailD
+    400120: ring_01_l
+    400122: ring_01_r
+    400124: ring_02_l
+    400126: ring_02_r
+    400128: ring_03_l
+    400130: ring_03_r
+    400132: root
+    400134: SKIN
+    400136: Skin_A_LOD0
+    400138: Skin_A_LOD1
+    400140: Skin_A_LOD2
+    400142: SkinA
+    400144: spine_01
+    400146: spine_02
+    400148: spine_03
+    400150: spine_curve
+    400152: thigh_l
+    400154: thigh_r
+    400156: thumb_01_l
+    400158: thumb_01_r
+    400160: thumb_02_l
+    400162: thumb_02_r
+    400164: thumb_03_l
+    400166: thumb_03_r
+    400168: TOP
+    400170: TOP_LOD0
+    400172: TOP_LOD1
+    400174: TOP_LOD2
+    400176: upperarm_l
+    400178: upperarm_r
+    400180: upperarm_twist_01_l
+    400182: upperarm_twist_01_r
+    400184: //RootNode
+    400186: Blink
+    2100000: Female_Scientist_BTM_MAT_V1
+    2100002: FemaleEyes_MAT
+    2100004: Female_Scientist_HairA_MAT_V5_Fade
+    2100006: Female_Scientist_HairA_MAT_V5
+    2100008: Female_Scientist_SKIN_A_MAT
+    2100010: Female_EyeLashes_MAT
+    2100012: Female_Scientist_TOP_MAT_V1
+    2100014: 17 - Default
+    2300000: Box001
+    2300002: Blink
+    3300000: Box001
+    3300002: Blink
+    4300000: BTM_LOD0
+    4300002: BTM_LOD1
+    4300004: BTM_LOD2
+    4300006: Eyes_LOD0
+    4300008: Eyes_LOD1
+    4300010: Eyes_LOD2
+    4300012: HairA_Fade_LOD0
+    4300014: HairA_LOD0
+    4300016: HairA_LOD1
+    4300018: HairA_LOD2
+    4300020: Skin_A_LOD0
+    4300022: Skin_A_LOD1
+    4300024: Skin_A_LOD2
+    4300026: TOP_LOD0
+    4300028: TOP_LOD1
+    4300030: TOP_LOD2
+    4300032: Box001
+    4300034: Blink
+    7400000: Walk Cycle
+    7400002: Sad Start Idle
+    7400004: Sad VoiceOver
+    7400006: Sad End Idle
+    9500000: //RootNode
+    13700000: BTM_LOD0
+    13700002: BTM_LOD1
+    13700004: BTM_LOD2
+    13700006: Eyes_LOD0
+    13700008: Eyes_LOD1
+    13700010: Eyes_LOD2
+    13700012: HairA_Fade_LOD0
+    13700014: HairA_LOD0
+    13700016: HairA_LOD1
+    13700018: HairA_LOD2
+    13700020: Skin_A_LOD0
+    13700022: Skin_A_LOD1
+    13700024: Skin_A_LOD2
+    13700026: TOP_LOD0
+    13700028: TOP_LOD1
+    13700030: TOP_LOD2
+    20500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 17 - Default
+    second: {fileID: 2100000, guid: 08a6076f074034e41852258eb983bbf1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FemaleEyes_MAT
+    second: {fileID: 2100000, guid: db44cba824a492347b096509a102e163, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Female_EyeLashes_MAT
+    second: {fileID: 2100000, guid: 6106d3f584aa344479a4ba1f5ed158ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Female_Scientist_BTM_MAT_V1
+    second: {fileID: 2100000, guid: 14c16c8dc005144469b10b635a189fb7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Female_Scientist_HairA_MAT_V5
+    second: {fileID: 2100000, guid: f20eedc65a7821948ab2c3dbed66e436, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Female_Scientist_HairA_MAT_V5_Fade
+    second: {fileID: 2100000, guid: f20eedc65a7821948ab2c3dbed66e436, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Female_Scientist_SKIN_A_MAT
+    second: {fileID: 2100000, guid: bac52900b7e53364ba3e45b4936bc4d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Female_Scientist_TOP_MAT_V1
+    second: {fileID: 2100000, guid: 8ecc1ce0b11eead4591274791196d4fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: phong1
+    second: {fileID: 2100000, guid: 615bd485f44ec70479a5c809174eda86, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walk Cycle
+      takeName: Take 001
+      firstFrame: 230
+      lastFrame: 265
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Sad Start Idle
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 43
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Sad VoiceOver
+      takeName: Take 001
+      firstFrame: 44
+      lastFrame: 182
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Sad End Idle
+      takeName: Take 001
+      firstFrame: 183
+      lastFrame: 220
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages:
+    - 0.25
+    - 0.125
+    - 0.01
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
