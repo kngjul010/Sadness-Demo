@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{EDD20CE6-D42C-A263-D4C5-862D19FD4ABA}</ProjectGuid>
+    <ProjectGuid>{825880CD-98B6-7C64-B918-820F5665B514}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Oculus.VR.Editor</AssemblyName>
@@ -313,20 +313,23 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="Valve.Newtonsoft.Json">
+      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/VREmote-Sadness/Sadness-Demo/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.Advertisements">
-      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/Sadness Demo/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/VREmote-Sadness/Sadness-Demo/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/Sadness Demo/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/VREmote-Sadness/Sadness-Demo/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/Sadness Demo/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/VREmote-Sadness/Sadness-Demo/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/Sadness Demo/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/VREmote-Sadness/Sadness-Demo/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
-      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/Sadness Demo/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/VREmote-Sadness/Sadness-Demo/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -685,7 +688,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Oculus.VR.csproj">
-      <Project>{8E47B76C-98DB-027C-DBF6-AED4875D5B10}</Project>
+      <Project>{482ABFD3-B777-D26A-E48B-B6119D42A927}</Project>
       <Name>Oculus.VR</Name>
     </ProjectReference>
   </ItemGroup>

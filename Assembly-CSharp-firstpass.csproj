@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{BEE28500-E0A6-4179-A3B1-9799BF437B05}</ProjectGuid>
+    <ProjectGuid>{EB25B435-1E5F-59B7-F9F3-3F44EC6CE30B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
@@ -298,25 +298,25 @@
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/Sadness Demo/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/VREmote-Sadness/Sadness-Demo/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/Sadness Demo/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/VREmote-Sadness/Sadness-Demo/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/Sadness Demo/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/VREmote-Sadness/Sadness-Demo/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/Sadness Demo/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/VREmote-Sadness/Sadness-Demo/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/Sadness Demo/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/VREmote-Sadness/Sadness-Demo/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/Sadness Demo/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/VREmote-Sadness/Sadness-Demo/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/Sadness Demo/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/VREmote-Sadness/Sadness-Demo/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -519,14 +519,17 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.11f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
+    <Reference Include="Valve.Newtonsoft.Json">
+      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/VREmote-Sadness/Sadness-Demo/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/Sadness Demo/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/VREmote-Sadness/Sadness-Demo/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/Sadness Demo/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/VREmote-Sadness/Sadness-Demo/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/Sadness Demo/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/blvan/Desktop/Files/VREmote/Sadness Demo/VREmote-Sadness/Sadness-Demo/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.11f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -876,16 +879,32 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Oculus.VR.Editor.csproj">
-      <Project>{EDD20CE6-D42C-A263-D4C5-862D19FD4ABA}</Project>
+      <Project>{825880CD-98B6-7C64-B918-820F5665B514}</Project>
       <Name>Oculus.VR.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Oculus.VR.Scripts.Editor.csproj">
-      <Project>{DDDB29CD-74D2-F378-2E6B-DBC8769E98A8}</Project>
+      <Project>{BB645A4C-D92B-5FFA-0CC9-555E34284E6B}</Project>
       <Name>Oculus.VR.Scripts.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Oculus.VR.csproj">
-      <Project>{8E47B76C-98DB-027C-DBF6-AED4875D5B10}</Project>
+      <Project>{482ABFD3-B777-D26A-E48B-B6119D42A927}</Project>
       <Name>Oculus.VR</Name>
+    </ProjectReference>
+    <ProjectReference Include="SteamVR_Input_Editor.csproj">
+      <Project>{92F0C9B0-C9D3-DEBE-457E-81D87E6C54ED}</Project>
+      <Name>SteamVR_Input_Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="SteamVR_Editor.csproj">
+      <Project>{7DCD2DDB-ED8C-B43E-4F5C-2AC0DA1416E5}</Project>
+      <Name>SteamVR_Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="SteamVR.csproj">
+      <Project>{49FBEC44-E867-620C-5AD9-EB5C4E342F30}</Project>
+      <Name>SteamVR</Name>
+    </ProjectReference>
+    <ProjectReference Include="SteamVR_Windows_EditorHelper.csproj">
+      <Project>{EBF43833-319A-64B0-08A0-C29143440996}</Project>
+      <Name>SteamVR_Windows_EditorHelper</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
