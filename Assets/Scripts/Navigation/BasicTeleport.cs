@@ -1,10 +1,12 @@
-﻿using System.Collections;
+﻿using OVR;
+using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using Valve.VR;
 
 
-public class BasicLaserPointer : MonoBehaviour
+public class BasicTeleport : MonoBehaviour
 {
 
     public SteamVR_Input_Sources handType;
@@ -28,9 +30,11 @@ public class BasicLaserPointer : MonoBehaviour
     private bool shouldTeleport;
 
     //Fade
+    public FadeManager fadeManager;
     private bool fade = false;
-    private float alphaFadeValue = 1;
-    public Texture blackTexture;
+    private float fadeDuration = 0.25f;
+    private float fadeTimer = 0f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -70,12 +74,27 @@ public class BasicLaserPointer : MonoBehaviour
         //Teleport
         if (teleportAction.GetStateUp(handType) && shouldTeleport)
         {
+            fadeManager.Fade(true, fadeDuration);
             fade = true;
-            Teleport();
-            fade = false;
+            
+
         }
-        if (fade)
-            FadeStuff();
+        //Fade
+        if (fade == true)
+        {
+            if (fadeTimer < fadeDuration)
+            {
+                fadeTimer += Time.deltaTime;
+            }
+            else
+            {
+                fade = false;
+                Teleport();
+                fadeManager.Fade(false, fadeDuration);
+            }
+        }
+
+
     }
 
     //Show laser between controller and point of raycast
@@ -97,16 +116,7 @@ public class BasicLaserPointer : MonoBehaviour
         Vector3 difference = cameraRigTransform.position - headTransform.position;
         difference.y = 0;
         cameraRigTransform.position = hitPoint + difference;
+
     }
 
-    //Fade
-    void FadeStuff()
-    {
-        alphaFadeValue = Mathf.Clamp01(alphaFadeValue - (Time.deltaTime / 0.5f));
-    }
-    void OnGUI()
-    {
-        GUI.color = new Color(0, 0, 0, alphaFadeValue); ;
-        GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), Texture2D.blackTexture);
-    }
 }
