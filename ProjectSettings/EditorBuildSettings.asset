@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Vet.unity
     guid: 100d2eddcf932ba42968d4119fcc07e6
-  m_configObjects: {}
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 9d0de5eca77f5244fba632e95c45d29b,
+      type: 2}
+    Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 0cf744cdd6af10048a62c755eccf99e9,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e4ac8caf4a7244841ae0a94bc3d8587b,
+      type: 2}
