@@ -8,6 +8,7 @@ public class ControllerGrab : MonoBehaviour
     public SteamVR_Input_Sources handType;
     public SteamVR_Behaviour_Pose controllerPose;
     public SteamVR_Action_Boolean grabAction;
+    public GameObject RigRotation;
 
     private GameObject collidingObject;
     private GameObject objectInHand;
@@ -33,6 +34,7 @@ public class ControllerGrab : MonoBehaviour
     public void OnTriggerStay(Collider other)
     {
         SetCollidingObject(other);
+        
     }
 
     // Release object and it being grabable
@@ -71,8 +73,8 @@ public class ControllerGrab : MonoBehaviour
         {
             GetComponent<FixedJoint>().connectedBody = null;
             Destroy(GetComponent<FixedJoint>());
-            
-            objectInHand.GetComponent<Rigidbody>().velocity = controllerPose.GetVelocity();
+            Vector3 vector = RigRotation.transform.rotation * controllerPose.GetVelocity();
+            objectInHand.GetComponent<Rigidbody>().velocity = vector;
             objectInHand.GetComponent<Rigidbody>().angularVelocity = controllerPose.GetAngularVelocity();
 
         }
