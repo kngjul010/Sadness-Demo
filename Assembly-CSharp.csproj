@@ -75,6 +75,7 @@
     <Compile Include="Assets\Oculus\SampleFramework\Usage\StartScene\Scripts\StartMenu.cs" />
     <Compile Include="Assets\Oculus\Platform\Scripts\MicrophoneInputNative.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportTransition.cs" />
+    <Compile Include="Assets\Scripts\Navigation\Rotation.cs" />
     <Compile Include="Assets\Oculus\Avatar\Scripts\OvrAvatarTextureCopyManager.cs" />
     <Compile Include="Assets\Oculus\Platform\Samples\EntitlementCheck\EntitlementCheck.cs" />
     <Compile Include="Assets\Oculus\Avatar\Scripts\OvrAvatarRenderComponent.cs" />
@@ -183,6 +184,7 @@
     <Compile Include="Assets\Oculus\Platform\Scripts\SystemVoipStatus.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Utils\InspectorNoteAttribute.cs" />
     <Compile Include="Assets\Oculus\Platform\Scripts\Models\AchievementProgress.cs" />
+    <Compile Include="Assets\Scripts\Tutoria\TutorialSystem.cs" />
     <Compile Include="Assets\Oculus\Platform\Samples\VrHoops\Scripts\P2PNetworkBall.cs" />
     <Compile Include="Assets\Scripts\DogDoor.cs" />
     <Compile Include="Assets\Oculus\Platform\Scripts\Encoder.cs" />
@@ -243,6 +245,7 @@
     <Compile Include="Assets\Oculus\Spatializer\Scenes\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportTargetHandlerNode.cs" />
     <Compile Include="Assets\Oculus\LipSync\Scripts\OVRLipSyncContext.cs" />
+    <Compile Include="Assets\Scripts\Tutoria\HandAction.cs" />
     <Compile Include="Assets\Oculus\Avatar\Scripts\OvrAvatar.cs" />
     <Compile Include="Assets\Oculus\Avatar\Scripts\OvrAvatarRemoteDriver.cs" />
     <Compile Include="Assets\Oculus\Platform\Scripts\Models\User.cs" />
@@ -291,6 +294,7 @@
     <Compile Include="Assets\Oculus\Platform\Scripts\Models\AssetDetails.cs" />
     <Compile Include="Assets\Oculus\Platform\Samples\VrHoops\Scripts\GoalMover.cs" />
     <Compile Include="Assets\Oculus\Platform\Scripts\Models\MatchmakingStats.cs" />
+    <Compile Include="Assets\Scripts\Tutoria\Target.cs" />
     <Compile Include="Assets\Oculus\Platform\Scripts\Models\ApplicationVersion.cs" />
     <Compile Include="Assets\Oculus\Avatar\Scripts\OvrAvatarSkinnedMeshRenderComponent.cs" />
     <Compile Include="Assets\Oculus\Platform\Scripts\Models\UserAndRoom.cs" />
@@ -354,7 +358,7 @@
     <Compile Include="Assets\Scripts\Navigation\FadeManager.cs" />
     <Compile Include="Assets\Oculus\Platform\Scripts\MatchmakingOptions.cs" />
     <Compile Include="Assets\Scripts\CarMovement.cs" />
-    <Compile Include="Assets\Scripts\Navigation\Rotation.cs" />
+    <Compile Include="Assets\Scripts\Tutoria\HandAccept.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Oculus\Avatar\Content\Materials\AvatarSurfaceShaderSelfOccluding.shader" />
