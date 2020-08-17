@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Valve.VR.InteractionSystem;
+using Valve.VR;
 
 public class InteractionLevel : MonoBehaviour
 {
     public Text levelText;
     public Text levelDescription;
     public Slider slider;
+    public GameObject playerObj;
 
     private int level;
     private string[] level0 = { "Level 0", "-> Control Environment\n-> Basic Interactions\n-> No Selection of Dog\n-> AI Implemented\n-> Basic Tutorial" };
@@ -52,6 +55,8 @@ public class InteractionLevel : MonoBehaviour
 
             if (asyncLoad.progress >= 0.9f)
             {
+                Destroy(playerObj);
+                
                 asyncLoad.allowSceneActivation = true;
             }
 
@@ -62,6 +67,8 @@ public class InteractionLevel : MonoBehaviour
     public void confirm()
     {
         PlayerPrefs.SetInt("Level", level);
+        SteamVR_Fade.Start(Color.clear, 0);
+        SteamVR_Fade.Start(Color.black, 1);
         StartCoroutine(LoadYourAsyncScene());
     }
 }

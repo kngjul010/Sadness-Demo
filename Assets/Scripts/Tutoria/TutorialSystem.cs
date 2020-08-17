@@ -155,7 +155,7 @@ public class TutorialSystem : MonoBehaviour
             if (stagePart1 == false && timer > 2)
             {
                 teleObj.SetActive(true);
-                tutText.text = "Use the Left DPad to Teleport to a Location - There is a Short Delay before You Can teleport Again";
+                tutText.text = "Hold the Left DPad Aim and Release it to Teleport to a Location - There is a Short Delay before You Can teleport Again";
                 ShowHint(leftHand, teleport, "Click and Hold to Aim, Release to Teleport", ref hintCoroutine);
                 stagePart1 = true;
             }
@@ -192,6 +192,12 @@ public class TutorialSystem : MonoBehaviour
             if (stagePart1 == false && timer > 2)
             {
                 tutText.text = "Go to the Right Side of the Room to Select Your Hand Style and End the Tutorial";
+                if (level == 0)
+                {
+                    tutText.text = "Select Your Hand Style and End the Tutorial";
+                    handSelectObj.transform.rotation = Quaternion.Euler(0, 0, 0);
+                    handSelectObj.transform.localPosition = new Vector3(-0.886f, -0.6366583f, -3.217f);
+                }
                 stagePart1 = true;
                 handSelectObj.SetActive(true);
             }
@@ -202,6 +208,8 @@ public class TutorialSystem : MonoBehaviour
                     PlayAudioClip(audioSource, tutCompleteSound);
                     tutText.text = "The Experience Will Begin Shortly";
                     stagePart2 = true;
+                    SteamVR_Fade.Start(Color.clear, 0);
+                    SteamVR_Fade.Start(Color.black, 1);
                     StartCoroutine(LoadYourAsyncScene());
                 }
             }
