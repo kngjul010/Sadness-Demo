@@ -47,6 +47,7 @@ public class TutorialSystem : MonoBehaviour
         Teleport.instance.CancelTeleportHint();
         grabbed = false;
         teleObj.SetActive(false);
+        level = PlayerPrefs.GetInt("Level");
 
     }
 
@@ -75,7 +76,7 @@ public class TutorialSystem : MonoBehaviour
             if (stagePart1 == false && timer > 4)
             {
                 stagePart1 = true;
-                tutText.text = "Click Your Right D-Pad to Flick to a Direction for Ease";
+                tutText.text = "Click The Side of Your Right D-Pad to Snap to that Direction";
                 ShowHint(rightHand,rightSnap,"Click Right Side to Snap Right", ref RCoroutine);
                 ShowHint(rightHand, leftSnap, "Click Left Side to Snap Left", ref LCoroutine);
                 snaps[0] = false;
@@ -107,7 +108,7 @@ public class TutorialSystem : MonoBehaviour
         {
             if (stagePart1 == false && timer > 0.5f)
             {
-                tutText.text = "Use the Trigger to Pick up a Ball, Release it to Let Go";
+                tutText.text = "Use the Trigger to Pick up a Ball and Release it to Let the Ball Go";
                 ShowHint(rightHand, grab, "Hold Trigger to Grab", ref RCoroutine);
                 ShowHint(leftHand, grab, "Hold Trigger to Grab", ref LCoroutine);
                 stagePart1 = true;
@@ -124,7 +125,7 @@ public class TutorialSystem : MonoBehaviour
             }
             else if (stagePart2 && stagePart3 ==false)
             {
-                tutText.text = "Throw a ball or cube at the Bricks";
+                tutText.text = "Throw a Ball or Cube at the Bricks in Front of You";
                 stagePart3 = true;
                 targetObj.SetActive(true);
             }
@@ -154,7 +155,7 @@ public class TutorialSystem : MonoBehaviour
             if (stagePart1 == false && timer > 2)
             {
                 teleObj.SetActive(true);
-                tutText.text = "Use the Left DPad to Teleport to a Location";
+                tutText.text = "Use the Left DPad to Teleport to a Location - There is a Short Delay before You Can teleport Again";
                 ShowHint(leftHand, teleport, "Click and Hold to Aim, Release to Teleport", ref hintCoroutine);
                 stagePart1 = true;
             }

@@ -293,6 +293,7 @@
     <Compile Include="Assets\Oculus\Platform\Samples\VrHoops\Scripts\MatchController.cs" />
     <Compile Include="Assets\Oculus\Platform\Scripts\Models\AssetDetails.cs" />
     <Compile Include="Assets\Oculus\Platform\Samples\VrHoops\Scripts\GoalMover.cs" />
+    <Compile Include="Assets\Scripts\Tutoria\HandAccept.cs" />
     <Compile Include="Assets\Oculus\Platform\Scripts\Models\MatchmakingStats.cs" />
     <Compile Include="Assets\Scripts\Tutoria\Target.cs" />
     <Compile Include="Assets\Oculus\Platform\Scripts\Models\ApplicationVersion.cs" />
@@ -358,7 +359,7 @@
     <Compile Include="Assets\Scripts\Navigation\FadeManager.cs" />
     <Compile Include="Assets\Oculus\Platform\Scripts\MatchmakingOptions.cs" />
     <Compile Include="Assets\Scripts\CarMovement.cs" />
-    <Compile Include="Assets\Scripts\Tutoria\HandAccept.cs" />
+    <Compile Include="Assets\Scripts\InteractionLevel.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Oculus\Avatar\Content\Materials\AvatarSurfaceShaderSelfOccluding.shader" />

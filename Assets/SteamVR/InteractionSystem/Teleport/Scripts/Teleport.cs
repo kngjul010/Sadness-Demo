@@ -65,6 +65,10 @@ namespace Valve.VR.InteractionSystem
 		public MeshRenderer floorDebugSphere;
 		public LineRenderer floorDebugLine;
 
+		[Header("Custom Timing")]
+		public float timer = 3;
+		public float reset = 3;
+
 		private LineRenderer pointerLineRenderer;
 		private GameObject teleportPointerObject;
 		private Transform pointerStartTransform;
@@ -237,6 +241,9 @@ namespace Valve.VR.InteractionSystem
 		//-------------------------------------------------
 		void Update()
 		{
+			//Custom Code
+			timer += Time.deltaTime;
+
 			Hand oldPointerHand = pointerHand;
 			Hand newPointerHand = null;
 
@@ -249,6 +256,7 @@ namespace Valve.VR.InteractionSystem
 						if ( pointerHand == hand ) //This is the pointer hand
 						{
 							TryTeleportPlayer();
+
 						}
 					}
 				}
@@ -307,6 +315,7 @@ namespace Valve.VR.InteractionSystem
 					onDeactivateObjectTransform.gameObject.SetActive( false );
 				}
 			}
+
 		}
 
 
@@ -873,6 +882,7 @@ namespace Valve.VR.InteractionSystem
 				if ( teleportPoint.teleportType == TeleportPoint.TeleportPointType.SwitchToNewScene )
 				{
 					teleportPoint.TeleportToScene();
+					timer = 0;
 					return;
 				}
 			}
@@ -905,7 +915,7 @@ namespace Valve.VR.InteractionSystem
 			{
 				teleportingToMarker.TeleportPlayer( pointedAtPosition );
 			}
-
+			timer = 0;
 			Teleport.Player.Send( pointedAtTeleportMarker );
 		}
 
@@ -1037,7 +1047,7 @@ namespace Valve.VR.InteractionSystem
 			{
 				return false;
 			}
-
+			
 			if ( !hand.gameObject.activeInHierarchy )
 			{
 				return false;
@@ -1071,6 +1081,11 @@ namespace Valve.VR.InteractionSystem
 				}
 			}
 
+			//Custom Code
+			if (timer < reset)
+            {
+				return false;
+            }
 			return true;
 		}
 
