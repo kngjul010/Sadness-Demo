@@ -13,14 +13,12 @@ Pet Store start: 0
 Pet Store start: 0
 Pet Store start: 0
 Pet Store start: 0
-Puppy Running away: 130,0186
-Crash: 155,4188
-Pet Store start: 75,52008
-Pet Store start: 75,52008
-Pet Store start: 75,52008
-Pet Store start: 89,90845
-Pet Store start: 89,90845
-Pet Store start: 89,90845
-Pet Store start: 66,3483
-Pet Store start: 66,3483
-Pet Store start: 66,3483
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 56,64245
+Pet Store start: 56,64245
+Pet Store start: 56,64245

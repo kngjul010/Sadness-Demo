@@ -12,6 +12,7 @@ public class InteractionLevel : MonoBehaviour
     public Text levelDescription;
     public Slider slider;
     public GameObject playerObj;
+    public GameObject canvas;
 
     private int level;
     private string[] level0 = { "Level 0", "-> Control Environment\n-> Basic Interactions\n-> No Selection of Dog\n-> AI Implemented\n-> Basic Tutorial" };
@@ -23,6 +24,7 @@ public class InteractionLevel : MonoBehaviour
     {
         levelText.text = level0[0];
         levelDescription.text = level0[1];
+        level = 0;
     }
 
     public void value() {
@@ -55,7 +57,7 @@ public class InteractionLevel : MonoBehaviour
 
             if (asyncLoad.progress >= 0.9f)
             {
-                Destroy(playerObj);
+                //Destroy(playerObj);
                 
                 asyncLoad.allowSceneActivation = true;
             }
@@ -66,9 +68,12 @@ public class InteractionLevel : MonoBehaviour
     }
     public void confirm()
     {
-        PlayerPrefs.SetInt("Level", level);
+        canvas.SetActive(false);
         SteamVR_Fade.Start(Color.clear, 0);
         SteamVR_Fade.Start(Color.black, 1);
+        Destroy(canvas);
+        Destroy(playerObj);
+        PlayerPrefs.SetInt("Level", level);
         StartCoroutine(LoadYourAsyncScene());
     }
 }
