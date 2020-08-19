@@ -13,7 +13,6 @@ public class StoreInteractionControl : MonoBehaviour
     public GameObject leftDog;
     public GameObject rightDog;
     
-    []
     public GameObject teleportObj;
 
     private int level = 0;
@@ -21,6 +20,7 @@ public class StoreInteractionControl : MonoBehaviour
     void Start()
     {
         level = PlayerPrefs.GetInt("Level");
+        print(level);
         Teleport.instance.CancelTeleportHint();
         if (level == 0)
         {
