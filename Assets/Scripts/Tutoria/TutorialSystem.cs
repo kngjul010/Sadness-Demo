@@ -155,7 +155,7 @@ public class TutorialSystem : MonoBehaviour
             if (stagePart1 == false && timer > 2)
             {
                 teleObj.SetActive(true);
-                tutText.text = "Hold the Left DPad Aim and Release it to Teleport to a Location - There is a Short Delay before You Can teleport Again";
+                tutText.text = "Hold the Left DPad Aim and Release it to Teleport to a Location - 3s Delay between Teleports";
                 ShowHint(leftHand, teleport, "Click and Hold to Aim, Release to Teleport", ref hintCoroutine);
                 stagePart1 = true;
             }
@@ -281,7 +281,7 @@ public class TutorialSystem : MonoBehaviour
 
     IEnumerator LoadYourAsyncScene()
     {
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Pet Store", LoadSceneMode.Single);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("TestStore", LoadSceneMode.Single);
         asyncLoad.allowSceneActivation = false;
         // Wait until the asynchronous scene fully loads
         while (!asyncLoad.isDone)

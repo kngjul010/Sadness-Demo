@@ -4,8 +4,9 @@ using System.Collections;
 using System.IO;
 
 //An extension of OVRGrabbable to handle how puppies are selected in the dog store scene
-public class DogDoor : OVRGrabbable
+public class DogDoor : MonoBehaviour
 {
+    /*
     private MeshRenderer[] m_meshRenderers = null;
     private bool m_highlight;
     public Transform master;
@@ -70,5 +71,5 @@ public class DogDoor : OVRGrabbable
         }
     }
 
-   
+   */
 }
