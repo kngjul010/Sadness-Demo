@@ -23,6 +23,12 @@ public class TutorialSystem : MonoBehaviour
     public HandAccept handAccept;
     public AudioSource audioSource;
     public AudioClip tutCompleteSound;
+    public GameObject levelLoader;
+
+    [Header("Voice Lines")]
+    public AudioSource vlSource;
+    public AudioClip welcomeA, lookAroundA, snapA, grabA, throwA, teleportA, strokeA, gestureA, handsA;
+
 
     private float timer;
     private int stage;
@@ -48,7 +54,8 @@ public class TutorialSystem : MonoBehaviour
         grabbed = false;
         teleObj.SetActive(false);
         level = PlayerPrefs.GetInt("Level");
-
+        leftHand =  GameObject.FindWithTag("Left Hand").GetComponent<Hand>();
+        rightHand = GameObject.FindWithTag("Right Hand").GetComponent<Hand>();
     }
 
     // Update is called once per frame
@@ -61,6 +68,7 @@ public class TutorialSystem : MonoBehaviour
             {
                 stagePart1 = true;
                 tutText.text = "Welcome To The VREmote Tutorial";
+                PlayAudioClip(vlSource, welcomeA);
             }
             else if (timer > 7)
             {
@@ -68,6 +76,7 @@ public class TutorialSystem : MonoBehaviour
                 stagePart1 = false;
                 timer = 0;
                 tutText.text = "Move Your Head to Look around";
+                PlayAudioClip(vlSource, lookAroundA);
             }
         }
         //Look Controls
@@ -77,6 +86,7 @@ public class TutorialSystem : MonoBehaviour
             {
                 stagePart1 = true;
                 tutText.text = "Click The Side of Your Right D-Pad to Snap to that Direction";
+                PlayAudioClip(vlSource, snapA);
                 ShowHint(rightHand,rightSnap,"Click Right Side to Snap Right", ref RCoroutine);
                 ShowHint(rightHand, leftSnap, "Click Left Side to Snap Left", ref LCoroutine);
                 snaps[0] = false;
@@ -109,6 +119,7 @@ public class TutorialSystem : MonoBehaviour
             if (stagePart1 == false && timer > 0.5f)
             {
                 tutText.text = "Use the Trigger to Pick up a Ball and Release it to Let the Ball Go";
+                PlayAudioClip(vlSource, grabA);
                 ShowHint(rightHand, grab, "Hold Trigger to Grab", ref RCoroutine);
                 ShowHint(leftHand, grab, "Hold Trigger to Grab", ref LCoroutine);
                 stagePart1 = true;
@@ -126,6 +137,7 @@ public class TutorialSystem : MonoBehaviour
             else if (stagePart2 && stagePart3 ==false)
             {
                 tutText.text = "Throw a Ball or Cube at the Bricks in Front of You";
+                PlayAudioClip(vlSource, throwA);
                 stagePart3 = true;
                 targetObj.SetActive(true);
             }
@@ -156,6 +168,7 @@ public class TutorialSystem : MonoBehaviour
             {
                 teleObj.SetActive(true);
                 tutText.text = "Hold the Left DPad Aim and Release it to Teleport to a Location - 3s Delay between Teleports";
+                PlayAudioClip(vlSource, teleportA);
                 ShowHint(leftHand, teleport, "Click and Hold to Aim, Release to Teleport", ref hintCoroutine);
                 stagePart1 = true;
             }
@@ -192,6 +205,7 @@ public class TutorialSystem : MonoBehaviour
             if (stagePart1 == false && timer > 2)
             {
                 tutText.text = "Go to the Right Side of the Room to Select Your Hand Style and End the Tutorial";
+                PlayAudioClip(vlSource, handsA);
                 if (level == 0)
                 {
                     tutText.text = "Select Your Hand Style and End the Tutorial";
@@ -208,9 +222,11 @@ public class TutorialSystem : MonoBehaviour
                     PlayAudioClip(audioSource, tutCompleteSound);
                     tutText.text = "The Experience Will Begin Shortly";
                     stagePart2 = true;
-                    SteamVR_Fade.Start(Color.clear, 0);
-                    SteamVR_Fade.Start(Color.black, 1);
-                    StartCoroutine(LoadYourAsyncScene());
+                    PlayerPrefs.SetInt("Level", level);
+                    levelLoader.SetActive(true);
+                    //SteamVR_Fade.Start(Color.clear, 0);
+                   // SteamVR_Fade.Start(Color.black, 1);
+                    //StartCoroutine(LoadYourAsyncScene());
                 }
             }
         }
@@ -281,7 +297,7 @@ public class TutorialSystem : MonoBehaviour
 
     IEnumerator LoadYourAsyncScene()
     {
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("TestStore", LoadSceneMode.Single);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Pet Store", LoadSceneMode.Single);
         asyncLoad.allowSceneActivation = false;
         // Wait until the asynchronous scene fully loads
         while (!asyncLoad.isDone)

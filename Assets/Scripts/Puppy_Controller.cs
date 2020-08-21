@@ -20,6 +20,8 @@ public class Puppy_Controller : MonoBehaviour
     bool startLyingBark, startStandBark, startfightIdle, startStandingBark, loadCheck;
     public GameObject door;
     public int dogChosen;
+    public GameObject loadObject;
+    public bool chosen;
     //Set initial values
     void Start()
     {
@@ -34,6 +36,7 @@ public class Puppy_Controller : MonoBehaviour
         startStandingBark = false;
         loadCheck = false;
         WriteString("Pet Store start: ");
+        chosen = false;
     }
     // Used to play puppy barking noises
     IEnumerator BarkWithDelay(float time, float length, int clip)
@@ -137,7 +140,7 @@ public class Puppy_Controller : MonoBehaviour
 
         }
         //end the scene once the pup gets close to the user
-        if (endScene > 9999.0f && Vector3.Distance(transform.position, new Vector3(puppySpot.position.x,0, puppySpot.position.z)) < .5f)
+        if (endScene > 9999.0f && Vector3.Distance(transform.position, new Vector3(puppySpot.position.x,0, puppySpot.position.z)) < .7f && chosen)
         {
             endScene = Time.time;
             GetComponent<AICharacterControl>().SetTarget(null);
@@ -151,7 +154,8 @@ public class Puppy_Controller : MonoBehaviour
         if (Time.time - endScene > 2.0f && !loadCheck)
         {
             PlayerPrefs.SetInt("Dog", dogChosen);
-            StartCoroutine(LoadYourAsyncScene());
+            loadObject.SetActive(true);
+            //StartCoroutine(LoadYourAsyncScene());
             loadCheck = true;               
         }
     }

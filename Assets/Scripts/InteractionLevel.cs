@@ -11,7 +11,7 @@ public class InteractionLevel : MonoBehaviour
     public Text levelText;
     public Text levelDescription;
     public Slider slider;
-    public GameObject playerObj;
+    public GameObject levelLoader;
     public GameObject canvas;
 
     private int level;
@@ -69,11 +69,9 @@ public class InteractionLevel : MonoBehaviour
     public void confirm()
     {
         canvas.SetActive(false);
-        SteamVR_Fade.Start(Color.clear, 0);
-        SteamVR_Fade.Start(Color.black, 1);
         Destroy(canvas);
-        Destroy(playerObj);
         PlayerPrefs.SetInt("Level", level);
-        StartCoroutine(LoadYourAsyncScene());
+        levelLoader.SetActive(true);
+        //StartCoroutine(LoadYourAsyncScene());
     }
 }

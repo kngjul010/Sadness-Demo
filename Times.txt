@@ -159,3 +159,534 @@ Pet Store start: 0
 Pet Store start: 0
 Pet Store start: 0
 Pet Store start: 0
+Pet Store start: 91,65954
+Pet Store start: 91,65954
+Pet Store start: 91,65954
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Puppy Chosen: 20,91808
+Puppy Chosen: 24,34964
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Puppy Chosen: 14,74835
+Puppy Chosen: 16,35884
+Puppy Chosen: 18,02904
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Puppy Chosen: 5,366337
+Puppy Chosen: 10,68032
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Puppy Chosen: 5,781289
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0
+Puppy Chosen: 15,41627
+Pet Store start: 0
+Pet Store start: 0
+Puppy Chosen: 9,997133
+Pet Store start: 0
+Puppy Chosen: 9,992982
+Pet Store start: 0
+Puppy Chosen: 10,00811
+Pet Store start: 0
+Puppy Chosen: 9,998974
+Pet Store start: 0
+Puppy Chosen: 9,997435
+Pet Store start: 0
+Puppy Chosen: 10,01088
+Puppy Chosen: 10,03706
+Puppy Chosen: 10,05969
+Puppy Chosen: 10,08136
+Puppy Chosen: 10,12613
+Puppy Chosen: 10,19432
+Puppy Chosen: 10,22002
+Puppy Chosen: 10,23936
+Puppy Chosen: 10,26061
+Puppy Chosen: 10,28148
+Puppy Chosen: 10,31578
+Puppy Chosen: 10,34682
+Puppy Chosen: 10,36732
+Puppy Chosen: 10,38989
+Puppy Chosen: 10,41135
+Puppy Chosen: 10,43315
+Puppy Chosen: 10,46665
+Puppy Chosen: 10,48426
+Puppy Chosen: 10,50275
+Puppy Chosen: 10,5216
+Puppy Chosen: 10,54363
+Puppy Chosen: 10,56636
+Puppy Chosen: 10,58836
+Puppy Chosen: 10,62085
+Puppy Chosen: 10,6386
+Puppy Chosen: 10,65574
+Puppy Chosen: 10,67669
+Puppy Chosen: 10,69869
+Puppy Chosen: 10,7218
+Puppy Chosen: 10,73991
+Puppy Chosen: 10,77328
+Puppy Chosen: 10,79101
+Puppy Chosen: 10,8104
+Puppy Chosen: 10,83174
+Puppy Chosen: 10,86611
+Puppy Chosen: 10,88792
+Puppy Chosen: 10,91073
+Puppy Chosen: 10,94534
+Puppy Chosen: 10,96314
+Puppy Chosen: 10,97939
+Puppy Chosen: 10,99866
+Puppy Chosen: 11,02216
+Puppy Chosen: 11,04428
+Puppy Chosen: 11,06605
+Puppy Chosen: 11,09751
+Puppy Chosen: 11,11443
+Puppy Chosen: 11,1321
+Puppy Chosen: 11,14871
+Puppy Chosen: 11,17811
+Puppy Chosen: 11,19939
+Puppy Chosen: 11,22567
+Puppy Chosen: 11,26175
+Puppy Chosen: 11,29049
+Puppy Chosen: 11,33108
+Puppy Chosen: 11,361
+Puppy Chosen: 11,41893
+Puppy Chosen: 11,47789
+Puppy Chosen: 11,51827
+Puppy Chosen: 11,5477
+Puppy Chosen: 11,5723
+Puppy Chosen: 11,62586
+Puppy Chosen: 11,65168
+Puppy Chosen: 11,6751
+Puppy Chosen: 11,6983
+Puppy Chosen: 11,72152
+Puppy Chosen: 11,74282
+Puppy Chosen: 11,78797
+Puppy Chosen: 11,81654
+Puppy Chosen: 11,84459
+Puppy Chosen: 11,86917
+Puppy Chosen: 11,8945
+Puppy Chosen: 11,93539
+Puppy Chosen: 11,9681
+Puppy Chosen: 11,99022
+Puppy Chosen: 12,01132
+Puppy Chosen: 12,03042
+Puppy Chosen: 12,05518
+Puppy Chosen: 12,09773
+Puppy Chosen: 12,12162
+Puppy Chosen: 12,14625
+Puppy Chosen: 12,18073
+Puppy Chosen: 12,21229
+Puppy Chosen: 12,2477
+Puppy Chosen: 12,26686
+Puppy Chosen: 12,28685
+Puppy Chosen: 12,30563
+Puppy Chosen: 12,32711
+Puppy Chosen: 12,34754
+Puppy Chosen: 12,36586
+Puppy Chosen: 12,40118
+Puppy Chosen: 12,42383
+Puppy Chosen: 12,44346
+Puppy Chosen: 12,46272
+Puppy Chosen: 12,48038
+Puppy Chosen: 12,49819
+Puppy Chosen: 12,52374
+Puppy Chosen: 12,56852
+Puppy Chosen: 12,60099
+Puppy Chosen: 12,66556
+Puppy Chosen: 12,70083
+Puppy Chosen: 12,75654
+Puppy Chosen: 12,78641
+Puppy Chosen: 12,81117
+Puppy Chosen: 12,84061
+Puppy Chosen: 12,86644
+Puppy Chosen: 12,90959
+Puppy Chosen: 12,93861
+Puppy Chosen: 12,96626
+Puppy Chosen: 12,99496
+Puppy Chosen: 13,026
+Puppy Chosen: 13,07436
+Puppy Chosen: 13,1104
+Puppy Chosen: 13,14509
+Puppy Chosen: 13,18361
+Puppy Chosen: 13,23736
+Puppy Chosen: 13,28027
+Puppy Chosen: 13,32185
+Puppy Chosen: 13,3623
+Puppy Chosen: 13,42418
+Puppy Chosen: 13,46911
+Puppy Chosen: 13,5129
+Puppy Chosen: 13,57686
+Puppy Chosen: 13,62627
+Puppy Chosen: 13,68052
+Puppy Chosen: 13,78036
+Puppy Chosen: 13,88036
+Puppy Chosen: 13,98036
+Puppy Chosen: 14,08036
+Puppy Chosen: 14,16123
+Puppy Chosen: 14,25205
+Puppy Chosen: 14,3234
+Puppy Chosen: 14,41158
+Puppy Chosen: 14,51157
+Puppy Chosen: 14,61158
+Puppy Chosen: 14,71158
+Puppy Chosen: 14,81157
+Puppy Chosen: 14,91158
+Puppy Chosen: 15,01157
+Puppy Chosen: 15,11158
+Puppy Chosen: 15,21158
+Puppy Chosen: 15,31157
+Puppy Chosen: 15,41158
+Puppy Chosen: 15,51157
+Puppy Chosen: 15,61158
+Puppy Chosen: 15,71158
+Puppy Chosen: 15,81157
+Puppy Chosen: 15,91158
+Puppy Chosen: 16,01158
+Puppy Chosen: 16,11158
+Puppy Chosen: 16,21157
+Puppy Chosen: 16,31157
+Puppy Chosen: 16,41158
+Puppy Chosen: 16,51158
+Puppy Chosen: 16,61158
+Puppy Chosen: 16,71157
+Puppy Chosen: 16,81157
+Puppy Chosen: 16,91158
+Puppy Chosen: 17,01158
+Puppy Chosen: 17,11158
+Puppy Chosen: 17,21157
+Puppy Chosen: 17,31157
+Puppy Chosen: 17,41158
+Puppy Chosen: 17,51158
+Puppy Chosen: 17,61158
+Puppy Chosen: 17,71157
+Puppy Chosen: 17,81157
+Puppy Chosen: 17,91158
+Puppy Chosen: 18,01158
+Puppy Chosen: 18,11158
+Puppy Chosen: 18,21157
+Puppy Chosen: 18,31157
+Puppy Chosen: 18,41158
+Puppy Chosen: 18,51158
+Puppy Chosen: 18,61158
+Puppy Chosen: 18,71157
+Puppy Chosen: 18,81157
+Puppy Chosen: 18,91158
+Puppy Chosen: 19,01158
+Puppy Chosen: 19,11158
+Pet Store start: 0
+Puppy Chosen: 9,992559
+Puppy Chosen: 10,01451
+Puppy Chosen: 10,03463
+Puppy Chosen: 10,05549
+Puppy Chosen: 10,0806
+Puppy Chosen: 10,1514
+Puppy Chosen: 10,17233
+Puppy Chosen: 10,19506
+Puppy Chosen: 10,21658
+Puppy Chosen: 10,2356
+Puppy Chosen: 10,26649
+Puppy Chosen: 10,28252
+Puppy Chosen: 10,29928
+Puppy Chosen: 10,3161
+Puppy Chosen: 10,33232
+Puppy Chosen: 10,34807
+Puppy Chosen: 10,36512
+Puppy Chosen: 10,38118
+Puppy Chosen: 10,39691
+Puppy Chosen: 10,42675
+Puppy Chosen: 10,44294
+Puppy Chosen: 10,45861
+Puppy Chosen: 10,47435
+Puppy Chosen: 10,4945
+Puppy Chosen: 10,51165
+Puppy Chosen: 10,52855
+Puppy Chosen: 10,54498
+Puppy Chosen: 10,56155
+Puppy Chosen: 10,59075
+Puppy Chosen: 10,60703
+Puppy Chosen: 10,62349
+Puppy Chosen: 10,63955
+Puppy Chosen: 10,65572
+Puppy Chosen: 10,67196
+Puppy Chosen: 10,68803
+Puppy Chosen: 10,70393
+Puppy Chosen: 10,72027
+Puppy Chosen: 10,75215
+Puppy Chosen: 10,76863
+Puppy Chosen: 10,78462
+Puppy Chosen: 10,8011
+Puppy Chosen: 10,81717
+Puppy Chosen: 10,83449
+Puppy Chosen: 10,8511
+Puppy Chosen: 10,86783
+Puppy Chosen: 10,88455
+Puppy Chosen: 10,9161
+Puppy Chosen: 10,93318
+Puppy Chosen: 10,95023
+Puppy Chosen: 10,96782
+Puppy Chosen: 10,98824
+Puppy Chosen: 11,00786
+Puppy Chosen: 11,02451
+Puppy Chosen: 11,04087
+Puppy Chosen: 11,06955
+Puppy Chosen: 11,0866
+Puppy Chosen: 11,10617
+Puppy Chosen: 11,12414
+Puppy Chosen: 11,14132
+Puppy Chosen: 11,15816
+Puppy Chosen: 11,17624
+Puppy Chosen: 11,19306
+Puppy Chosen: 11,22656
+Puppy Chosen: 11,24827
+Puppy Chosen: 11,26941
+Puppy Chosen: 11,29773
+Puppy Chosen: 11,35881
+Puppy Chosen: 11,41619
+Puppy Chosen: 11,44525
+Puppy Chosen: 11,47643
+Puppy Chosen: 11,50296
+Puppy Chosen: 11,52868
+Puppy Chosen: 11,57262
+Puppy Chosen: 11,60637
+Puppy Chosen: 11,62888
+Puppy Chosen: 11,65055
+Puppy Chosen: 11,675
+Puppy Chosen: 11,69595
+Puppy Chosen: 11,73519
+Puppy Chosen: 11,75553
+Puppy Chosen: 11,77683
+Puppy Chosen: 11,79667
+Puppy Chosen: 11,81651
+Puppy Chosen: 11,83698
+Puppy Chosen: 11,85301
+Puppy Chosen: 11,88298
+Puppy Chosen: 11,90084
+Puppy Chosen: 11,91839
+Puppy Chosen: 11,93642
+Puppy Chosen: 11,95295
+Puppy Chosen: 11,97453
+Puppy Chosen: 12,00659
+Puppy Chosen: 12,05878
+Puppy Chosen: 12,08294
+Puppy Chosen: 12,10861
+Puppy Chosen: 12,13177
+Puppy Chosen: 12,15305
+Puppy Chosen: 12,17391
+Puppy Chosen: 12,22239
+Puppy Chosen: 12,24394
+Puppy Chosen: 12,26392
+Puppy Chosen: 12,28384
+Puppy Chosen: 12,3032
+Puppy Chosen: 12,32898
+Puppy Chosen: 12,37129
+Puppy Chosen: 12,39248
+Puppy Chosen: 12,41696
+Puppy Chosen: 12,43926
+Puppy Chosen: 12,46226
+Puppy Chosen: 12,48528
+Puppy Chosen: 12,54868
+Puppy Chosen: 12,59022
+Puppy Chosen: 12,68278
+Puppy Chosen: 12,74245
+Puppy Chosen: 12,78424
+Puppy Chosen: 12,81692
+Puppy Chosen: 12,84697
+Puppy Chosen: 12,89837
+Puppy Chosen: 12,9305
+Puppy Chosen: 12,96292
+Puppy Chosen: 12,99946
+Puppy Chosen: 13,06103
+Puppy Chosen: 13,09956
+Puppy Chosen: 13,13888
+Puppy Chosen: 13,18291
+Puppy Chosen: 13,23823
+Puppy Chosen: 13,28801
+Puppy Chosen: 13,33679
+Puppy Chosen: 13,40094
+Puppy Chosen: 13,45485
+Puppy Chosen: 13,50817
+Puppy Chosen: 13,5774
+Puppy Chosen: 13,63441
+Puppy Chosen: 13,69323
+Puppy Chosen: 13,77044
+Puppy Chosen: 13,87044
+Puppy Chosen: 13,97044
+Puppy Chosen: 14,04081
+Puppy Chosen: 14,12682
+Puppy Chosen: 14,20175
+Puppy Chosen: 14,29448
+Puppy Chosen: 14,37706
+Puppy Chosen: 14,4709
+Puppy Chosen: 14,55434
+Puppy Chosen: 14,65332
+Puppy Chosen: 14,73977
+Puppy Chosen: 14,83977
+Puppy Chosen: 14,93087
+Puppy Chosen: 15,03087
+Puppy Chosen: 15,13087
+Puppy Chosen: 15,23087
+Puppy Chosen: 15,33087
+Puppy Chosen: 15,43087
+Puppy Chosen: 15,53087
+Puppy Chosen: 15,63087
+Puppy Chosen: 15,73087
+Puppy Chosen: 15,83087
+Puppy Chosen: 15,93087
+Puppy Chosen: 16,03087
+Puppy Chosen: 16,13087
+Puppy Chosen: 16,23087
+Puppy Chosen: 16,33087
+Puppy Chosen: 16,43087
+Puppy Chosen: 16,53087
+Puppy Chosen: 16,63087
+Puppy Chosen: 16,73087
+Puppy Chosen: 16,83087
+Puppy Chosen: 16,93087
+Puppy Chosen: 17,03087
+Puppy Chosen: 17,13087
+Puppy Chosen: 17,23087
+Puppy Chosen: 17,33087
+Puppy Chosen: 17,43087
+Pet Store start: 0
+Puppy Chosen: 10,01261
+Pet Store start: 0
+Puppy Chosen: 9,998043
+Pet Store start: 0
+Puppy Chosen: 9,992621
+Pet Store start: 0
+Puppy Chosen: 10,00343
+Pet Store start: 0
+Puppy Chosen: 10,00729
+Pet Store start: 0
+Puppy Chosen: 9,995934
+Pet Store start: 0
+Puppy Chosen: 10,00333
+Pet Store start: 0
+Puppy Chosen: 9,995263
+Pet Store start: 39,72496
+Pet Store start: 39,72496
+Pet Store start: 39,72496
+Pet Store start: 43,59937
+Pet Store start: 43,59937
+Pet Store start: 43,59937
+Puppy Chosen: 77,48972
