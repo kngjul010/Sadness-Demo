@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 3863f263326701a49b6afd2d9a2b273f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Pet Store.unity
     guid: 01680265d0d6c0f40b40106686e8ffe9
+  - enabled: 1
+    path: Assets/Scenes/testPet.unity
+    guid: 169036a996a985a4b87d2ebf2418487e
   - enabled: 1
     path: Assets/Scenes/Park.unity
     guid: 712ddef809e07ad4f975d6d52369904a
@@ -21,11 +24,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Vet.unity
     guid: 100d2eddcf932ba42968d4119fcc07e6
   - enabled: 1
+    path: Assets/Scenes/testVet.unity
+    guid: 13a8f494331e3264eaa921672986a944
+  - enabled: 1
     path: Assets/Scenes/TestEmpty.unity
     guid: 93d7351d762560a4f87d9ed97ca888d7
-  - enabled: 1
-    path: Assets/Scenes/test.unity
-    guid: 169036a996a985a4b87d2ebf2418487e
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 9d0de5eca77f5244fba632e95c45d29b,
       type: 2}

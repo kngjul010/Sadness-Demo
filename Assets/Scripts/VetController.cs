@@ -4,7 +4,7 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityStandardAssets.Characters.ThirdPerson;
-
+using Valve.VR.InteractionSystem;
 public class VetController : MonoBehaviour
 {
 
@@ -14,6 +14,13 @@ public class VetController : MonoBehaviour
     public GameObject ball;
     public Light[] lights;
     float delay;
+
+    private int level;
+    public GameObject camObj;
+    public GameObject teleportObj;
+    private bool endScene;
+    private float timer;
+
     // Initialise variables
     void Start()
     {
@@ -21,13 +28,21 @@ public class VetController : MonoBehaviour
         start = true;
         talk = false;
         delay = Time.time;
+        endScene = false;
+        timer = 0;
+
+        level = PlayerPrefs.GetInt("Level");
+        level = 1; //test
+        camObj = GameObject.FindGameObjectWithTag("MainCamera");
+        waypoints[3] = camObj.GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         //Start after a set delay
-        if (Time.time - delay > 15.0f && Time.time - delay < 15.1f)
+        if (Time.time - delay > 10.0f && Time.time - delay < 10.1f)
         {
             GetComponentInChildren<AICharacterControl>().SetTarget(waypoints[0]);
         }
@@ -72,20 +87,39 @@ public class VetController : MonoBehaviour
             talk = true;
         }
         //end scene once the user has taken the ball from the vet
-        if (ball.GetComponent<MeshRenderer>().enabled == false)
+        if (endScene)
         {
             for (int i = 0; i < lights.Length; i++)
             {
                 lights[i].intensity = lights[i].intensity * .99f;
-                if (lights[i].intensity < 0.07f)
+                if (timer > 2f)
                 {
                     Application.Quit();
+                    UnityEditor.EditorApplication.isPlaying = false;
                 }
             }
 
             RenderSettings.ambientLight = Color.black;
-
+            timer += Time.deltaTime;
+        }
+        else if (talk)
+        {
+            if (level == 0 )
+            {
+                if (timer > 6)
+                {
+                    TriggerEnd();
+                    timer = 0;
+                }
+                timer += Time.deltaTime;
+            }
+            
         }
         
+    }
+
+    public void TriggerEnd()
+    {
+        endScene = true;
     }
 }

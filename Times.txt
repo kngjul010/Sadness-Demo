@@ -690,3 +690,25 @@ Pet Store start: 43,59937
 Pet Store start: 43,59937
 Pet Store start: 43,59937
 Puppy Chosen: 77,48972
+Vet Speech: 8,356451
+Vet Speech: 8,358583
+Vet Speech: 8,42398
+Vet Speech: 8,38495
+Vet Speech: 13,83572
+Vet Speech: 8,401977
+Vet Speech: 26,22693
+Vet Speech: 27,62032
+Vet Speech: 27,6332
+Vet Speech: 27,49436
+Vet Speech: 22,6193
+Vet Speech: 22,49216
+Vet Speech: 22,61244
+Vet Speech: 22,60682
+Vet Speech: 22,61663
+Vet Speech: 22,48511
+Vet Speech: 22,62623
+Vet Speech: 22,22019
+Vet Speech: 22,33024
+Vet Speech: 22,10189
+Vet Speech: 22,13335
+Vet Speech: 22,37525

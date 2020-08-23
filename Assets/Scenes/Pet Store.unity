@@ -937,7 +937,11 @@ MonoBehaviour:
   rightPen: {fileID: 776500257}
   leftDog: {fileID: 1883365230}
   rightDog: {fileID: 2108111161}
+  lvl0Door: {fileID: 0}
   teleportObj: {fileID: 243545385}
+  midDogC: {fileID: 0}
+  rDogC: {fileID: 0}
+  lDogC: {fileID: 0}
 --- !u!4 &48949713
 Transform:
   m_ObjectHideFlags: 0
@@ -4608,6 +4612,8 @@ MonoBehaviour:
   lighting: {fileID: 735982739}
   door: {fileID: 1639338394}
   dogChosen: 0
+  loadObject: {fileID: 0}
+  chosen: 0
 --- !u!169 &312154051
 AudioLowPassFilter:
   m_ObjectHideFlags: 0
@@ -18387,7 +18393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 472188, guid: dfd6a04841522d34eb18d1a579a0111b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.060000002
+      value: 0.17
       objectReference: {fileID: 0}
     - target: {fileID: 472188, guid: dfd6a04841522d34eb18d1a579a0111b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19614,7 +19620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 472188, guid: dfd6a04841522d34eb18d1a579a0111b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.060000002
+      value: 0.186
       objectReference: {fileID: 0}
     - target: {fileID: 472188, guid: dfd6a04841522d34eb18d1a579a0111b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -24399,6 +24405,8 @@ MonoBehaviour:
   lighting: {fileID: 735982739}
   door: {fileID: 1984111245}
   dogChosen: 0
+  loadObject: {fileID: 0}
+  chosen: 0
 --- !u!169 &1883365238
 AudioLowPassFilter:
   m_ObjectHideFlags: 0
@@ -27380,6 +27388,8 @@ MonoBehaviour:
   lighting: {fileID: 735982739}
   door: {fileID: 1407942170}
   dogChosen: 0
+  loadObject: {fileID: 0}
+  chosen: 0
 --- !u!195 &2108111164
 NavMeshAgent:
   m_ObjectHideFlags: 0
