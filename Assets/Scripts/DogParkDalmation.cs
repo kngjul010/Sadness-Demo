@@ -48,7 +48,7 @@ public class DogParkDalmation : MonoBehaviour
         startballfetchBark = false;
         startDeathBark = false;
         timeOfDeath = 0;
-        GetComponentInChildren<SkinnedMeshRenderer>().material = dogSkin[PlayerPrefs.GetInt("Dog")];
+
     }
     //Used to play the dog bark sounds at specific times
     IEnumerator BarkWithDelay(float time, int clip) 
