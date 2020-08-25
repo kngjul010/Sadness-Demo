@@ -12,9 +12,12 @@ public class SoundOnCollision : MonoBehaviour
     {
         if (collision.gameObject.tag != "Left Hand" && collision.gameObject.tag != "Right Hand")
         {
-            source.clip = clip;
-            source.volume = Mathf.Clamp01(collision.relativeVelocity.magnitude / 10);
-            source.Play();
+            if (collision.relativeVelocity.y > 0.1) {
+                source.clip = clip;
+                source.volume = Mathf.Clamp01(collision.relativeVelocity.magnitude / 10);
+                source.Play();
+            }
+            
         }
 
     }

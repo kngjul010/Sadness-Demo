@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR.InteractionSystem;
 
 public class ParkInteractionControl : MonoBehaviour
 {
@@ -9,8 +10,11 @@ public class ParkInteractionControl : MonoBehaviour
     public SkinnedMeshRenderer dogMesh;
     public Material dogMaterial;
 
+
     private int level;
     private int dogChosen;
+    private Hand leftHand;
+    private Hand rightHand;
 
     // Start is called before the first frame update
     void Start()
@@ -18,15 +22,22 @@ public class ParkInteractionControl : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         level = PlayerPrefs.GetInt("Level");
         dogChosen = PlayerPrefs.GetInt("Dog");
-
+        dogChosen = 1; //test Line
         if (dogChosen == 0)
         {
-            dogMesh.materials[0] = dogMaterial;
+            dogMesh.material = dogMaterial;
         }
-
-        player.transform.position = new Vector3(0, 0, 0);
+        Teleport.instance.CancelTeleportHint();
+        player.transform.position = new Vector3(53.37283f, 49.85787f, -127.6087f);
         player.transform.rotation = Quaternion.Euler(0, 0, 0);
+        leftHand = GameObject.FindGameObjectWithTag("Left Hand").GetComponent<Hand>();
+        rightHand = GameObject.FindGameObjectWithTag("Right Hand").GetComponent<Hand>();
 
+        //Make it easy to pick items from the floor
+        leftHand.fingerJointHoverRadius = 0.5f;
+        leftHand.hoverSphereRadius = 0.4f;
+        rightHand.fingerJointHoverRadius = 0.5f;
+        rightHand.hoverSphereRadius = 0.4f;
     }
 
 
