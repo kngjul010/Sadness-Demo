@@ -9,6 +9,7 @@ using UnityStandardAssets.Characters.ThirdPerson;
 public class DogParkDalmation : MonoBehaviour
 {
     public Transform sphere, approachPoint, idlePoint, diggingSpot;
+    public GameObject targetObj;
     public Transform[] deathspots;
     public GameObject mouthBall;
     private Vector3 lastPosition;
@@ -26,7 +27,18 @@ public class DogParkDalmation : MonoBehaviour
     bool startballfetchBark, startDeathBark;
     public Material[] dogSkin;
     public float dogLife;
+    public GameObject dogMouth;
 
+    private int objType;
+    private Vector3[] mouthPositions = { new Vector3(-0.118000001f, -0.0209999997f, 0.00499999989f),    //Bouncy Ball
+                                         new Vector3(-0.0967f, 0.0038f, 0.0406f),                       //Tennis Ball
+                                         new Vector3(-0.114299998f, 0.00510000018f, -0.0148999998f),    //Bone
+                                         new Vector3(-0.101000004f, -0.145999998f, 0.00899999961f)      //Teddy                                   
+                                        };
+    private Vector3[] mouthRotations = { new Vector3 (0,0,0),                                       //Bouncy Ball
+                                         new Vector3(1.14008284f, 182.066574f, 17.4123516f),        //Tennis Ball
+                                         new Vector3(84.8392334f, 198.522034f, 289.72522f),         //Bone
+                                         new Vector3(48.8043404f, 359.46994f, 269.295593f)};        //Teddy
 
     // Use this for initialization
     void Start()
@@ -87,7 +99,7 @@ public class DogParkDalmation : MonoBehaviour
     {
         speed = agent.velocity.magnitude;
         //If the ball has been thrown and the dog is not already chasing it or running to his death start chasing the ball after a short delay
-        if (charController.target != sphere && sphere.GetComponent<BallBehaviour>().thrown && Time.time-sphere.GetComponent<BallBehaviour>().timeThrown>1.0f && Time.time - deathTime < dogLife)
+        if (charController.target != sphere && sphere.GetComponent<ObjectThrown>().thrown && Time.time - deathTime < dogLife)
         {
             anim.SetInteger("State",0); //Transition to running fast
             charController.SetTarget(sphere);
@@ -100,10 +112,16 @@ public class DogParkDalmation : MonoBehaviour
             
             anim.SetInteger("State", 1); //Transition to running with ball
             anim.SetBool("DroppedBall", false);
-            mouthBall.SetActive(true);
+            //mouthBall.SetActive(true);
+            sphere.SetParent(dogMouth.transform);
+            sphere.localPosition = mouthPositions[1 + objType];
+            sphere.localRotation = Quaternion.Euler(mouthRotations[1 + objType]);
             charController.SetTarget(approachPoint);
             agent.speed = 2.8f;
-            sphere.gameObject.SetActive(false);           
+            //sphere.gameObject.SetActive(false); 
+            sphere.GetComponent<ObjectThrown>().thrown = false;
+            sphere.GetComponent<Rigidbody>().isKinematic = true;
+            sphere.GetComponent<Rigidbody>().useGravity = false;
         }
         //Slow to a walk when close to the user
         else if (charController.target == approachPoint && Vector3.Distance(approachPoint.position, transform.position) < .8 && Time.time - deathTime < dogLife)
@@ -120,8 +138,11 @@ public class DogParkDalmation : MonoBehaviour
             anim.SetInteger("State", -1); //transition to idle
             anim.SetBool("DroppedBall", true);
             charController.SetTarget(null);
-            mouthBall.SetActive(false);
-            sphere.gameObject.SetActive(true);       
+            //mouthBall.SetActive(false);
+            //sphere.gameObject.SetActive(true);    
+            sphere.SetParent(null);
+            sphere.GetComponent<Rigidbody>().isKinematic = false;
+            sphere.GetComponent<Rigidbody>().useGravity = true;
             animationTime = Time.time;
         }
         //If the dog isn't due to run off and die but has been idle for some time play a secondary animation
@@ -256,5 +277,12 @@ public class DogParkDalmation : MonoBehaviour
         //make sure our animations sync with the dog's movement speed
         anim.SetFloat("Speed", speed);
 
+    }
+
+    private void onObjectThrown(GameObject thrownObj)
+    {
+        targetObj = thrownObj;
+        objType = thrownObj.GetComponent<ObjectThrown>().objType;
+        sphere = targetObj.GetComponent<Transform>();
     }
 }
