@@ -32,7 +32,6 @@ public class VetController : MonoBehaviour
         timer = 0;
 
         level = PlayerPrefs.GetInt("Level");
-        level = 1; //test
         camObj = GameObject.FindGameObjectWithTag("MainCamera");
         waypoints[3] = camObj.GetComponent<Transform>();
     }

@@ -16,7 +16,6 @@ public class VetInteractionControl : MonoBehaviour
     void Start()
     {
         level = PlayerPrefs.GetInt("Level");
-        level = 1; //test line
         if (Teleport.instance != null){
             Teleport.instance.CancelTeleportHint();
         }
@@ -28,7 +27,6 @@ public class VetInteractionControl : MonoBehaviour
         else
         {
             item = PlayerPrefs.GetInt("Item");
-            item = 0; //test line
             if (item == 0)
             {
                 ball.SetActive(true);

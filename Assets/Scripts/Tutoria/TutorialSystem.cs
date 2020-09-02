@@ -24,6 +24,9 @@ public class TutorialSystem : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip tutCompleteSound;
     public GameObject levelLoader;
+    public bool stroked;
+    public GameObject strokeSphere;
+    
 
     [Header("Voice Lines")]
     public AudioSource vlSource;
@@ -170,6 +173,7 @@ public class TutorialSystem : MonoBehaviour
                 tutText.text = "Hold the Left DPad Aim and Release it to Teleport to a Location - 3s Delay between Teleports";
                 PlayAudioClip(vlSource, teleportA);
                 ShowHint(leftHand, teleport, "Click and Hold to Aim, Release to Teleport", ref hintCoroutine);
+
                 stagePart1 = true;
             }
             else if (stagePart1 == true)
@@ -186,13 +190,37 @@ public class TutorialSystem : MonoBehaviour
         }
         //TODO: Stroke Sphere
         else if (stage == 4)
-        {
+        {   
             if (level == 1)
             {
                 stage = 6;
                 return;
             }
-            stage = 5;
+            if (stagePart1 == false && timer > 2)
+            {
+                strokeSphere.SetActive(true);
+                tutText.text = "Move Your Hand Along the Surface of the Green Sphere to Stroke It";
+                PlayAudioClip(vlSource, strokeA);
+                stagePart1 = true;
+                stroked = false;
+            }
+            else if (stagePart1 == true && stagePart2 == false) {
+                if (stroked)
+                {
+                    stagePart2 = true;
+                    timer = 0;
+                }
+                
+            }
+            else if (stagePart1 && stagePart2 && timer > 2)
+            {
+                stage = 5;
+                stagePart1 = false;
+                stagePart2 = false;
+                timer = 0;
+                PlayAudioClip(audioSource, tutCompleteSound);
+            }
+                
         }
         //TODO: Gesture Recognition
         else if (stage == 5)
