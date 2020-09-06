@@ -17,7 +17,7 @@ public class StoreInteractionControl : MonoBehaviour
     public GameObject lvl0Door;
     public GameObject teleportObj;
 
-    [Header ("Dog Spots")]
+    [Header ("Dog Scripts")]
     public Puppy_Controller midDogC;
     public Puppy_Controller rDogC;
     public Puppy_Controller lDogC;
@@ -44,6 +44,10 @@ public class StoreInteractionControl : MonoBehaviour
         rDogC.puppySpot = player.transform;
         player.transform.position = new Vector3(0.335f, player.transform.position.y, -1.774418f);
         player.transform.rotation = Quaternion.Euler(0, 0, 0);
+
+        lDogC.interactionStage = level;
+        midDogC.interactionStage = level;
+        rDogC.interactionStage = level;
     }
 
     // Update is called once per frame

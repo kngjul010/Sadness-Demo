@@ -28,3 +28,6 @@ Fetch Teddy: 18,03967
 Start Explore: 29,80642
 Start Explore: 69,87752
 Puppy Running away: 130,029
+Pet Store start: 0
+Pet Store start: 0
+Pet Store start: 0

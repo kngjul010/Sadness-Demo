@@ -12,6 +12,7 @@ public class ParkInteractionControl : MonoBehaviour
     public Material dogMaterial;
     public GameObject[] interactableObjects;
     public GameObject teleportObj;
+    public GameObject gestureObjs;
 
     private int level;
     private int dogChosen;
@@ -19,6 +20,7 @@ public class ParkInteractionControl : MonoBehaviour
     private Hand rightHand;
     private DogParkDalmation dogScript;
     private float dogSpan;
+    private bool bondBoost;
 
     // Start is called before the first frame update
     void Start()
@@ -76,22 +78,28 @@ public class ParkInteractionControl : MonoBehaviour
         }
         else if (level == 2)
         {
+            gestureObjs.SetActive(true);
             dogScript.interactionStage = 2;
         }
 
         dogSpan = Time.time;
+        bondBoost = false;
+
+        string path = "Times.txt";
+        StreamWriter writer = new StreamWriter(path, true);
+        writer.WriteLine("== Park Start: " + Time.time);
+        writer.Close();
     }
 
     private void Update()
     {
-        if (dogScript.numInteractions < 10 && Time.time - dogSpan > dogScript.dogLife / 2)
+        if (!bondBoost && dogScript.numInteractions < 10 && Time.time - dogSpan > dogScript.dogLife / 2)
         {
             dogScript.bond += 0.2f;
             string path = "Times.txt";
-
             StreamWriter writer = new StreamWriter(path, true);
             writer.WriteLine("Director Incrased Bond: " + Time.time);
-            dogScript.numInteractions = 10;
+            writer.Close();
         }
     }
 

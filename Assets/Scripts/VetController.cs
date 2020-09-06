@@ -78,11 +78,7 @@ public class VetController : MonoBehaviour
         {
             GetComponent<AudioSource>().time = 0.8f;
             GetComponent<AudioSource>().Play();
-            string path = "Times.txt";
-
-            StreamWriter writer = new StreamWriter(path, true);
-            writer.WriteLine("Vet Speech: " + Time.time);
-            writer.Close();
+            WriteString("Vet Speech: ");
             talk = true;
         }
         //end scene once the user has taken the ball from the vet
@@ -119,6 +115,19 @@ public class VetController : MonoBehaviour
 
     public void TriggerEnd()
     {
+        string path = "Times.txt";
+        StreamWriter writer = new StreamWriter(path, true);
+        writer.WriteLine("==== End of Experience ====");
+        writer.WriteLine("\n");
+        writer.Close();
         endScene = true;
+    }
+
+    static void WriteString(string ident)
+    {
+        string path = "Times.txt";
+        StreamWriter writer = new StreamWriter(path, true);
+        writer.WriteLine(ident + Time.time);
+        writer.Close();
     }
 }

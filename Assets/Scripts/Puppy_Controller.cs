@@ -22,6 +22,14 @@ public class Puppy_Controller : MonoBehaviour
     public int dogChosen;
     public GameObject loadObject;
     public bool chosen;
+    public int interactionStage;
+
+    private float animationTime;
+    private Animator anim;
+    private bool strokeTouch;
+    private int numInteractions;
+    private float bond;
+
     //Set initial values
     void Start()
     {
@@ -35,8 +43,13 @@ public class Puppy_Controller : MonoBehaviour
         startfightIdle = false;
         startStandingBark = false;
         loadCheck = false;
-        WriteString("Pet Store start: ");
+        WriteString("== Pet Store start: ");
         chosen = false;
+        strokeTouch = false;
+        puppySpot = GameObject.FindGameObjectWithTag("MainCamera").transform;
+        anim = GetComponent<Animator>();
+        numInteractions = 0;
+        bond = 0;
     }
     // Used to play puppy barking noises
     IEnumerator BarkWithDelay(float time, float length, int clip)
@@ -75,8 +88,30 @@ public class Puppy_Controller : MonoBehaviour
 
     void Update()
     {
+         //Stroke animation
+        if (strokeTouch)
+        {
+            
+            if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Stroking"))
+            {
+
+                anim.SetInteger("Next", -1);
+                animationTime = Time.time;
+                //Log Stroke
+                WriteString("Start Puppy Stroke: ");
+                numInteractions += 1;
+                bond += 0.05f;
+
+            }
+            else if (Time.time - animationTime > 3)
+            {
+                anim.SetInteger("Next", 0);
+                animationTime = Time.time;
+                strokeTouch = false;
+            }
+        }
         // State machine to govern a set of idle behaviours
-        if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Enjoy Stunding") && !startStandBark)
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Enjoy Stunding") && !startStandBark)
         {
             StartCoroutine(BarkWithDelay(.85f, 23.1f, 0));
             StartCoroutine(BarkWithDelay(1.0f, 23.1f, 0));
@@ -85,38 +120,38 @@ public class Puppy_Controller : MonoBehaviour
             startStandBark = true;
         }
         
-        if (!GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Enjoy Stunding") && startStandBark)
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Enjoy Stunding") && startStandBark)
         {
             startStandBark = false;
         }
-        if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Enjoy Lieing") && !startLyingBark)
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Enjoy Lieing") && !startLyingBark)
         {
             StartCoroutine(BarkWithDelay(.2f, 1.9f, 0));
             StartCoroutine(BarkWithDelay(3.9f, 1.9f, 0));
             startLyingBark = true;
         }
-        if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("End Rest") && startLyingBark)
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("End Rest") && startLyingBark)
         {
             source.Stop();
             startLyingBark = false;
         }
-        if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Fight Idle") && !startfightIdle)
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Fight Idle") && !startfightIdle)
         {
             StartCoroutine(BarkWithDelay(.2f, 15.9f, 0));
             startfightIdle = true;
         }
-        if (!GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Fight Idle") && startfightIdle)
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Fight Idle") && startfightIdle)
         {
             source.Stop();
             startfightIdle = false;
         }
-        if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Barking Stunding") && !startStandingBark)
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Barking Stunding") && !startStandingBark)
         {
             StartCoroutine(BarkWithDelay(.2f, 1.9f, 0));
             StartCoroutine(BarkWithDelay(3.9f, 1.9f, 0));
             startStandingBark = true;
         }
-        if (!GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Barking Stunding") && startStandingBark)
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Barking Stunding") && startStandingBark)
         {
             source.Stop();
             startStandingBark = false;
@@ -126,14 +161,14 @@ public class Puppy_Controller : MonoBehaviour
         if (GetComponent<NavMeshAgent>() != null && GetComponent<AICharacterControl>() != null)
         {
             speed = GetComponent<NavMeshAgent>().velocity.magnitude;
-            GetComponent<Animator>().SetFloat("Speed", speed);
+            anim.SetFloat("Speed", speed);
         }
         //delay between animations
         if (Time.time - timer > timeDelay)
         {
-            if (GetComponent<Animator>().GetInteger("Next") != 5)
+            if (anim.GetInteger("Next") != 5)
             {
-                GetComponent<Animator>().SetInteger("Next", (int)Random.Range(0.0f, 4.99f));
+                anim.SetInteger("Next", (int)Random.Range(0.0f, 4.99f));
             }
             timeDelay = Random.Range(2, 5);
             timer = Time.time;
@@ -154,9 +189,23 @@ public class Puppy_Controller : MonoBehaviour
         if (Time.time - endScene > 2.0f && !loadCheck)
         {
             PlayerPrefs.SetInt("Dog", dogChosen);
+            PlayerPrefs.SetInt("NumInteractions", numInteractions);
+            PlayerPrefs.SetFloat("Bond", bond);
             loadObject.SetActive(true);
             //StartCoroutine(LoadYourAsyncScene());
             loadCheck = true;               
+        }
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (interactionStage == 2)
+        {
+            GameObject player = other.gameObject.transform.parent.gameObject;
+            if (player.tag == "Player")
+            {
+                strokeTouch = true;
+            }
         }
     }
 }

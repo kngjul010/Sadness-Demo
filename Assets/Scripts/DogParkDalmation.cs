@@ -39,7 +39,10 @@ public class DogParkDalmation : MonoBehaviour
     public int numInteractions;
 
     [Header("Emotion Values")]
-    public float bond, inquisitive, obedience, playfulness;
+    public float bond;
+    public float inquisitive;
+    public float obedience;
+    public float playfulness;
 
     private int objType;
     private bool digTeddy;
@@ -60,7 +63,9 @@ public class DogParkDalmation : MonoBehaviour
     private bool groveFound;
     private bool deathStart;
     private bool deathMove;
-    
+    private bool gestureDetect;
+    private string path = "Times.txt";
+    private StreamWriter writer;
 
 
     // Use this for initialization
@@ -95,6 +100,9 @@ public class DogParkDalmation : MonoBehaviour
         groveFound = false;
         deathStart = false;
         numInteractions = 0;
+        gestureDetect = false;
+        approachPoint = GameObject.FindGameObjectWithTag("MainCamera").transform;
+        idlePoint = approachPoint;
     }
     //Used to play the dog bark sounds at specific times
     IEnumerator BarkWithDelay(float time, int clip) 
@@ -207,8 +215,19 @@ public class DogParkDalmation : MonoBehaviour
         {
             animationTime = Time.time;
         }
+        //Check if the player has used a gesture
+        else if (gestureDetect)
+        {
+            WriteString("AI: Gesture Obeyed: ");
+            numInteractions += 1;
+            bond += 0.05f;
+            gestureDetect = false;
+
+            state = "return";
+            StateReturn(true);
+        }
         //Check for throw
-        if (CheckThrow())
+        else if (CheckThrow())
         {
             state = "chase";
             StateChase(true);
@@ -230,11 +249,7 @@ public class DogParkDalmation : MonoBehaviour
                     anim.SetInteger("State", 1);
                     animationTime = Time.time;
                     //Log Stroke
-                    string path = "Times.txt";
-
-                    StreamWriter writer = new StreamWriter(path, true);
-                    writer.WriteLine("Start Stroking: " + Time.time);
-                    writer.Close();
+                    WriteString("Start Stroking");
                     numInteractions += 1;
                     bond += 0.05f;
                 }
@@ -263,6 +278,7 @@ public class DogParkDalmation : MonoBehaviour
                     play = true;
                     anim.SetInteger("State", 5);
                     charController.SetTarget(null);
+                    WriteString("AI - Play: ");
                 }
                 //chance to explore
                 else if (chancePlay2 <= inquisitive * 30)
@@ -305,6 +321,7 @@ public class DogParkDalmation : MonoBehaviour
         {
             anim.SetInteger("State", 0); //Transition to running fast
             charController.SetTarget(sphere);
+            sphere.GetComponent<ObjectThrown>().thrown = false;
             agent.speed = 3.3f;
 
             //Start Barking
@@ -317,12 +334,29 @@ public class DogParkDalmation : MonoBehaviour
             StartCoroutine(BarkWithDelay(6.2f, 0));
             StartCoroutine(BarkWithDelay(7.5f, 0));
 
-            string path = "Times.txt";
-            StreamWriter writer = new StreamWriter(path, true);
-            writer.WriteLine("Start Chase Ball: " + Time.time);
-            writer.Close();
+            WriteString("Start Chase Ball: ");
             numInteractions += 1;
             bond += 0.05f;
+        }
+        //Check if the player has used a gesture
+        else if (gestureDetect)
+        {
+            int chancePlay = Random.Range(0, 100);
+            if (chancePlay <= ((playfulness - (obedience) * bond) * 30) + (5 * objType))
+            {
+                WriteString("AI: Gesture Ignored: ");
+            }
+            else
+            {
+                WriteString("AI: Gesture Obeyed: ");
+                numInteractions += 1;
+                bond += 0.05f;
+                gestureDetect = false;
+
+                state = "return";
+                StateReturn(true);
+            }
+            
         }
         //Pick up the ball when the dog gets close enough
         else if (Vector3.Distance(sphere.position, transform.position) < .8)
@@ -353,11 +387,7 @@ public class DogParkDalmation : MonoBehaviour
         {
             //If the dog should run to its death start barking and record the event in our text doc
             StopAllCoroutines();
-            string path = "Times.txt";
-
-            StreamWriter writer = new StreamWriter(path, true);
-            writer.WriteLine("Puppy Running away: " + Time.time);
-            writer.Close();
+            WriteString("Start Running Away: ");
             audioSource.volume = 0.1f;
             audioSource.pitch = 1;
             for (int i = 0; i < 50; i++)
@@ -396,10 +426,7 @@ public class DogParkDalmation : MonoBehaviour
             audioSource.volume = 0.4f;
             StartCoroutine(BarkWithDelay(0, 1));
             StartCoroutine(BarkWithDelay(1.7f, 2));
-            string path = "Times.txt";
-            StreamWriter writer = new StreamWriter(path, true);
-            writer.WriteLine("Crash: " + Time.time);
-            writer.Close();
+            WriteString("Crash: ");
 
             agent.speed = 0.5f;
             anim.SetInteger("State", -5);
@@ -422,10 +449,17 @@ public class DogParkDalmation : MonoBehaviour
                 GameObject.FindGameObjectWithTag("Player").transform.position = (new Vector3(8.19498634f, 50.1063004f, -135.298294f));
                 SteamVR_Fade.Start(Color.clear, 1);
                 deathMove = true;
+                WriteString("By Body: ");
+                
             }
             //load next scene
             if (timeOfDeath > 1 && Time.time - timeOfDeath > 10 && !loadCheck)
             {
+                if (strokeTouch)
+                {
+                    WriteString("Stroked: ");
+                    numInteractions += 1;
+                }
                 Debug.Log("NextScene");
                 levelLoader.SetActive(true);
                 loadCheck = true;
@@ -494,6 +528,7 @@ public class DogParkDalmation : MonoBehaviour
         }
         else if (disobedient && Time.time - animationTime > 3)
         {
+            WriteString("AI: Disobey Return: ");
             state = "explore";
             StateExplore(true);
         }
@@ -535,7 +570,7 @@ public class DogParkDalmation : MonoBehaviour
             sphere.GetComponent<Rigidbody>().isKinematic = false;
             sphere.GetComponent<Rigidbody>().useGravity = true;
             animationTime = Time.time;
-
+            WriteString("AI: Disobey return: ");
             state = "explore";
             StateExplore(true);
         }
@@ -558,6 +593,17 @@ public class DogParkDalmation : MonoBehaviour
             charController.SetTarget(null);
             animationTime = Time.time;
         }
+        //Check if the player has used a gesture
+        else if (gestureDetect)
+        {
+            WriteString("Gesture Obeyed: ");
+            numInteractions += 1;
+            bond += 0.05f;
+            gestureDetect = false;
+
+            state = "return";
+            StateReturn(true);
+        }
         else if (Time.time - animationTime > 4)
         {
             if (interactionStage > 0 && !teddyBear.activeSelf)
@@ -572,12 +618,9 @@ public class DogParkDalmation : MonoBehaviour
                     PlayerPrefs.SetInt("Item", 1);
                 }
 
-                string path = "Times.txt";
-                StreamWriter writer = new StreamWriter(path, true);
-                writer.WriteLine("Fetch Teddy: " + Time.time);
-                writer.Close();
+                WriteString("Fetch Teddy: ");
                 numInteractions += 1;
-                bond += 0.1f;
+                bond += 0.25f;
             }
             else
             {
@@ -591,10 +634,7 @@ public class DogParkDalmation : MonoBehaviour
     {
         if (first)
         {
-            string path = "Times.txt";
-            StreamWriter writer = new StreamWriter(path, true);
-            writer.WriteLine("Start Explore: " + Time.time);
-            writer.Close();
+            WriteString("AI: Start Exploring: ");
 
             int chancePlay = Random.Range(0, 100);
             if (chancePlay <= inquisitive * 30) longExpl = true;
@@ -603,11 +643,7 @@ public class DogParkDalmation : MonoBehaviour
             if (chancePlay <= ((inquisitive - (playfulness + obedience) * bond) * 30) - (5 * objType))
             {
                 ignoreThrow = true;
-                string p = "Times.txt";
-
-                StreamWriter w = new StreamWriter(p, true);
-                w.WriteLine("Throw Will be ignored: " + Time.time);
-                w.Close();
+                //WriteString("Throws & Gestures will be")
             }
             else ignoreThrow = false;
             chancePlay = Random.Range(0, 100);
@@ -639,12 +675,41 @@ public class DogParkDalmation : MonoBehaviour
         }
 
         //Check for throw
-        if (CheckThrow() && !ignoreThrow)
+        if (CheckThrow())
         {
-            state = "chase";
-            StateChase(true);
+            int chancePlay = Random.Range(0, 100);
+            if (chancePlay <= ((inquisitive - (playfulness + obedience) * bond) * 30) - (5 * objType))
+            {
+                ignoreThrow = true;
+                sphere.GetComponent<ObjectThrown>().thrown = false;
+                WriteString("Throw Ignored: ");
+            }
+            else
+            {
+                state = "chase";
+                StateChase(true);
+            }
+            
         }
-        
+        //Check if the player has used a gesture
+        else if (gestureDetect)
+        {
+            int chancePlay = Random.Range(0, 100);
+            if (chancePlay <= ((inquisitive - (obedience) * bond) * 30))
+            {
+                WriteString("Gesture Ignored: ");
+                gestureDetect = false;
+            }
+            else
+            {
+                numInteractions += 1;
+                bond += 0.05f;
+                gestureDetect = false;
+                WriteString("Gesture Obeyed: ");
+                state = "return";
+                StateReturn(true);
+            }
+        }
         //transition to digging
         else if (Vector3.Distance(closest.position, transform.position) < .8)
         {
@@ -654,10 +719,7 @@ public class DogParkDalmation : MonoBehaviour
         //Start showing grove
         else if (findGrove && Time.time - animationTime > 5)
         {
-            string path = "Times.txt";
-            StreamWriter writer = new StreamWriter(path, true);
-            writer.WriteLine("Start Grove: " + Time.time);
-            writer.Close();
+            WriteString("Start Show Grove: ");
 
             state = "showGrove";
             groveFound = true;
@@ -672,6 +734,7 @@ public class DogParkDalmation : MonoBehaviour
         //Long Time Stop
         else if (Time.time - animationTime > 18)
         {
+            WriteString("AI: Longer Exloring: ");
             state = "return";
             StateReturn(true);
         }
@@ -696,7 +759,7 @@ public class DogParkDalmation : MonoBehaviour
             StartCoroutine(BarkWithDelay(6.2f, 0));
             StartCoroutine(BarkWithDelay(7.5f, 0));
         }
-        else if (Vector3.Distance(idlePoint.position, transform.position) > 15)
+        else if (Vector3.Distance(idlePoint.position, transform.position) > 11)
         {
             anim.SetInteger("State", -1);
             charController.SetTarget(transform);
@@ -712,11 +775,7 @@ public class DogParkDalmation : MonoBehaviour
         }
         else if (Vector3.Distance(groveLocation.position, transform.position) < 2)
         {
-            string path = "Times.txt";
-
-            StreamWriter writer = new StreamWriter(path, true);
-            writer.WriteLine("Grove Found: " + Time.time);
-            writer.Close();
+            WriteString("Grove Found");
             numInteractions += 1;
             bond += 0.5f;
             anim.SetInteger("State", -1);
@@ -732,7 +791,19 @@ public class DogParkDalmation : MonoBehaviour
 
     public void DetectGesture()
     {
+        if (Vector3.Distance(idlePoint.position, transform.position) > 4)
+        {
+            gestureDetect = true;
+        }
+    }
 
+    // Our text doc for recording times
+    static void WriteString(string ident)
+    {
+        string path = "Times.txt";
+        StreamWriter writer = new StreamWriter(path, true);
+        writer.WriteLine(ident + Time.time);
+        writer.Close();
     }
 }
 

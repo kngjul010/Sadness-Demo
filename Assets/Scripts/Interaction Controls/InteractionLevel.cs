@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Valve.VR.InteractionSystem;
 using Valve.VR;
+using System.IO;
 
 public class InteractionLevel : MonoBehaviour
 {
@@ -72,6 +73,10 @@ public class InteractionLevel : MonoBehaviour
         Destroy(canvas);
         PlayerPrefs.SetInt("Level", level);
         levelLoader.SetActive(true);
+        string path = "Times.txt";
+        StreamWriter writer = new StreamWriter(path, true);
+        writer.WriteLine("====== Level Chosen: " + level + " ======");
+        writer.Close();
         //StartCoroutine(LoadYourAsyncScene());
     }
 }

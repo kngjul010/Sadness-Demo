@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR.InteractionSystem;
+using System.IO;
 
 public class VetInteractionControl : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class VetInteractionControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        WriteString("== Vet Start: ");
         level = PlayerPrefs.GetInt("Level");
         if (Teleport.instance != null){
             Teleport.instance.CancelTeleportHint();
@@ -36,17 +38,21 @@ public class VetInteractionControl : MonoBehaviour
             {
                 teddy.SetActive(true);
                 ball.SetActive(false);
+                WriteString("Teddy Used: ");
             }
         }
         player = GameObject.FindGameObjectWithTag("Player");
         player.transform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
         player.transform.position = new Vector3(-0.581f, 0.39f, 0.071f);
         player.transform.rotation = Quaternion.Euler(0, 0, 0);
+
     }
 
-    // Update is called once per frame
-    void Update()
+    static void WriteString(string ident)
     {
-        
+        string path = "Times.txt";
+        StreamWriter writer = new StreamWriter(path, true);
+        writer.WriteLine(ident + Time.time);
+        writer.Close();
     }
 }

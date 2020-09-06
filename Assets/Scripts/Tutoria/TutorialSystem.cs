@@ -7,6 +7,7 @@ using Valve.VR.InteractionSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.AI;
 using UnityStandardAssets.Characters.ThirdPerson;
+using System.IO;
 
 public class TutorialSystem : MonoBehaviour
 {
@@ -78,6 +79,7 @@ public class TutorialSystem : MonoBehaviour
                 stagePart1 = true;
                 tutText.text = "Welcome To The VREmote Tutorial";
                 PlayAudioClip(vlSource, welcomeA);
+                WriteString("Tutorial Start: ");
             }
             else if (timer > 7)
             {
@@ -288,6 +290,7 @@ public class TutorialSystem : MonoBehaviour
                     stagePart2 = true;
                     PlayerPrefs.SetInt("Level", level);
                     levelLoader.SetActive(true);
+                    WriteString("Tutorial End: ");
                     //SteamVR_Fade.Start(Color.clear, 0);
                     // SteamVR_Fade.Start(Color.black, 1);
                     //StartCoroutine(LoadYourAsyncScene());
@@ -386,6 +389,15 @@ public class TutorialSystem : MonoBehaviour
     public void DetectGesture()
     {
         gestureDone = true;
+    }
+
+    // Our text doc for recording times
+    static void WriteString(string ident)
+    {
+        string path = "Times.txt";
+        StreamWriter writer = new StreamWriter(path, true);
+        writer.WriteLine(ident + Time.time);
+        writer.Close();
     }
 
 }

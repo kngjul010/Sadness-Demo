@@ -60,7 +60,7 @@ public class DogDoor : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
         pup.gameObject.AddComponent<ThirdPersonCharacter>();
         pup.gameObject.AddComponent<AICharacterControl>();
-        pup.GetComponent<AICharacterControl>().SetTarget(master);
+        pup.GetComponent<AICharacterControl>().SetTarget(GameObject.FindGameObjectWithTag("MainCamera").transform);
         pup.GetComponent<Animator>().SetInteger("Next", 5);
         pup.gameObject.GetComponent<Puppy_Controller>().dogChosen = DogChosen;
         pup.gameObject.GetComponent<Puppy_Controller>().chosen = true;
