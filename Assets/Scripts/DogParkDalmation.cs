@@ -99,7 +99,8 @@ public class DogParkDalmation : MonoBehaviour
         disobedient = false;
         groveFound = false;
         deathStart = false;
-        numInteractions = 0;
+        numInteractions = 0 + PlayerPrefs.GetInt("NumInteractions");
+        bond = 1 + PlayerPrefs.GetFloat("Bond");
         gestureDetect = false;
         approachPoint = GameObject.FindGameObjectWithTag("MainCamera").transform;
         idlePoint = approachPoint;

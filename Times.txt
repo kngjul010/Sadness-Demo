@@ -31,3 +31,6 @@ Puppy Running away: 130,029
 Pet Store start: 0
 Pet Store start: 0
 Pet Store start: 0
+== Vet Start: 0
+Teddy Used: 0
+Vet Speech: 21,97328
