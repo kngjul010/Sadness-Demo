@@ -37,6 +37,7 @@ public class DogParkDalmation : MonoBehaviour
     public Transform groveLocation;
     public GameObject butterflies;
     public int numInteractions;
+    public Transform bones;
 
     [Header("Emotion Values")]
     public float bond;
@@ -66,6 +67,8 @@ public class DogParkDalmation : MonoBehaviour
     private bool gestureDetect;
     private string path = "Times.txt";
     private StreamWriter writer;
+    private float boneTimer;
+    private bool chanceBone;
 
 
     // Use this for initialization
@@ -104,6 +107,8 @@ public class DogParkDalmation : MonoBehaviour
         gestureDetect = false;
         approachPoint = GameObject.FindGameObjectWithTag("MainCamera").transform;
         idlePoint = approachPoint;
+        boneTimer = Time.time;
+        chanceBone = false;
     }
     //Used to play the dog bark sounds at specific times
     IEnumerator BarkWithDelay(float time, int clip) 
@@ -644,7 +649,6 @@ public class DogParkDalmation : MonoBehaviour
             if (chancePlay <= ((inquisitive - (playfulness + obedience) * bond) * 30) - (5 * objType))
             {
                 ignoreThrow = true;
-                //WriteString("Throws & Gestures will be")
             }
             else ignoreThrow = false;
             chancePlay = Random.Range(0, 100);
@@ -690,7 +694,7 @@ public class DogParkDalmation : MonoBehaviour
                 state = "chase";
                 StateChase(true);
             }
-            
+
         }
         //Check if the player has used a gesture
         else if (gestureDetect)
@@ -739,6 +743,8 @@ public class DogParkDalmation : MonoBehaviour
             state = "return";
             StateReturn(true);
         }
+        //Look at nearby Bone Toys
+        else if (Time.time - animationTime > 3) SearchBone();
     }
 
     private void StateShowGrove(bool first = false)
@@ -805,6 +811,49 @@ public class DogParkDalmation : MonoBehaviour
         StreamWriter writer = new StreamWriter(path, true);
         writer.WriteLine(ident + Time.time);
         writer.Close();
+    }
+
+    private void SearchBone()
+    {
+        //Dont need to do it the entirety of it
+        Transform closest = null;
+        if (Time.time - boneTimer > 1.5f)
+        {
+            //check closest digspot
+            
+            float distance = Mathf.Infinity;
+            Vector3 position = transform.position;
+            foreach (Transform go in bones)
+            {
+                Vector3 diff = go.position - position;
+                float curDistance = diff.sqrMagnitude;
+                if (curDistance < distance)
+                {
+                    closest = go;
+                    distance = curDistance;
+                }
+            }
+            boneTimer = Time.time;
+
+            //See if dog will fetch it
+            int chancePlay = Random.Range(0, 100);
+            if (chancePlay <= ((playfulness * bond) * 45)) chanceBone = true;
+            else chanceBone = false;
+            
+
+        }
+        if (chanceBone && Vector3.Distance(closest.position, transform.position) < 2)
+        {
+            sphere = closest;
+            state = "chase";
+            WriteString("Bone Toy Found: ");
+            numInteractions += 1;
+            bond += 0.05f;
+            StateChase(true);
+        }
+       
+
+
     }
 }
 
