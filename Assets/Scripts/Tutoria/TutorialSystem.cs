@@ -5,6 +5,8 @@ using UnityEngine;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.AI;
+using UnityStandardAssets.Characters.ThirdPerson;
 
 public class TutorialSystem : MonoBehaviour
 {
@@ -16,6 +18,7 @@ public class TutorialSystem : MonoBehaviour
     public SteamVR_Action_Boolean rightSnap;
     public SteamVR_Action_Boolean grab;
     public SteamVR_Action_Boolean teleport;
+    public SteamVR_Action_Boolean gesture;
     public Target target;
     public GameObject teleObj;
     public GameObject targetObj;
@@ -26,6 +29,7 @@ public class TutorialSystem : MonoBehaviour
     public GameObject levelLoader;
     public bool stroked;
     public GameObject strokeSphere;
+    public GameObject gestureObjs;
     
 
     [Header("Voice Lines")]
@@ -41,6 +45,7 @@ public class TutorialSystem : MonoBehaviour
     private Coroutine hintCoroutine;
     private Coroutine LCoroutine;
     private Coroutine RCoroutine;
+    private bool gestureDone;
 
 
 
@@ -59,6 +64,7 @@ public class TutorialSystem : MonoBehaviour
         level = PlayerPrefs.GetInt("Level");
         leftHand =  GameObject.FindWithTag("Left Hand").GetComponent<Hand>();
         rightHand = GameObject.FindWithTag("Right Hand").GetComponent<Hand>();
+        gestureDone = false;
     }
 
     // Update is called once per frame
@@ -90,7 +96,7 @@ public class TutorialSystem : MonoBehaviour
                 stagePart1 = true;
                 tutText.text = "Click The Side of Your Right D-Pad to Snap to that Direction";
                 PlayAudioClip(vlSource, snapA);
-                ShowHint(rightHand,rightSnap,"Click Right Side to Snap Right", ref RCoroutine);
+                ShowHint(rightHand, rightSnap, "Click Right Side to Snap Right", ref RCoroutine);
                 ShowHint(rightHand, leftSnap, "Click Left Side to Snap Left", ref LCoroutine);
                 snaps[0] = false;
                 snaps[1] = false;
@@ -137,7 +143,7 @@ public class TutorialSystem : MonoBehaviour
                     timer = 0;
                 }
             }
-            else if (stagePart2 && stagePart3 ==false)
+            else if (stagePart2 && stagePart3 == false)
             {
                 tutText.text = "Throw a Ball or Cube at the Bricks in Front of You";
                 PlayAudioClip(vlSource, throwA);
@@ -151,7 +157,7 @@ public class TutorialSystem : MonoBehaviour
                 {
                     stage = 3;
                     timer = 0;
-                    stagePart1 = false; 
+                    stagePart1 = false;
                     stagePart2 = false;
                     stagePart3 = false;
                     targetObj.SetActive(false);
@@ -190,7 +196,7 @@ public class TutorialSystem : MonoBehaviour
         }
         //TODO: Stroke Sphere
         else if (stage == 4)
-        {   
+        {
             if (level == 1)
             {
                 stage = 6;
@@ -204,13 +210,14 @@ public class TutorialSystem : MonoBehaviour
                 stagePart1 = true;
                 stroked = false;
             }
-            else if (stagePart1 == true && stagePart2 == false) {
+            else if (stagePart1 == true && stagePart2 == false)
+            {
                 if (stroked)
                 {
                     stagePart2 = true;
                     timer = 0;
                 }
-                
+
             }
             else if (stagePart1 && stagePart2 && timer > 2)
             {
@@ -220,12 +227,41 @@ public class TutorialSystem : MonoBehaviour
                 timer = 0;
                 PlayAudioClip(audioSource, tutCompleteSound);
             }
-                
+
         }
         //TODO: Gesture Recognition
         else if (stage == 5)
         {
-            stage = 6;
+            if (stagePart1 == false && timer > 2)
+            {
+                gestureObjs.SetActive(true);
+                strokeSphere.transform.position = new Vector3(-3.01300001f, 0.5f, 2.86999989f);
+                tutText.text = "Above Your Head - Hold the Grip Button to Start and Release to Complete the Gesture Indicated";
+                PlayAudioClip(vlSource, gestureA);
+                stagePart1 = true;
+                stroked = false;
+                ShowHint(rightHand, gesture, "Hold to Start, Release to Complete Gesture", ref hintCoroutine);
+                gestureDone = false;
+                stagePart1 = true;
+            }
+            else if (stagePart1 && !stagePart2)
+            {
+                if (gestureDone)
+                { 
+                    strokeSphere.GetComponent<CapsuleCollider>().enabled = true;
+                    strokeSphere.GetComponent<Animator>().enabled = true;
+                    strokeSphere.GetComponent<ThirdPersonCharacter>().enabled = true;
+                    strokeSphere.GetComponent<AICharacterControl>().enabled = true;
+                    strokeSphere.GetComponent<NavMeshAgent>().enabled = true;
+
+                    stagePart1 = false;
+                    stagePart2 = false;
+                    timer = 0;
+                    PlayAudioClip(audioSource, tutCompleteSound);
+                    stage = 6;
+                }
+            }
+            
         }
         //Choose Hands
         else if (stage == 6)
@@ -253,7 +289,7 @@ public class TutorialSystem : MonoBehaviour
                     PlayerPrefs.SetInt("Level", level);
                     levelLoader.SetActive(true);
                     //SteamVR_Fade.Start(Color.clear, 0);
-                   // SteamVR_Fade.Start(Color.black, 1);
+                    // SteamVR_Fade.Start(Color.black, 1);
                     //StartCoroutine(LoadYourAsyncScene());
                 }
             }
@@ -345,6 +381,11 @@ public class TutorialSystem : MonoBehaviour
     {
         source.clip = clip;
         source.Play();
+    }
+
+    public void DetectGesture()
+    {
+        gestureDone = true;
     }
 
 }

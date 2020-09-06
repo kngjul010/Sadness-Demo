@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 using UnityStandardAssets.Characters.ThirdPerson;
+using Valve.VR.InteractionSystem;
+using Valve.VR;
 
 public class DogParkDalmation : MonoBehaviour
 {
@@ -33,6 +35,7 @@ public class DogParkDalmation : MonoBehaviour
     public int interactionStage;
     public GameObject levelLoader;
     public Transform groveLocation;
+    public GameObject butterflies;
     public int numInteractions;
 
     [Header("Emotion Values")]
@@ -50,12 +53,13 @@ public class DogParkDalmation : MonoBehaviour
                                          new Vector3(84.8392334f, 198.522034f, 289.72522f),         //Bone
                                          new Vector3(48.8043404f, 359.46994f, 269.295593f)};        //Teddy
     private bool strokeTouch;
-    private string state;
+    public string state;
     private bool play;
     private bool longExpl, ignoreThrow, findGrove;
     private bool disobedient;
     private bool groveFound;
     private bool deathStart;
+    private bool deathMove;
     
 
 
@@ -213,6 +217,7 @@ public class DogParkDalmation : MonoBehaviour
         else if (play && Time.time - animationTime > 4)
         {
             state = "return";
+            play = false;
             StateReturn(true);
         }
         //Stroke animation
@@ -231,7 +236,7 @@ public class DogParkDalmation : MonoBehaviour
                     writer.WriteLine("Start Stroking: " + Time.time);
                     writer.Close();
                     numInteractions += 1;
-                    bond += 0.5f;
+                    bond += 0.05f;
                 }
                 else
                 {
@@ -245,7 +250,7 @@ public class DogParkDalmation : MonoBehaviour
             }
         }
         //Other Idle Animations
-        else if (Time.time - animationTime > 7)
+        else if (Time.time - animationTime > 6)
         {
 
             if (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
@@ -257,6 +262,7 @@ public class DogParkDalmation : MonoBehaviour
                 {
                     play = true;
                     anim.SetInteger("State", 5);
+                    charController.SetTarget(null);
                 }
                 //chance to explore
                 else if (chancePlay2 <= inquisitive * 30)
@@ -391,24 +397,72 @@ public class DogParkDalmation : MonoBehaviour
             StartCoroutine(BarkWithDelay(0, 1));
             StartCoroutine(BarkWithDelay(1.7f, 2));
             string path = "Times.txt";
-
             StreamWriter writer = new StreamWriter(path, true);
             writer.WriteLine("Crash: " + Time.time);
-            writer.WriteLine("Final Bond Value: " + bond);
-            writer.WriteLine("Num Interactions: " + numInteractions);
             writer.Close();
+
+            agent.speed = 0.5f;
+            anim.SetInteger("State", -5);
+            deathMove = false;
+
         }
-        else //fade to black after death
-        if (timeOfDeath > 1 && Time.time - timeOfDeath > 4)
+        else if (interactionStage == 2)
         {
-            lighting.intensity = 2 / (1 + ((Time.time - (timeOfDeath + 4)) * .5f));
+            if (timeOfDeath > 1 && Time.time - timeOfDeath > 4 && Time.time - timeOfDeath < 5)
+            {
+
+                SteamVR_Fade.Start(Color.clear, 0);
+                SteamVR_Fade.Start(Color.black, 1);
+                //lighting.intensity = 2 / (1 + ((Time.time - (timeOfDeath + 4)) * .5f));
+
+            }
+            if (!deathMove && timeOfDeath > 1 && Time.time - timeOfDeath > 5)
+            {
+                transform.position = (new Vector3(8.19498634f, 50.1063004f, -134.298294f));
+                GameObject.FindGameObjectWithTag("Player").transform.position = (new Vector3(8.19498634f, 50.1063004f, -135.298294f));
+                SteamVR_Fade.Start(Color.clear, 1);
+                deathMove = true;
+            }
+            //load next scene
+            if (timeOfDeath > 1 && Time.time - timeOfDeath > 10 && !loadCheck)
+            {
+                Debug.Log("NextScene");
+                levelLoader.SetActive(true);
+                loadCheck = true;
+
+                string path = "Times.txt";
+                StreamWriter writer = new StreamWriter(path, true);
+                writer.WriteLine("Crash: " + Time.time);
+                writer.WriteLine("Final Bond Value: " + bond);
+                writer.WriteLine("Num Interactions: " + numInteractions);
+                writer.Close();
+
+            }
+
         }
-        //load next scene
-        if (timeOfDeath > 1 && Time.time - timeOfDeath > 7 && !loadCheck)
+
+        else
         {
-            Debug.Log("NextScene");
-            levelLoader.SetActive(true);
-            loadCheck = true;
+            //fade to black after death
+            if (timeOfDeath > 1 && Time.time - timeOfDeath > 4)
+            {
+                lighting.intensity = 2 / (1 + ((Time.time - (timeOfDeath + 4)) * .5f));
+            }
+            //load next scene
+            if (timeOfDeath > 1 && Time.time - timeOfDeath > 7 && !loadCheck)
+            {
+                Debug.Log("NextScene");
+                levelLoader.SetActive(true);
+                loadCheck = true;
+
+                string path = "Times.txt";
+                StreamWriter writer = new StreamWriter(path, true);
+                writer.WriteLine("Crash: " + Time.time);
+                writer.WriteLine("Final Bond Value: " + bond);
+                writer.WriteLine("Num Interactions: " + numInteractions);
+                writer.Close();
+
+            }
         }
     }
 
@@ -504,10 +558,11 @@ public class DogParkDalmation : MonoBehaviour
             charController.SetTarget(null);
             animationTime = Time.time;
         }
-        else if (Time.time - animationTime > 8)
+        else if (Time.time - animationTime > 4)
         {
             if (interactionStage > 0 && !teddyBear.activeSelf)
             {
+                teddyBear.transform.position = transform.position;
                 teddyBear.SetActive(true);
                 sphere = teddyBear.transform;
                 charController.SetTarget(sphere);
@@ -556,7 +611,7 @@ public class DogParkDalmation : MonoBehaviour
             }
             else ignoreThrow = false;
             chancePlay = Random.Range(0, 100);
-            if (chancePlay <= 35 * bond && !groveFound) findGrove = true;
+            if (interactionStage == 2 && chancePlay <= 35 * bond && !groveFound) findGrove = true;
             else findGrove = false;
 
             anim.SetInteger("State", 4);
@@ -629,6 +684,7 @@ public class DogParkDalmation : MonoBehaviour
             anim.SetInteger("State", 0); //Transition to running fast
             charController.SetTarget(groveLocation);
             agent.speed = 3.3f;
+            butterflies.SetActive(true);
 
             //Start Barking
             StartCoroutine(BarkWithDelay(.7f, 0));
@@ -642,7 +698,7 @@ public class DogParkDalmation : MonoBehaviour
         }
         else if (Vector3.Distance(idlePoint.position, transform.position) > 15)
         {
-            anim.SetInteger("State", 1);
+            anim.SetInteger("State", -1);
             charController.SetTarget(transform);
             agent.speed = 1f;
 
@@ -654,7 +710,7 @@ public class DogParkDalmation : MonoBehaviour
             agent.speed = 3.3f;
 
         }
-        else if (Vector3.Distance(idlePoint.position, transform.position) < 2)
+        else if (Vector3.Distance(groveLocation.position, transform.position) < 2)
         {
             string path = "Times.txt";
 
@@ -662,8 +718,8 @@ public class DogParkDalmation : MonoBehaviour
             writer.WriteLine("Grove Found: " + Time.time);
             writer.Close();
             numInteractions += 1;
-            bond += 1.2f;
-
+            bond += 0.5f;
+            anim.SetInteger("State", -1);
             state = "idle";
             StateIdle(true);
         }
@@ -672,6 +728,11 @@ public class DogParkDalmation : MonoBehaviour
     private bool CheckThrow()
     {
         return (charController.target != sphere && sphere.GetComponent<ObjectThrown>().thrown);
+    }
+
+    public void DetectGesture()
+    {
+
     }
 }
 

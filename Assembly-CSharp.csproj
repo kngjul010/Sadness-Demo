@@ -56,6 +56,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Legacy\ThrowArm_selector.cs" />
+    <Compile Include="Assets\Wao3DStudio\Models\Butterfly Effect 2\Scripts\GlobalFlock.cs" />
+    <Compile Include="Assets\AirSig\Script\Demo\BasedGestureHandle.cs" />
     <Compile Include="Assets\Scripts\Interaction Controls\ParkInteractionControl.cs" />
     <Compile Include="Assets\Scripts\Interaction Controls\InteractionLevel.cs" />
     <Compile Include="Assets\Scripts\Navigation\Rotation.cs" />
@@ -63,6 +65,8 @@
     <Compile Include="Assets\Vet_Asset\Scripts\CharacterCustomize.cs" />
     <Compile Include="Assets\Scripts\Navigation\BasicTeleport.cs" />
     <Compile Include="Assets\Scripts\Puppy_Controller.cs" />
+    <Compile Include="Assets\AirSig\Script\AirSigManager.cs" />
+    <Compile Include="Assets\AirSig\Script\Demo\DeveloperDefined.cs" />
     <Compile Include="Assets\Scripts\ObjectThrown.cs" />
     <Compile Include="Assets\Vet_Asset\Scripts\BlinkController.cs" />
     <Compile Include="Assets\Scripts\Tutoria\TutorialSystem.cs" />
@@ -70,20 +74,27 @@
     <Compile Include="Assets\Scripts\SoundOnCollision.cs" />
     <Compile Include="Assets\Scripts\Interaction Controls\StoreInteractionControl.cs" />
     <Compile Include="Assets\Scripts\VetObjGrabbed.cs" />
+    <Compile Include="Assets\Wao3DStudio\Models\Butterfly Effect 2\Scripts\Flock.cs" />
     <Compile Include="Assets\Scripts\Tutoria\HandAction.cs" />
     <Compile Include="Assets\Scripts\Navigation\ControllerGrab.cs" />
     <Compile Include="Assets\Scripts\VetController.cs" />
     <Compile Include="Assets\Scripts\Legacy\BallBehaviour.cs" />
     <Compile Include="Assets\Scripts\Tutoria\HandAccept.cs" />
     <Compile Include="Assets\Scripts\Tutoria\Target.cs" />
+    <Compile Include="Assets\AirSig\Script\Demo\PlayerGesture.cs" />
     <Compile Include="Assets\Scripts\Interaction Controls\VetInteractionControl.cs" />
+    <Compile Include="Assets\VR Hands FP Arms\Scripts\HandAnimatorManager.cs" />
     <Compile Include="Assets\Vet_Asset\Scripts\MaterialsList.cs" />
     <Compile Include="Assets\Scripts\Carspawn.cs" />
     <Compile Include="Assets\Scripts\Legacy\HandSelector.cs" />
+    <Compile Include="Assets\AirSig\Script\Demo\SmartGesture.cs" />
     <Compile Include="Assets\Vet_Asset\Scripts\InstantiateCode.cs" />
+    <Compile Include="Assets\VR Hands FP Arms\Scripts\HandAnimatorManagerVR.cs" />
+    <Compile Include="Assets\AirSig\Script\Demo\PlayerSignature.cs" />
     <Compile Include="Assets\Scripts\Navigation\FadeManager.cs" />
     <Compile Include="Assets\Scripts\CarMovement.cs" />
-    <Compile Include="Assets\tutStoke.cs" />
+    <Compile Include="Assets\Scripts\GestureScript.cs" />
+    <Compile Include="Assets\Scripts\Tutoria\tutStoke.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Materials\Ground Materials\Documentation.txt" />
@@ -91,6 +102,10 @@
      <None Include="Assets\Dog Dalmatian II\Animation\Dalmatian_SV_IP_MX.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\Wao3DStudio\Models\Butterfly Effect 2\Shaders\Butterfly Effect Body.shader" />
+     <None Include="Assets\AirSig\Plugins\AirsigViveBridgeDll.dll" />
+     <None Include="Assets\Wao3DStudio\Models\Butterfly Effect 2\Shaders\Butterfly_Effect_MultiColor.shader" />
+     <None Include="Assets\VR Hands FP Arms\Shaders\Skin Shader Dynamic.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
@@ -98,11 +113,14 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\Wao3DStudio\Models\Butterfly Effect 2\Shaders\Butterfly Effect Wings.shader" />
      <None Include="Assets\Wispy Sky\ReadMe.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\Dog Dalmatian II\Models\Dalmatian_FV_RM_MX.txt" />
+     <None Include="Assets\AirSig\Plugins\sqlite3.dll" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\VR Hands FP Arms\Shaders\Skin Shader.shader" />
      <None Include="Assets\Dog Dalmatian II\Models\Dalmatian_FV_IP_MX.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />

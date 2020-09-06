@@ -515,7 +515,7 @@ namespace Valve.VR
         public Vector3 lastAngularVelocity { get; protected set; }
 
 
-        protected InputPoseActionData_t poseActionData = new InputPoseActionData_t();
+        public InputPoseActionData_t poseActionData = new InputPoseActionData_t();
 
         protected InputPoseActionData_t lastPoseActionData = new InputPoseActionData_t();
 

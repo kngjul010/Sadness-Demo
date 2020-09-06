@@ -11,6 +11,7 @@ public class ParkInteractionControl : MonoBehaviour
     public SkinnedMeshRenderer dogMesh;
     public Material dogMaterial;
     public GameObject[] interactableObjects;
+    public GameObject teleportObj;
 
     private int level;
     private int dogChosen;
@@ -26,8 +27,8 @@ public class ParkInteractionControl : MonoBehaviour
         level = PlayerPrefs.GetInt("Level");
         dogChosen = PlayerPrefs.GetInt("Dog");
         dogChosen = 1; //test Line
-        level = 1; //test Line
-
+        level = 2; //test Line
+        dogScript = dog.GetComponent<DogParkDalmation>();
         //Happy & Inquisitive
         if (dogChosen == 0)
         {
@@ -55,7 +56,7 @@ public class ParkInteractionControl : MonoBehaviour
         player.transform.rotation = Quaternion.Euler(0, 0, 0);
         leftHand = GameObject.FindGameObjectWithTag("Left Hand").GetComponent<Hand>();
         rightHand = GameObject.FindGameObjectWithTag("Right Hand").GetComponent<Hand>();
-        dogScript = dog.GetComponent<DogParkDalmation>();
+        
         //Make it easy to pick items from the floor
         leftHand.fingerJointHoverRadius = 0.5f;
         leftHand.hoverSphereRadius = 0.4f;
@@ -67,7 +68,7 @@ public class ParkInteractionControl : MonoBehaviour
             interactableObjects[0].SetActive(false);
             interactableObjects[1].SetActive(false);
             interactableObjects[2].SetActive(false);
-
+            teleportObj.SetActive(false);
             dogScript.interactionStage = 0;
         }
         else if (level == 1){
@@ -90,6 +91,7 @@ public class ParkInteractionControl : MonoBehaviour
 
             StreamWriter writer = new StreamWriter(path, true);
             writer.WriteLine("Director Incrased Bond: " + Time.time);
+            dogScript.numInteractions = 10;
         }
     }
 
