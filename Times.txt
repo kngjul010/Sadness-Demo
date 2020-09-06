@@ -34,3 +34,7 @@ Pet Store start: 0
 == Vet Start: 0
 Teddy Used: 0
 Vet Speech: 21,97328
+====== Level Chosen: 2 ======
+Tutorial Start: 6,658218
+====== Level Chosen: 2 ======
+Tutorial Start: 8,296474

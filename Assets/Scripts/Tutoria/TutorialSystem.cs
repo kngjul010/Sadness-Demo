@@ -249,7 +249,8 @@ public class TutorialSystem : MonoBehaviour
             else if (stagePart1 && !stagePart2)
             {
                 if (gestureDone)
-                { 
+                {
+                    CancelHint(rightHand, gesture, ref hintCoroutine);
                     strokeSphere.GetComponent<CapsuleCollider>().enabled = true;
                     strokeSphere.GetComponent<Animator>().enabled = true;
                     strokeSphere.GetComponent<ThirdPersonCharacter>().enabled = true;
