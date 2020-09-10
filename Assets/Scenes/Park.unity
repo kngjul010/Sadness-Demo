@@ -28923,6 +28923,7 @@ MonoBehaviour:
   groveLocation: {fileID: 1056007576}
   butterflies: {fileID: 181464319}
   numInteractions: 0
+  bones: {fileID: 0}
   bond: 1
   inquisitive: 1
   obedience: 1
@@ -43144,7 +43145,7 @@ MonoBehaviour:
   - {fileID: 1927568229}
   - {fileID: 833845744}
   teleportObj: {fileID: 246063398}
-  gestureObjs: {fileID: 0}
+  gestureObjs: {fileID: 390402067}
 --- !u!1001 &1065198802
 PrefabInstance:
   m_ObjectHideFlags: 0

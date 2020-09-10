@@ -44,7 +44,7 @@ namespace Valve.VR.InteractionSystem.Sample
                 }
             }
         }
-
+        /*
         public void SetRenderModel(RenderModelChangerUI prefabs)
         {
             for (int handIndex = 0; handIndex < Player.instance.hands.Length; handIndex++)
@@ -59,7 +59,7 @@ namespace Valve.VR.InteractionSystem.Sample
                 }
             }
         }
-
+        */
         public void HideController()
         {
             for (int handIndex = 0; handIndex < Player.instance.hands.Length; handIndex++)

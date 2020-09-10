@@ -1,40 +1,36 @@
-Start Explore: 21,03746
-Start Grove: 26,04778
-Start Explore: 7,005578
-Start Explore: 49,09223
-Start Grove: 54,1124
-Start Explore: 21,03094
-Start Grove: 26,05872
-Start Explore: 7,002841
-Start Grove: 12,00976
-Grove Found: 77,37981
-Start Explore: 98,41108
-Puppy Running away: 130,0071
-Start Explore: 21,02492
-Fetch Teddy: 32,15124
-Start Explore: 42,88428
-Start Grove: 47,88778
-Start Explore: 41,26004
-Fetch Teddy: 48,60876
-Start Explore: 97,33523
-Fetch Teddy: 109,2412
-Start Explore: 121,107
-Start Grove: 126,1164
-Puppy Running away: 130,0119
-Start Chase Ball: 8,549051
-Start Chase Ball: 41,20462
-Start Explore: 6,002877
-Fetch Teddy: 18,03967
-Start Explore: 29,80642
-Start Explore: 69,87752
-Puppy Running away: 130,029
-Pet Store start: 0
-Pet Store start: 0
-Pet Store start: 0
-== Vet Start: 0
-Teddy Used: 0
-Vet Speech: 21,97328
+====== Level Chosen: 1 ======
+Tutorial Start: 11,84972
 ====== Level Chosen: 2 ======
-Tutorial Start: 6,658218
+Tutorial Start: 11,11916
 ====== Level Chosen: 2 ======
-Tutorial Start: 8,296474
+Tutorial Start: 13,89095
+====== Level Chosen: 2 ======
+Tutorial Start: 10,45924
+====== Level Chosen: 2 ======
+Tutorial Start: 4,658558
+====== Level Chosen: 1 ======
+Tutorial Start: 18,06399
+====== Level Chosen: 2 ======
+Tutorial Start: 43,37209
+====== Level Chosen: 1 ======
+Tutorial Start: 14,5623
+====== Level Chosen: 0 ======
+Tutorial Start: 85,10331
+====== Level Chosen: 1 ======
+Tutorial Start: 202,5676
+====== Level Chosen: 1 ======
+Tutorial Start: 119,268
+====== Level Chosen: 1 ======
+Tutorial Start: 64,43222
+====== Level Chosen: 1 ======
+Tutorial Start: 19,6839
+====== Level Chosen: 1 ======
+Tutorial Start: 11,9123
+====== Level Chosen: 1 ======
+Tutorial Start: 20,57061
+====== Level Chosen: 1 ======
+Tutorial Start: 16,42491
+====== Level Chosen: 2 ======
+Tutorial Start: 13,00754
+====== Level Chosen: 1 ======
+Tutorial Start: 12,84336

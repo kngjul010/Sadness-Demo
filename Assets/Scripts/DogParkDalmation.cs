@@ -37,7 +37,7 @@ public class DogParkDalmation : MonoBehaviour
     public Transform groveLocation;
     public GameObject butterflies;
     public int numInteractions;
-    public Transform bones;
+    public Transform [] bones;
 
     [Header("Emotion Values")]
     public float bond;
@@ -69,6 +69,7 @@ public class DogParkDalmation : MonoBehaviour
     private StreamWriter writer;
     private float boneTimer;
     private bool chanceBone;
+    private bool deadStroke;
 
 
     // Use this for initialization
@@ -109,6 +110,7 @@ public class DogParkDalmation : MonoBehaviour
         idlePoint = approachPoint;
         boneTimer = Time.time;
         chanceBone = false;
+        deadStroke = true;
     }
     //Used to play the dog bark sounds at specific times
     IEnumerator BarkWithDelay(float time, int clip) 
@@ -254,10 +256,7 @@ public class DogParkDalmation : MonoBehaviour
                 {
                     anim.SetInteger("State", 1);
                     animationTime = Time.time;
-                    //Log Stroke
-                    WriteString("Start Stroking");
-                    numInteractions += 1;
-                    bond += 0.05f;
+                    
                 }
                 else
                 {
@@ -268,6 +267,10 @@ public class DogParkDalmation : MonoBehaviour
                 anim.SetInteger("State", 6);
                 animationTime = Time.time;
                 strokeTouch = false;
+                //Log Stroke
+                WriteString("Dog Stroked");
+                numInteractions += 1;
+                bond += 0.05f;
             }
         }
         //Other Idle Animations
@@ -451,20 +454,23 @@ public class DogParkDalmation : MonoBehaviour
             }
             if (!deathMove && timeOfDeath > 1 && Time.time - timeOfDeath > 5)
             {
+                charController.SetTarget(null);
                 transform.position = (new Vector3(8.19498634f, 50.1063004f, -134.298294f));
                 GameObject.FindGameObjectWithTag("Player").transform.position = (new Vector3(8.19498634f, 50.1063004f, -135.298294f));
                 SteamVR_Fade.Start(Color.clear, 1);
                 deathMove = true;
                 WriteString("By Body: ");
+                deadStroke = false;
                 
             }
             //load next scene
             if (timeOfDeath > 1 && Time.time - timeOfDeath > 10 && !loadCheck)
             {
-                if (strokeTouch)
+                if (strokeTouch && !deadStroke)
                 {
                     WriteString("Stroked: ");
                     numInteractions += 1;
+                    deadStroke = true;
                 }
                 Debug.Log("NextScene");
                 levelLoader.SetActive(true);

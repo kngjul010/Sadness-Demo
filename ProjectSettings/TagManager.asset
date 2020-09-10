@@ -8,6 +8,10 @@ TagManager:
   - VetBall
   - Left Hand
   - Right Hand
+  - lMesh
+  - rMesh
+  - lCollider
+  - rCollider
   layers:
   - Default
   - TransparentFX

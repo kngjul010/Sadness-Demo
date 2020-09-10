@@ -9,7 +9,7 @@ public class tutStoke : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
         GameObject player = other.gameObject.transform.parent.gameObject;
-        if (player.tag == "Player")
+        if (player.tag== "Player")
         {
             tutSystem.stroked = true;
         }

@@ -61,9 +61,11 @@
     <Compile Include="Assets\Scripts\Interaction Controls\ParkInteractionControl.cs" />
     <Compile Include="Assets\Scripts\Interaction Controls\InteractionLevel.cs" />
     <Compile Include="Assets\Scripts\Navigation\Rotation.cs" />
+    <Compile Include="Assets\Scripts\GestureScript.cs" />
     <Compile Include="Assets\Scripts\DogParkDalmation.cs" />
     <Compile Include="Assets\Vet_Asset\Scripts\CharacterCustomize.cs" />
     <Compile Include="Assets\Scripts\Navigation\BasicTeleport.cs" />
+    <Compile Include="Assets\Scripts\Tutoria\tutStoke.cs" />
     <Compile Include="Assets\Scripts\Puppy_Controller.cs" />
     <Compile Include="Assets\AirSig\Script\AirSigManager.cs" />
     <Compile Include="Assets\AirSig\Script\Demo\DeveloperDefined.cs" />
@@ -73,9 +75,11 @@
     <Compile Include="Assets\Scripts\DogDoor.cs" />
     <Compile Include="Assets\Scripts\SoundOnCollision.cs" />
     <Compile Include="Assets\Scripts\Interaction Controls\StoreInteractionControl.cs" />
+    <Compile Include="Assets\Scripts\HandCollider.cs" />
     <Compile Include="Assets\Scripts\VetObjGrabbed.cs" />
     <Compile Include="Assets\Wao3DStudio\Models\Butterfly Effect 2\Scripts\Flock.cs" />
     <Compile Include="Assets\Scripts\Tutoria\HandAction.cs" />
+    <Compile Include="Assets\Scripts\VRHandScript.cs" />
     <Compile Include="Assets\Scripts\Navigation\ControllerGrab.cs" />
     <Compile Include="Assets\Scripts\VetController.cs" />
     <Compile Include="Assets\Scripts\Legacy\BallBehaviour.cs" />
@@ -93,8 +97,10 @@
     <Compile Include="Assets\AirSig\Script\Demo\PlayerSignature.cs" />
     <Compile Include="Assets\Scripts\Navigation\FadeManager.cs" />
     <Compile Include="Assets\Scripts\CarMovement.cs" />
-    <Compile Include="Assets\Scripts\GestureScript.cs" />
-    <Compile Include="Assets\Scripts\Tutoria\tutStoke.cs" />
+    <Compile Include="Assets\Scripts\HandMoveToCollider.cs" />
+    <Compile Include="Assets\Scripts\HandModels.cs" />
+    <Compile Include="Assets\Scripts\Tutoria\RenderModelChangerUI.cs" />
+    <Compile Include="Assets\Scripts\Tutoria\ChooseHand.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Materials\Ground Materials\Documentation.txt" />

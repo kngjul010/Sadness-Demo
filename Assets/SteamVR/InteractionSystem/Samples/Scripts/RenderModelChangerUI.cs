@@ -2,13 +2,17 @@
 
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using Valve.VR.InteractionSystem;
+using Valve.VR.InteractionSystem.Sample;
 
-namespace Valve.VR.InteractionSystem.Sample
-{
     public class RenderModelChangerUI : UIElement
     {
-        public GameObject leftPrefab;
-        public GameObject rightPrefab;
+        public GameObject leftHand;
+        public GameObject rightHand;
+        public Material materialMale;
+        public Material materialFemale;
+        public bool isMale;
 
         protected SkeletonUIOptions ui;
 
@@ -17,6 +21,9 @@ namespace Valve.VR.InteractionSystem.Sample
             base.Awake();
 
             ui = this.GetComponentInParent<SkeletonUIOptions>();
+            leftHand = GameObject.FindGameObjectWithTag("lMesh");
+            rightHand = GameObject.FindGameObjectWithTag("rMesh");
+            //isMale = GameObject.FindGameObjectWithTag("Player").GetComponent<>();
         }
 
         protected override void OnButtonClick()
@@ -25,8 +32,9 @@ namespace Valve.VR.InteractionSystem.Sample
 
             if (ui != null)
             {
-                ui.SetRenderModel(this);
+                //ui.SetRenderModel(this);
+                //leftHand.GetComponent<SkinnedMeshRenderer>().material = material;
+                //rightHand.GetComponent<SkinnedMeshRenderer>().material = material;
             }
         }
     }
-}

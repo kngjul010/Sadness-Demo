@@ -55,28 +55,8 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\Editor\MixerSnapshotPropertyDrawer.cs" />
-    <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\Editor\AudioImportPostProcessor.cs" />
-    <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\Editor\OSPPropsPropertyDrawer.cs" />
-    <Compile Include="Assets\Oculus\Spatializer\Editor\ONSPPropagationMaterialEditor.cs" />
-    <Compile Include="Assets\Oculus\Platform\Editor\OculusPlatformSettingsEditor.cs" />
-    <Compile Include="Assets\Oculus\Platform\Editor\OculusPluginUpdaterStub.cs" />
-    <Compile Include="Assets\Oculus\LipSync\Editor\OVRNamedArrayPropertyDrawer.cs" />
-    <Compile Include="Assets\Oculus\Platform\Editor\GUIHelper.cs" />
-    <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\Editor\MinMaxPropertyDrawer.cs" />
-    <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\Editor\AudioManagerInspector.cs" />
-    <Compile Include="Assets\Oculus\AudioManager\Scripts\Utils\Editor\DrawerInspectorNote.cs" />
-    <Compile Include="Assets\Oculus\LipSync\Editor\OVRLipSyncTool.cs" />
-    <Compile Include="Assets\Oculus\Spatializer\Editor\ONSPAudioSourceEditor.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\Editor\TeleportTransitionWarpInspector.cs" />
-    <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\Editor\SoundFXPropertyDrawer.cs" />
-    <Compile Include="Assets\Oculus\Spatializer\Editor\ONSPReflectionCustomGUI.cs" />
-    <Compile Include="Assets\Oculus\Spatializer\Editor\ONSPPropagationGeometryEditor.cs" />
-    <Compile Include="Assets\Oculus\Avatar\Editor\AvatarMaterialEditor.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Editor\OculusSampleFrameworkUtil.cs" />
-    <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\Editor\SoundFXRefPropertyDrawer.cs" />
-    <Compile Include="Assets\Oculus\Platform\Editor\OculusStandalonePlatformResponse.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Editor\BuildAssetPackages.cs" />
+    <Compile Include="Assets\NewtonVR\Editor\NVRPlayerEditor.cs" />
+    <Compile Include="Assets\NewtonVR\CollisionSoundFramework\Editor\NVRCollisionSoundControllerEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -738,18 +718,6 @@
     <ProjectReference Include="SteamVR_Actions.csproj">
       <Project>{8DB7AB7C-921C-EF69-A00D-E7F36D30AE0A}</Project>
       <Name>SteamVR_Actions</Name>
-    </ProjectReference>
-    <ProjectReference Include="Oculus.VR.Editor.csproj">
-      <Project>{825880CD-98B6-7C64-B918-820F5665B514}</Project>
-      <Name>Oculus.VR.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Oculus.VR.Scripts.Editor.csproj">
-      <Project>{BB645A4C-D92B-5FFA-0CC9-555E34284E6B}</Project>
-      <Name>Oculus.VR.Scripts.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Oculus.VR.csproj">
-      <Project>{482ABFD3-B777-D26A-E48B-B6119D42A927}</Project>
-      <Name>Oculus.VR</Name>
     </ProjectReference>
     <ProjectReference Include="SteamVR_Input_Editor.csproj">
       <Project>{92F0C9B0-C9D3-DEBE-457E-81D87E6C54ED}</Project>

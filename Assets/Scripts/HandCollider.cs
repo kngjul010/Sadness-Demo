@@ -9,9 +9,9 @@ namespace Valve.VR.InteractionSystem
         private new Rigidbody rigidbody;
         [HideInInspector]
         public HandPhysics hand;
-
+        
         public LayerMask collisionMask;
-
+        public Hand handReal;
         Collider[] colliders;
 
 
@@ -106,7 +106,9 @@ namespace Valve.VR.InteractionSystem
 
             SetPhysicMaterial(physicMaterial_lowfriction);
 
-            scale = SteamVR_Utils.GetLossyScale(transform);
+            scale = SteamVR_Utils.GetLossyScale(handReal.transform);
+
+            //this.tag = "rCollider";
         }
 
         void SetPhysicMaterial(PhysicMaterial mat)
@@ -276,7 +278,7 @@ namespace Valve.VR.InteractionSystem
                 float intensity = Util.RemapNumber(energy, minCollisionEnergy, maxCollisionEnergy, 0.3f, 1.0f);
                 float length = Util.RemapNumber(energy, minCollisionEnergy, maxCollisionEnergy, 0.0f, 0.06f);
 
-                hand.hand.TriggerHapticPulse(length, 100, intensity);
+                handReal.TriggerHapticPulse(length, 100, intensity);
             }
         }
 

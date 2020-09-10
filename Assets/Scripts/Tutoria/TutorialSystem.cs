@@ -8,11 +8,12 @@ using UnityEngine.SceneManagement;
 using UnityEngine.AI;
 using UnityStandardAssets.Characters.ThirdPerson;
 using System.IO;
+using UnityEngine.UI;
 
 public class TutorialSystem : MonoBehaviour
 {
     public int level;
-    public TextMeshPro tutText;
+    public Text tutText;
     public Hand leftHand;
     public Hand rightHand;
     public SteamVR_Action_Boolean leftSnap;

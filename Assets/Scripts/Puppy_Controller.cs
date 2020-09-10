@@ -89,7 +89,7 @@ public class Puppy_Controller : MonoBehaviour
     void Update()
     {
          //Stroke animation
-        if (strokeTouch)
+        if (strokeTouch && interactionStage == 2)
         {
             
             if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Stroking"))
@@ -97,10 +97,7 @@ public class Puppy_Controller : MonoBehaviour
 
                 anim.SetInteger("Next", -1);
                 animationTime = Time.time;
-                //Log Stroke
-                WriteString("Start Puppy Stroke: ");
-                numInteractions += 1;
-                bond += 0.05f;
+                
 
             }
             else if (Time.time - animationTime > 3)
@@ -108,6 +105,10 @@ public class Puppy_Controller : MonoBehaviour
                 anim.SetInteger("Next", 0);
                 animationTime = Time.time;
                 strokeTouch = false;
+                //Log Stroke
+                WriteString("Puppy Stroked: ");
+                numInteractions += 1;
+                bond += 0.05f;
             }
         }
         // State machine to govern a set of idle behaviours

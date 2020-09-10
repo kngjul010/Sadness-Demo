@@ -1,208 +1,602 @@
 fileFormatVersion: 2
 guid: 67e4d59e95ef86c4b880cd3cee18b0cb
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: amrature_vr_hand
-    100002: arm_fk
-    100004: arm_ik
-    100006: forearm_ down_deform
-    100008: forearm_fk
-    100010: forearm_ik
-    100012: forearm_ik_end
-    100014: hand_deform.001
-    100016: hand_deform.002
-    100018: hand_deform.003
-    100020: hand_deform.004
-    100022: hand_deform.004_end
-    100024: hand_deform.005
-    100026: hand_deform.006
-    100028: hand_deform.007
-    100030: hand_deform.008
-    100032: hand_deform.008_end
-    100034: hand_deform.009
-    100036: hand_deform.010
-    100038: hand_deform.011
-    100040: hand_deform.012
-    100042: hand_deform.012_end
-    100044: hand_deform.013
-    100046: hand_deform.014
-    100048: hand_deform.015
-    100050: hand_deform.016
-    100052: hand_deform.016_end
-    100054: hand_deform.017
-    100056: hand_deform.018
-    100058: hand_deform.019
-    100060: hand_deform.019_end
-    100062: hand_fk
-    100064: hand_fk_end
-    100066: hand_ik
-    100068: hand_ik_end
-    100070: hand_joint
-    100072: //RootNode
-    100074: vr_male_hand
-    100076: index_bone
-    100078: index_dist
-    100080: index_dist_end
-    100082: index_inter
-    100084: index_prox
-    100086: little_bone
-    100088: little_dist
-    100090: little_dist_end
-    100092: little_inter
-    100094: little_prox
-    100096: middle_bone
-    100098: middle_dist
-    100100: middle_dist_end
-    100102: middle_inter
-    100104: middle_prox
-    100106: ring_bone
-    100108: ring_dist
-    100110: ring_dist_end
-    100112: ring_inter
-    100114: ring_prox
-    100116: thumb_dist
-    100118: thumb_dist_end
-    100120: thumb_inter
-    100122: thumb_prox
-    100124: vr_hand_armature
-    100126: forearm
-    100128: hand
-    100130: vr_hand_male_armature
-    400000: amrature_vr_hand
-    400002: arm_fk
-    400004: arm_ik
-    400006: forearm_ down_deform
-    400008: forearm_fk
-    400010: forearm_ik
-    400012: forearm_ik_end
-    400014: hand_deform.001
-    400016: hand_deform.002
-    400018: hand_deform.003
-    400020: hand_deform.004
-    400022: hand_deform.004_end
-    400024: hand_deform.005
-    400026: hand_deform.006
-    400028: hand_deform.007
-    400030: hand_deform.008
-    400032: hand_deform.008_end
-    400034: hand_deform.009
-    400036: hand_deform.010
-    400038: hand_deform.011
-    400040: hand_deform.012
-    400042: hand_deform.012_end
-    400044: hand_deform.013
-    400046: hand_deform.014
-    400048: hand_deform.015
-    400050: hand_deform.016
-    400052: hand_deform.016_end
-    400054: hand_deform.017
-    400056: hand_deform.018
-    400058: hand_deform.019
-    400060: hand_deform.019_end
-    400062: hand_fk
-    400064: hand_fk_end
-    400066: hand_ik
-    400068: hand_ik_end
-    400070: hand_joint
-    400072: vr_male_hand
-    400074: //RootNode
-    400076: index_bone
-    400078: index_dist
-    400080: index_dist_end
-    400082: index_inter
-    400084: index_prox
-    400086: little_bone
-    400088: little_dist
-    400090: little_dist_end
-    400092: little_inter
-    400094: little_prox
-    400096: middle_bone
-    400098: middle_dist
-    400100: middle_dist_end
-    400102: middle_inter
-    400104: middle_prox
-    400106: ring_bone
-    400108: ring_dist
-    400110: ring_dist_end
-    400112: ring_inter
-    400114: ring_prox
-    400116: thumb_dist
-    400118: thumb_dist_end
-    400120: thumb_inter
-    400122: thumb_prox
-    400124: vr_hand_armature
-    400126: forearm
-    400128: hand
-    400130: vr_hand_male_armature
-    4300000: vr_male_hand
-    7400000: amrature_vr_hand|vr_catch_end
-    7400002: amrature_vr_hand|vr_catch_pose
-    7400004: amrature_vr_hand|vr_catch_throw
-    7400006: amrature_vr_hand|vr_fist_clenching
-    7400008: amrature_vr_hand|vr_fist_opening
-    7400010: amrature_vr_hand|vr_fist_pose
-    7400012: amrature_vr_hand|vr_neutral_pose
-    7400014: amrature_vr_hand|vr_neutral_pose_anim_01
-    7400016: amrature_vr_hand|vr_neutral_pose_anim_02
-    7400018: amrature_vr_hand|vr_skill_shot_01
-    7400020: amrature_vr_hand|vr_skill_shot_02
-    7400022: amrature_vr_hand|vr_skill_shot_02_end
-    7400024: amrature_vr_hand|vr_skill_shot_02_loop
-    7400026: amrature_vr_hand|vr_skill_shot_02_start
-    7400028: amrature_vr_hand|vr_indicating_pose
-    7400030: amrature_vr_hand|vr_pistol_holding_pose
-    7400032: amrature_vr_hand|vr_pistol_shoot
-    7400034: amrature_vr_hand|vr_sword_holding_pose
-    7400036: amrature_vr_hand|vr_catch
-    7400038: vr_hand_armature|vr_catch
-    7400040: vr_hand_armature|vr_catch_end
-    7400042: vr_hand_armature|vr_catch_pose
-    7400044: vr_hand_armature|vr_catch_throw
-    7400046: vr_hand_armature|vr_fist_clenching
-    7400048: vr_hand_armature|vr_fist_opening
-    7400050: vr_hand_armature|vr_fist_pose
-    7400052: vr_hand_armature|vr_indicating_pose
-    7400054: vr_hand_armature|vr_neutral_pose
-    7400056: vr_hand_armature|vr_neutral_pose_anim_01
-    7400058: vr_hand_armature|vr_neutral_pose_anim_02
-    7400060: vr_hand_armature|vr_pistol_holding_pose
-    7400062: vr_hand_armature|vr_pistol_shoot
-    7400064: vr_hand_armature|vr_skill_shot_01
-    7400066: vr_hand_armature|vr_skill_shot_02
-    7400068: vr_hand_armature|vr_skill_shot_02_end
-    7400070: vr_hand_armature|vr_skill_shot_02_loop
-    7400072: vr_hand_armature|vr_skill_shot_02_start
-    7400074: vr_hand_armature|vr_sword_holding_pose
-    7400076: vr_hand_armature|vr_catch_start
-    7400078: vr_hand_male_armature|vr_fist_pose
-    7400080: vr_hand_male_armature|vr_neutral_pose
-    7400082: vr_male_hand|vr_neutral_pose
-    7400084: vr_hand_male_armature|vr_skill_shot_02_loop
-    7400086: vr_hand_male_armature|vr_catch
-    7400088: vr_hand_male_armature|vr_catch_end
-    7400090: vr_hand_male_armature|vr_catch_pose
-    7400092: vr_hand_male_armature|vr_catch_start
-    7400094: vr_hand_male_armature|vr_catch_throw
-    7400096: vr_hand_male_armature|vr_fist_clenching
-    7400098: vr_hand_male_armature|vr_fist_opening
-    7400100: vr_hand_male_armature|vr_indicating_pose
-    7400102: vr_hand_male_armature|vr_neutral_pose_anim_01
-    7400104: vr_hand_male_armature|vr_neutral_pose_anim_02
-    7400106: vr_hand_male_armature|vr_pistol_holding_pose
-    7400108: vr_hand_male_armature|vr_pistol_shoot
-    7400110: vr_hand_male_armature|vr_skill_shot_01
-    7400112: vr_hand_male_armature|vr_skill_shot_02
-    7400114: vr_hand_male_armature|vr_skill_shot_02_end
-    7400116: vr_hand_male_armature|vr_skill_shot_02_start
-    7400118: vr_hand_male_armature|vr_sword_holding_pose
-    7400120: vr_hand_male_armature|vr_skill_self_shot_01
-    9500000: //RootNode
-    13700000: vr_male_hand
-    2186277476908879412: ImportLogs
+  serializedVersion: 20101
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: amrature_vr_hand
+  - first:
+      1: 100002
+    second: arm_fk
+  - first:
+      1: 100004
+    second: arm_ik
+  - first:
+      1: 100006
+    second: forearm_ down_deform
+  - first:
+      1: 100008
+    second: forearm_fk
+  - first:
+      1: 100010
+    second: forearm_ik
+  - first:
+      1: 100012
+    second: forearm_ik_end
+  - first:
+      1: 100014
+    second: hand_deform.001
+  - first:
+      1: 100016
+    second: hand_deform.002
+  - first:
+      1: 100018
+    second: hand_deform.003
+  - first:
+      1: 100020
+    second: hand_deform.004
+  - first:
+      1: 100022
+    second: hand_deform.004_end
+  - first:
+      1: 100024
+    second: hand_deform.005
+  - first:
+      1: 100026
+    second: hand_deform.006
+  - first:
+      1: 100028
+    second: hand_deform.007
+  - first:
+      1: 100030
+    second: hand_deform.008
+  - first:
+      1: 100032
+    second: hand_deform.008_end
+  - first:
+      1: 100034
+    second: hand_deform.009
+  - first:
+      1: 100036
+    second: hand_deform.010
+  - first:
+      1: 100038
+    second: hand_deform.011
+  - first:
+      1: 100040
+    second: hand_deform.012
+  - first:
+      1: 100042
+    second: hand_deform.012_end
+  - first:
+      1: 100044
+    second: hand_deform.013
+  - first:
+      1: 100046
+    second: hand_deform.014
+  - first:
+      1: 100048
+    second: hand_deform.015
+  - first:
+      1: 100050
+    second: hand_deform.016
+  - first:
+      1: 100052
+    second: hand_deform.016_end
+  - first:
+      1: 100054
+    second: hand_deform.017
+  - first:
+      1: 100056
+    second: hand_deform.018
+  - first:
+      1: 100058
+    second: hand_deform.019
+  - first:
+      1: 100060
+    second: hand_deform.019_end
+  - first:
+      1: 100062
+    second: hand_fk
+  - first:
+      1: 100064
+    second: hand_fk_end
+  - first:
+      1: 100066
+    second: hand_ik
+  - first:
+      1: 100068
+    second: hand_ik_end
+  - first:
+      1: 100070
+    second: hand_joint
+  - first:
+      1: 100072
+    second: //RootNode
+  - first:
+      1: 100074
+    second: vr_male_hand
+  - first:
+      1: 100076
+    second: index_bone
+  - first:
+      1: 100078
+    second: index_dist
+  - first:
+      1: 100080
+    second: index_dist_end
+  - first:
+      1: 100082
+    second: index_inter
+  - first:
+      1: 100084
+    second: index_prox
+  - first:
+      1: 100086
+    second: little_bone
+  - first:
+      1: 100088
+    second: little_dist
+  - first:
+      1: 100090
+    second: little_dist_end
+  - first:
+      1: 100092
+    second: little_inter
+  - first:
+      1: 100094
+    second: little_prox
+  - first:
+      1: 100096
+    second: middle_bone
+  - first:
+      1: 100098
+    second: middle_dist
+  - first:
+      1: 100100
+    second: middle_dist_end
+  - first:
+      1: 100102
+    second: middle_inter
+  - first:
+      1: 100104
+    second: middle_prox
+  - first:
+      1: 100106
+    second: ring_bone
+  - first:
+      1: 100108
+    second: ring_dist
+  - first:
+      1: 100110
+    second: ring_dist_end
+  - first:
+      1: 100112
+    second: ring_inter
+  - first:
+      1: 100114
+    second: ring_prox
+  - first:
+      1: 100116
+    second: thumb_dist
+  - first:
+      1: 100118
+    second: thumb_dist_end
+  - first:
+      1: 100120
+    second: thumb_inter
+  - first:
+      1: 100122
+    second: thumb_prox
+  - first:
+      1: 100124
+    second: vr_hand_armature
+  - first:
+      1: 100126
+    second: forearm
+  - first:
+      1: 100128
+    second: hand
+  - first:
+      1: 100130
+    second: vr_hand_male_armature
+  - first:
+      4: 400000
+    second: amrature_vr_hand
+  - first:
+      4: 400002
+    second: arm_fk
+  - first:
+      4: 400004
+    second: arm_ik
+  - first:
+      4: 400006
+    second: forearm_ down_deform
+  - first:
+      4: 400008
+    second: forearm_fk
+  - first:
+      4: 400010
+    second: forearm_ik
+  - first:
+      4: 400012
+    second: forearm_ik_end
+  - first:
+      4: 400014
+    second: hand_deform.001
+  - first:
+      4: 400016
+    second: hand_deform.002
+  - first:
+      4: 400018
+    second: hand_deform.003
+  - first:
+      4: 400020
+    second: hand_deform.004
+  - first:
+      4: 400022
+    second: hand_deform.004_end
+  - first:
+      4: 400024
+    second: hand_deform.005
+  - first:
+      4: 400026
+    second: hand_deform.006
+  - first:
+      4: 400028
+    second: hand_deform.007
+  - first:
+      4: 400030
+    second: hand_deform.008
+  - first:
+      4: 400032
+    second: hand_deform.008_end
+  - first:
+      4: 400034
+    second: hand_deform.009
+  - first:
+      4: 400036
+    second: hand_deform.010
+  - first:
+      4: 400038
+    second: hand_deform.011
+  - first:
+      4: 400040
+    second: hand_deform.012
+  - first:
+      4: 400042
+    second: hand_deform.012_end
+  - first:
+      4: 400044
+    second: hand_deform.013
+  - first:
+      4: 400046
+    second: hand_deform.014
+  - first:
+      4: 400048
+    second: hand_deform.015
+  - first:
+      4: 400050
+    second: hand_deform.016
+  - first:
+      4: 400052
+    second: hand_deform.016_end
+  - first:
+      4: 400054
+    second: hand_deform.017
+  - first:
+      4: 400056
+    second: hand_deform.018
+  - first:
+      4: 400058
+    second: hand_deform.019
+  - first:
+      4: 400060
+    second: hand_deform.019_end
+  - first:
+      4: 400062
+    second: hand_fk
+  - first:
+      4: 400064
+    second: hand_fk_end
+  - first:
+      4: 400066
+    second: hand_ik
+  - first:
+      4: 400068
+    second: hand_ik_end
+  - first:
+      4: 400070
+    second: hand_joint
+  - first:
+      4: 400072
+    second: vr_male_hand
+  - first:
+      4: 400074
+    second: //RootNode
+  - first:
+      4: 400076
+    second: index_bone
+  - first:
+      4: 400078
+    second: index_dist
+  - first:
+      4: 400080
+    second: index_dist_end
+  - first:
+      4: 400082
+    second: index_inter
+  - first:
+      4: 400084
+    second: index_prox
+  - first:
+      4: 400086
+    second: little_bone
+  - first:
+      4: 400088
+    second: little_dist
+  - first:
+      4: 400090
+    second: little_dist_end
+  - first:
+      4: 400092
+    second: little_inter
+  - first:
+      4: 400094
+    second: little_prox
+  - first:
+      4: 400096
+    second: middle_bone
+  - first:
+      4: 400098
+    second: middle_dist
+  - first:
+      4: 400100
+    second: middle_dist_end
+  - first:
+      4: 400102
+    second: middle_inter
+  - first:
+      4: 400104
+    second: middle_prox
+  - first:
+      4: 400106
+    second: ring_bone
+  - first:
+      4: 400108
+    second: ring_dist
+  - first:
+      4: 400110
+    second: ring_dist_end
+  - first:
+      4: 400112
+    second: ring_inter
+  - first:
+      4: 400114
+    second: ring_prox
+  - first:
+      4: 400116
+    second: thumb_dist
+  - first:
+      4: 400118
+    second: thumb_dist_end
+  - first:
+      4: 400120
+    second: thumb_inter
+  - first:
+      4: 400122
+    second: thumb_prox
+  - first:
+      4: 400124
+    second: vr_hand_armature
+  - first:
+      4: 400126
+    second: forearm
+  - first:
+      4: 400128
+    second: hand
+  - first:
+      4: 400130
+    second: vr_hand_male_armature
+  - first:
+      43: 4300000
+    second: vr_male_hand
+  - first:
+      74: 7400000
+    second: amrature_vr_hand|vr_catch_end
+  - first:
+      74: 7400002
+    second: amrature_vr_hand|vr_catch_pose
+  - first:
+      74: 7400004
+    second: amrature_vr_hand|vr_catch_throw
+  - first:
+      74: 7400006
+    second: amrature_vr_hand|vr_fist_clenching
+  - first:
+      74: 7400008
+    second: amrature_vr_hand|vr_fist_opening
+  - first:
+      74: 7400010
+    second: amrature_vr_hand|vr_fist_pose
+  - first:
+      74: 7400012
+    second: amrature_vr_hand|vr_neutral_pose
+  - first:
+      74: 7400014
+    second: amrature_vr_hand|vr_neutral_pose_anim_01
+  - first:
+      74: 7400016
+    second: amrature_vr_hand|vr_neutral_pose_anim_02
+  - first:
+      74: 7400018
+    second: amrature_vr_hand|vr_skill_shot_01
+  - first:
+      74: 7400020
+    second: amrature_vr_hand|vr_skill_shot_02
+  - first:
+      74: 7400022
+    second: amrature_vr_hand|vr_skill_shot_02_end
+  - first:
+      74: 7400024
+    second: amrature_vr_hand|vr_skill_shot_02_loop
+  - first:
+      74: 7400026
+    second: amrature_vr_hand|vr_skill_shot_02_start
+  - first:
+      74: 7400028
+    second: amrature_vr_hand|vr_indicating_pose
+  - first:
+      74: 7400030
+    second: amrature_vr_hand|vr_pistol_holding_pose
+  - first:
+      74: 7400032
+    second: amrature_vr_hand|vr_pistol_shoot
+  - first:
+      74: 7400034
+    second: amrature_vr_hand|vr_sword_holding_pose
+  - first:
+      74: 7400036
+    second: amrature_vr_hand|vr_catch
+  - first:
+      74: 7400038
+    second: vr_hand_armature|vr_catch
+  - first:
+      74: 7400040
+    second: vr_hand_armature|vr_catch_end
+  - first:
+      74: 7400042
+    second: vr_hand_armature|vr_catch_pose
+  - first:
+      74: 7400044
+    second: vr_hand_armature|vr_catch_throw
+  - first:
+      74: 7400046
+    second: vr_hand_armature|vr_fist_clenching
+  - first:
+      74: 7400048
+    second: vr_hand_armature|vr_fist_opening
+  - first:
+      74: 7400050
+    second: vr_hand_armature|vr_fist_pose
+  - first:
+      74: 7400052
+    second: vr_hand_armature|vr_indicating_pose
+  - first:
+      74: 7400054
+    second: vr_hand_armature|vr_neutral_pose
+  - first:
+      74: 7400056
+    second: vr_hand_armature|vr_neutral_pose_anim_01
+  - first:
+      74: 7400058
+    second: vr_hand_armature|vr_neutral_pose_anim_02
+  - first:
+      74: 7400060
+    second: vr_hand_armature|vr_pistol_holding_pose
+  - first:
+      74: 7400062
+    second: vr_hand_armature|vr_pistol_shoot
+  - first:
+      74: 7400064
+    second: vr_hand_armature|vr_skill_shot_01
+  - first:
+      74: 7400066
+    second: vr_hand_armature|vr_skill_shot_02
+  - first:
+      74: 7400068
+    second: vr_hand_armature|vr_skill_shot_02_end
+  - first:
+      74: 7400070
+    second: vr_hand_armature|vr_skill_shot_02_loop
+  - first:
+      74: 7400072
+    second: vr_hand_armature|vr_skill_shot_02_start
+  - first:
+      74: 7400074
+    second: vr_hand_armature|vr_sword_holding_pose
+  - first:
+      74: 7400076
+    second: vr_hand_armature|vr_catch_start
+  - first:
+      74: 7400078
+    second: vr_hand_male_armature|vr_fist_pose
+  - first:
+      74: 7400080
+    second: vr_hand_male_armature|vr_neutral_pose
+  - first:
+      74: 7400082
+    second: vr_male_hand|vr_neutral_pose
+  - first:
+      74: 7400084
+    second: vr_hand_male_armature|vr_skill_shot_02_loop
+  - first:
+      74: 7400086
+    second: vr_hand_male_armature|vr_catch
+  - first:
+      74: 7400088
+    second: vr_hand_male_armature|vr_catch_end
+  - first:
+      74: 7400090
+    second: vr_hand_male_armature|vr_catch_pose
+  - first:
+      74: 7400092
+    second: vr_hand_male_armature|vr_catch_start
+  - first:
+      74: 7400094
+    second: vr_hand_male_armature|vr_catch_throw
+  - first:
+      74: 7400096
+    second: vr_hand_male_armature|vr_fist_clenching
+  - first:
+      74: 7400098
+    second: vr_hand_male_armature|vr_fist_opening
+  - first:
+      74: 7400100
+    second: vr_hand_male_armature|vr_indicating_pose
+  - first:
+      74: 7400102
+    second: vr_hand_male_armature|vr_neutral_pose_anim_01
+  - first:
+      74: 7400104
+    second: vr_hand_male_armature|vr_neutral_pose_anim_02
+  - first:
+      74: 7400106
+    second: vr_hand_male_armature|vr_pistol_holding_pose
+  - first:
+      74: 7400108
+    second: vr_hand_male_armature|vr_pistol_shoot
+  - first:
+      74: 7400110
+    second: vr_hand_male_armature|vr_skill_shot_01
+  - first:
+      74: 7400112
+    second: vr_hand_male_armature|vr_skill_shot_02
+  - first:
+      74: 7400114
+    second: vr_hand_male_armature|vr_skill_shot_02_end
+  - first:
+      74: 7400116
+    second: vr_hand_male_armature|vr_skill_shot_02_start
+  - first:
+      74: 7400118
+    second: vr_hand_male_armature|vr_sword_holding_pose
+  - first:
+      74: 7400120
+    second: vr_hand_male_armature|vr_skill_self_shot_01
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: vr_male_hand
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
   externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 0
@@ -231,6 +625,7 @@ ModelImporter:
     - serializedVersion: 16
       name: vr_hand_male_armature|vr_catch
       takeName: vr_hand_male_armature|vr_catch
+      internalID: 0
       firstFrame: 0
       lastFrame: 17
       wrapMode: 0
@@ -317,6 +712,7 @@ ModelImporter:
     - serializedVersion: 16
       name: vr_hand_male_armature|vr_catch_end
       takeName: vr_hand_male_armature|vr_catch_end
+      internalID: 0
       firstFrame: 0
       lastFrame: 6
       wrapMode: 0
@@ -403,6 +799,7 @@ ModelImporter:
     - serializedVersion: 16
       name: vr_hand_male_armature|vr_catch_pose
       takeName: vr_hand_male_armature|vr_catch_pose
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -489,6 +886,7 @@ ModelImporter:
     - serializedVersion: 16
       name: vr_hand_male_armature|vr_catch_start
       takeName: vr_hand_male_armature|vr_catch_start
+      internalID: 0
       firstFrame: 0
       lastFrame: 11
       wrapMode: 0
@@ -575,6 +973,7 @@ ModelImporter:
     - serializedVersion: 16
       name: vr_hand_male_armature|vr_catch_throw
       takeName: vr_hand_male_armature|vr_catch_throw
+      internalID: 0
       firstFrame: 0
       lastFrame: 11
       wrapMode: 0
@@ -661,6 +1060,7 @@ ModelImporter:
     - serializedVersion: 16
       name: vr_hand_male_armature|vr_fist_clenching
       takeName: vr_hand_male_armature|vr_fist_clenching
+      internalID: 0
       firstFrame: 0
       lastFrame: 7
       wrapMode: 0
@@ -747,6 +1147,7 @@ ModelImporter:
     - serializedVersion: 16
       name: vr_hand_male_armature|vr_fist_opening
       takeName: vr_hand_male_armature|vr_fist_opening
+      internalID: 0
       firstFrame: 0
       lastFrame: 5
       wrapMode: 0
@@ -833,6 +1234,7 @@ ModelImporter:
     - serializedVersion: 16
       name: vr_hand_male_armature|vr_fist_pose
       takeName: vr_hand_male_armature|vr_fist_pose
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -919,6 +1321,7 @@ ModelImporter:
     - serializedVersion: 16
       name: vr_hand_male_armature|vr_indicating_pose
       takeName: vr_hand_male_armature|vr_indicating_pose
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -1005,6 +1408,7 @@ ModelImporter:
     - serializedVersion: 16
       name: vr_hand_male_armature|vr_neutral_pose
       takeName: vr_hand_male_armature|vr_neutral_pose
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -1091,6 +1495,7 @@ ModelImporter:
     - serializedVersion: 16
       name: vr_hand_male_armature|vr_neutral_pose_anim_01
       takeName: vr_hand_male_armature|vr_neutral_pose_anim_01
+      internalID: 0
       firstFrame: 0
       lastFrame: 70
       wrapMode: 0
@@ -1177,6 +1582,7 @@ ModelImporter:
     - serializedVersion: 16
       name: vr_hand_male_armature|vr_neutral_pose_anim_02
       takeName: vr_hand_male_armature|vr_neutral_pose_anim_02
+      internalID: 0
       firstFrame: 0
       lastFrame: 70
       wrapMode: 0
@@ -1263,6 +1669,7 @@ ModelImporter:
     - serializedVersion: 16
       name: vr_hand_male_armature|vr_pistol_holding_pose
       takeName: vr_hand_male_armature|vr_pistol_holding_pose
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -1349,6 +1756,7 @@ ModelImporter:
     - serializedVersion: 16
       name: vr_hand_male_armature|vr_pistol_shoot
       takeName: vr_hand_male_armature|vr_pistol_shoot
+      internalID: 0
       firstFrame: 0
       lastFrame: 8
       wrapMode: 0
@@ -1435,6 +1843,7 @@ ModelImporter:
     - serializedVersion: 16
       name: vr_hand_male_armature|vr_skill_self_shot_01
       takeName: vr_hand_male_armature|vr_skill_self_shot_01
+      internalID: 0
       firstFrame: 0
       lastFrame: 23
       wrapMode: 0
@@ -1521,6 +1930,7 @@ ModelImporter:
     - serializedVersion: 16
       name: vr_hand_male_armature|vr_skill_shot_01
       takeName: vr_hand_male_armature|vr_skill_shot_01
+      internalID: 0
       firstFrame: 0
       lastFrame: 14
       wrapMode: 0
@@ -1607,6 +2017,7 @@ ModelImporter:
     - serializedVersion: 16
       name: vr_hand_male_armature|vr_skill_shot_02
       takeName: vr_hand_male_armature|vr_skill_shot_02
+      internalID: 0
       firstFrame: 0
       lastFrame: 24
       wrapMode: 0
@@ -1693,6 +2104,7 @@ ModelImporter:
     - serializedVersion: 16
       name: vr_hand_male_armature|vr_skill_shot_02_end
       takeName: vr_hand_male_armature|vr_skill_shot_02_end
+      internalID: 0
       firstFrame: 0
       lastFrame: 24
       wrapMode: 0
@@ -1779,6 +2191,7 @@ ModelImporter:
     - serializedVersion: 16
       name: vr_hand_male_armature|vr_skill_shot_02_loop
       takeName: vr_hand_male_armature|vr_skill_shot_02_loop
+      internalID: 0
       firstFrame: 0
       lastFrame: 56
       wrapMode: 0
@@ -1865,6 +2278,7 @@ ModelImporter:
     - serializedVersion: 16
       name: vr_hand_male_armature|vr_skill_shot_02_start
       takeName: vr_hand_male_armature|vr_skill_shot_02_start
+      internalID: 0
       firstFrame: 0
       lastFrame: 10
       wrapMode: 0
@@ -1951,6 +2365,7 @@ ModelImporter:
     - serializedVersion: 16
       name: vr_hand_male_armature|vr_sword_holding_pose
       takeName: vr_hand_male_armature|vr_sword_holding_pose
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -2041,25 +2456,32 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
     importLights: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -2068,10 +2490,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -2081,13 +2503,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 0.01
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
