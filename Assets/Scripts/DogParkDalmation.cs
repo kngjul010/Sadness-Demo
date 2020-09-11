@@ -281,20 +281,23 @@ public class DogParkDalmation : MonoBehaviour
             {
                 //Chance to play around
                 int chancePlay = Random.Range(0, 100);
-                int chancePlay2 = Random.Range(0, 100);
-                if (chancePlay <= playfulness * 25)
+                float totalEmot = inquisitive * 30 + playfulness * 25;
+                float inq = 30 * inquisitive / totalEmot * Mathf.Clamp(totalEmot, 0, 80);
+                float playful = 25 * playfulness / totalEmot * Mathf.Clamp(totalEmot, 0, 80);
+                //chance to explore
+                if (chancePlay <= inq)
+                {
+                    state = "explore";
+                    StateExplore(true);
+                }
+                else if (chancePlay <= inq + playful)
                 {
                     play = true;
                     anim.SetInteger("State", 5);
                     charController.SetTarget(null);
                     WriteString("AI - Play: ");
                 }
-                //chance to explore
-                else if (chancePlay2 <= inquisitive * 30)
-                {
-                    state = "explore";
-                    StateExplore(true);
-                }
+                
                 //Other Idle Animations
                 else
                 {
@@ -440,6 +443,8 @@ public class DogParkDalmation : MonoBehaviour
             agent.speed = 0.5f;
             anim.SetInteger("State", -5);
             deathMove = false;
+            charController.SetTarget(transform);
+            
 
         }
         else if (interactionStage == 2)
@@ -461,6 +466,7 @@ public class DogParkDalmation : MonoBehaviour
                 deathMove = true;
                 WriteString("By Body: ");
                 deadStroke = false;
+                GetComponent<NavMeshAgent>().enabled = false;
                 
             }
             //load next scene
@@ -624,6 +630,7 @@ public class DogParkDalmation : MonoBehaviour
                 teddyBear.SetActive(true);
                 sphere = teddyBear.transform;
                 charController.SetTarget(sphere);
+                anim.SetInteger("State", 0); //Transition to running fast
                 //Chase the teddy, which really just fetches it
                 state = "chase";
                 if (interactionStage == 2) {
@@ -636,6 +643,7 @@ public class DogParkDalmation : MonoBehaviour
             }
             else
             {
+                StateReturn(true);
                 state = "return";
             }
         }
@@ -724,6 +732,7 @@ public class DogParkDalmation : MonoBehaviour
         //transition to digging
         else if (Vector3.Distance(closest.position, transform.position) < .8)
         {
+            charController.SetTarget(closest);
             state = "dig";
             StateDig(true);
         }

@@ -1,36 +1,185 @@
 ====== Level Chosen: 1 ======
-Tutorial Start: 11,84972
-====== Level Chosen: 2 ======
-Tutorial Start: 11,11916
-====== Level Chosen: 2 ======
-Tutorial Start: 13,89095
-====== Level Chosen: 2 ======
-Tutorial Start: 10,45924
-====== Level Chosen: 2 ======
-Tutorial Start: 4,658558
+Tutorial Start: 7,832429
 ====== Level Chosen: 1 ======
-Tutorial Start: 18,06399
-====== Level Chosen: 2 ======
-Tutorial Start: 43,37209
+Tutorial Start: 13,90874
 ====== Level Chosen: 1 ======
-Tutorial Start: 14,5623
+Tutorial Start: 12,65619
+====== Level Chosen: 1 ======
+Tutorial Start: 11,0213
+====== Level Chosen: 1 ======
+Tutorial Start: 16,22518
+====== Level Chosen: 1 ======
+Tutorial Start: 9,91646
+====== Level Chosen: 1 ======
+Tutorial Start: 4,719757
+====== Level Chosen: 2 ======
+Tutorial Start: 12,6195
+====== Level Chosen: 2 ======
+Tutorial Start: 13,62011
+====== Level Chosen: 2 ======
+Tutorial Start: 9,634654
+====== Level Chosen: 2 ======
+Tutorial Start: 5,066763
+====== Level Chosen: 2 ======
+Tutorial Start: 5,485449
+====== Level Chosen: 2 ======
+Tutorial Start: 8,368958
+====== Level Chosen: 2 ======
+Tutorial Start: 8,241278
+====== Level Chosen: 2 ======
+Tutorial Start: 17,54868
+====== Level Chosen: 2 ======
+Tutorial Start: 18,26398
+====== Level Chosen: 2 ======
+Tutorial Start: 14,96314
+Tutorial End: 128,5612
+== Pet Store start: 129,8869
+== Pet Store start: 129,8869
+== Pet Store start: 129,8869
+Puppy Stroked: 156,4155
+Puppy Stroked: 159,4493
+Puppy Chosen: 161,8457
+== Park Start: 167,9965
+AI: Start Exploring: 173,9983
+Fetch Teddy: 181,1305
+Start Chase Ball: 192,0904
+Start Chase Ball: 199,4572
+AI: Start Exploring: 218,1003
+Start Chase Ball: 218,5335
+Dog Stroked230,0603
+AI - Play: 236,091
+Start Chase Ball: 244,1194
+Director Incrased Bond: 253,0164
+Dog Stroked262,0006
+Dog Stroked265,0107
+Start Chase Ball: 271,8093
+AI - Play: 287,923
+AI: Start Exploring: 298,0191
+Start Running Away: 338,0106
+Crash: 362,6564
+By Body: 367,6873
+Crash: 372,6845
+Final Bond Value: 1,95
+Num Interactions: 11
+== Vet Start: 374,0583
+Teddy Used: 374,0583
+Vet Speech: 396,2318
 ====== Level Chosen: 0 ======
-Tutorial Start: 85,10331
-====== Level Chosen: 1 ======
-Tutorial Start: 202,5676
-====== Level Chosen: 1 ======
-Tutorial Start: 119,268
-====== Level Chosen: 1 ======
-Tutorial Start: 64,43222
-====== Level Chosen: 1 ======
-Tutorial Start: 19,6839
-====== Level Chosen: 1 ======
-Tutorial Start: 11,9123
-====== Level Chosen: 1 ======
-Tutorial Start: 20,57061
-====== Level Chosen: 1 ======
-Tutorial Start: 16,42491
+Tutorial Start: 7,108985
+Tutorial End: 49,82291
+== Pet Store start: 51,10432
+Puppy Chosen: 61,12375
+== Park Start: 74,85622
 ====== Level Chosen: 2 ======
-Tutorial Start: 13,00754
-====== Level Chosen: 1 ======
-Tutorial Start: 12,84336
+Tutorial Start: 6,050914
+Tutorial End: 48,2755
+== Pet Store start: 49,63988
+== Pet Store start: 49,63988
+== Pet Store start: 49,63988
+Puppy Chosen: 59,55049
+== Park Start: 72,08269
+AI - Play: 78,09624
+AI - Play: 88,55781
+Start Chase Ball: 94,50163
+== Park Start: 0
+AI: Start Exploring: 6,018036
+Start Show Grove: 11,06985
+Grove Found26,39452
+AI: Start Exploring: 32,40305
+Start Chase Ball: 58,15688
+Start Chase Ball: 71,20625
+Director Incrased Bond: 85,02213
+Dog Stroked87,68872
+Dog Stroked90,7517
+Start Chase Ball: 98,87052
+AI: Start Exploring: 109,965
+Fetch Teddy: 125,1579
+Start Chase Ball: 140,5303
+AI: Start Exploring: 164,0431
+Start Running Away: 170,0188
+Crash: 193,4504
+By Body: 198,4587
+Crash: 203,4563
+Final Bond Value: 2,25
+Num Interactions: 8
+== Vet Start: 204,7889
+Teddy Used: 204,7889
+Vet Speech: 227,0554
+== Park Start: 0
+Start Chase Ball: 4,36592
+Dog Stroked15,59467
+Start Chase Ball: 17,68412
+AI - Play: 28,87874
+Start Chase Ball: 34,69655
+Dog Stroked47,43649
+Dog Stroked50,46791
+Start Chase Ball: 64,72765
+Start Chase Ball: 74,16815
+Director Incrased Bond: 85,00769
+AI: Start Exploring: 86,02734
+Start Show Grove: 91,05984
+Grove Found104,4372
+AI: Start Exploring: 110,4609
+Start Chase Ball: 135,6284
+Start Running Away: 170,0089
+== Park Start: 0
+AI: Start Exploring: 6,032133
+Fetch Teddy: 18,06921
+AI: Start Exploring: 29,86273
+== Park Start: 0
+AI: Start Exploring: 6,077887
+Fetch Teddy: 13,26253
+Start Chase Ball: 23,0434
+Start Chase Ball: 41,50227
+Dog Stroked53,35427
+Dog Stroked56,37392
+AI: Start Exploring: 62,39208
+Start Chase Ball: 70,17849
+Dog Stroked80,77197
+Director Incrased Bond: 85,06034
+AI: Start Exploring: 86,79226
+AI: Start Exploring: 114,0242
+AI: Start Exploring: 154,1269
+Start Chase Ball: 157,6701
+Start Chase Ball: 168,609
+Start Running Away: 170,0116
+Crash: 193,5663
+By Body: 198,5953
+Stroked: 203,5711
+Crash: 203,5711
+Final Bond Value: 1,85
+Num Interactions: 10
+== Vet Start: 205,0927
+Teddy Used: 205,0927
+Vet Speech: 227,6846
+== Vet Start: 0
+Teddy Used: 0
+== Vet Start: 0
+Teddy Used: 0
+== Vet Start: 0
+== Vet Start: 0
+== Vet Start: 0
+== Vet Start: 0
+== Vet Start: 0
+== Vet Start: 0
+Teddy Used: 0
+== Vet Start: 0
+Teddy Used: 0
+Vet Speech: 22,23461
+== Vet Start: 0
+Teddy Used: 0
+== Vet Start: 0
+Teddy Used: 0
+Vet Speech: 22,46009
+== Vet Start: 0
+Teddy Used: 0
+== Vet Start: 0
+Teddy Used: 0
+Vet Speech: 22,52419
+== Vet Start: 0
+Teddy Used: 0
+Vet Speech: 22,42416
+Handed Object: 29,57827
+==== End of Experience ====
+
+

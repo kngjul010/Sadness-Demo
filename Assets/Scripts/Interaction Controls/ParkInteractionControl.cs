@@ -54,7 +54,7 @@ public class ParkInteractionControl : MonoBehaviour
             dogScript.obedience = 0.8f;
         }
         Teleport.instance.CancelTeleportHint();
-        player.transform.position = new Vector3(53.37283f, 49.85787f, -126.5f);
+        player.transform.position = new Vector3(53.9599991f, 50.1300011f, -124.884338f);
         player.transform.rotation = Quaternion.Euler(0, 0, 0);
         leftHand = GameObject.FindGameObjectWithTag("Left Hand").GetComponent<Hand>();
         rightHand = GameObject.FindGameObjectWithTag("Right Hand").GetComponent<Hand>();
@@ -75,11 +75,13 @@ public class ParkInteractionControl : MonoBehaviour
         }
         else if (level == 1){
             dogScript.interactionStage = 1;
+            dogScript.dogLife += 20;
         }
         else if (level == 2)
         {
             gestureObjs.SetActive(true);
             dogScript.interactionStage = 2;
+            dogScript.dogLife += 40;
         }
 
         dogSpan = Time.time;
@@ -100,6 +102,7 @@ public class ParkInteractionControl : MonoBehaviour
             StreamWriter writer = new StreamWriter(path, true);
             writer.WriteLine("Director Incrased Bond: " + Time.time);
             writer.Close();
+            bondBoost = true;
         }
     }
 

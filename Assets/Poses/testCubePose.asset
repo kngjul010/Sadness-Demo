@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e90911e410742a1498a167540c7865bf, type: 3}
-  m_Name: ParkTennisBall
+  m_Name: testCubePose
   m_EditorClassIdentifier: 
   leftHand:
     inputSource: 1
@@ -21,8 +21,8 @@ MonoBehaviour:
     pinkyFingerMovementType: 0
     ignoreRootPoseData: 1
     ignoreWristPoseData: 1
-    position: {x: 0.022839481, y: 0.0076234452, z: -0.17284745}
-    rotation: {x: -0.23811692, y: 0.2764861, z: -0.70548123, w: -0.6075788}
+    position: {x: 0.15920007, y: -0.089785695, z: -0.091060266}
+    rotation: {x: 0.38785276, y: -0.15017532, z: 0.064208604, w: -0.9071356}
     bonePositions:
     - {x: -0, y: 0, z: 0}
     - {x: -0.034037687, y: 0.03650266, z: 0.16472164}
@@ -96,8 +96,8 @@ MonoBehaviour:
     pinkyFingerMovementType: 0
     ignoreRootPoseData: 1
     ignoreWristPoseData: 1
-    position: {x: -0.022839481, y: 0.0076234452, z: -0.17284745}
-    rotation: {x: 0.23811692, y: 0.2764861, z: -0.70548123, w: 0.6075788}
+    position: {x: -0.15920007, y: -0.089785695, z: -0.091060266}
+    rotation: {x: -0.38785276, y: -0.15017532, z: 0.064208604, w: 0.9071356}
     bonePositions:
     - {x: -0, y: 0, z: 0}
     - {x: -0.034037687, y: 0.03650266, z: 0.16472164}

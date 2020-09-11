@@ -37,7 +37,10 @@ public class VetInteractionControl : MonoBehaviour
             else if (item == 1)
             {
                 teddy.SetActive(true);
-                ball.SetActive(false);
+                //ball.SetActive(false);
+                ball.GetComponent<MeshRenderer>().enabled = false;
+                ball.GetComponent<Interactable>().enabled = false;
+                ball.GetComponent<SphereCollider>().enabled = false;
                 WriteString("Teddy Used: ");
             }
         }
