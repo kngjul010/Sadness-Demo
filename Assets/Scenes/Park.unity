@@ -29077,7 +29077,10 @@ MonoBehaviour:
   butterflies: {fileID: 181464319}
   numInteractions: 0
   bones:
-  - {fileID: 0}
+  - {fileID: 4090756298811592}
+  - {fileID: 4090756056147566}
+  - {fileID: 4090754682425802}
+  - {fileID: 4090756233663932}
   bond: 1
   inquisitive: 1
   obedience: 1
@@ -31595,7 +31598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1391196967409252, guid: f6531f2887353c242a2c81ea5cd369d2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4834230985743088, guid: f6531f2887353c242a2c81ea5cd369d2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31643,20 +31646,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4834230985743088, guid: f6531f2887353c242a2c81ea5cd369d2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.02
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4834230985743088, guid: f6531f2887353c242a2c81ea5cd369d2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.02
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4834230985743088, guid: f6531f2887353c242a2c81ea5cd369d2, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.02
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114165101905209924, guid: f6531f2887353c242a2c81ea5cd369d2,
         type: 3}
       propertyPath: areaSize
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114165101905209924, guid: f6531f2887353c242a2c81ea5cd369d2,
+        type: 3}
+      propertyPath: scale
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6531f2887353c242a2c81ea5cd369d2, type: 3}

@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using UnityEngine;
 
 public class GlobalFlock : MonoBehaviour {
 	public GameObject[] butterflyPrefab;
 	public int areaSize = 3;
+	public float scale = 1;
 
 	public int numButterflies = 15;
 	public GameObject[] allButterfly;
@@ -28,6 +30,7 @@ public class GlobalFlock : MonoBehaviour {
             int rdm = Random.Range(0, butterflyPrefab.Length);
 			allButterfly[i] = (GameObject) Instantiate(butterflyPrefab[rdm], pos, Quaternion.identity);
 			allButterfly[i].transform.parent = gameObject.transform;
+			allButterfly[i].transform.localScale = new Vector3(scale, scale, scale);
 			//allButterfly[i].transform.position=new Vector3(0,0,0);
 			//allButterfly[i].GetComponent<Flock>().startUpdate=true;
 		}	

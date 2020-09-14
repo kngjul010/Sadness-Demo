@@ -219,3 +219,37 @@ Crash: 202,1071
 Final Bond Value: 2,649999
 Num Interactions: 21
 == Vet Start: 203,5576
+== Park Start: 0
+AI - Play: 6,023015
+== Park Start: 0
+AI - Play: 6,025365
+== Park Start: 0
+Dog Stroked: 17,18309
+AI - Play: 23,23097
+Dog Stroked: 34,41595
+== Park Start: 0
+Dog Stroked: 17,14327
+AI: Start Exploring: 23,1524
+== Park Start: 0
+AI - Play: 6,014842
+Dog Stroked: 17,25288
+AI - Play: 23,26418
+AI - Play: 50,41867
+== Park Start: 0
+AI - Play: 6,000986
+Dog Stroked: 31,4816
+Dog Stroked: 34,49009
+AI: Start Exploring: 40,51046
+Dog Stroked: 71,97509
+Director Incrased Bond: 85,02364
+Dog Stroked: 86,85646
+Dog Stroked: 89,86569
+== Park Start: 0
+AI: Start Exploring: 6,020181
+== Park Start: 0
+AI: Start Exploring: 6,00397
+Start Show Grove: 11,01179
+== Park Start: 0
+Dog Stroked: 17,17321
+AI: Start Exploring: 35,23837
+Fetch Teddy: 42,43028
