@@ -33,6 +33,7 @@ public class ObjectThrown : MonoBehaviour
 
     void Update()
     {
+        //When object detached, wait before checking if it was thrown or just dropped
         if (detached)
         {
             timer += Time.deltaTime;
@@ -50,6 +51,11 @@ public class ObjectThrown : MonoBehaviour
                     detached = false;
                 }
             }
+        }
+        //ensure object doesnt fall through ground
+        if (transform.position.y < -10)
+        {
+            transform.position = new Vector3(transform.position.x, 1, transform.position.z);
         }
     }
 }

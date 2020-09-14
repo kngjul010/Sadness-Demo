@@ -183,3 +183,39 @@ Handed Object: 29,57827
 ==== End of Experience ====
 
 
+== Park Start: 0
+== Park Start: 0
+AI: Start Exploring: 6,006325
+Fetch Teddy: 18,07084
+Gesture - Sit: 28,00744
+Dog Stroked31,03926
+Gesture - Sit: 32,5504
+Dog Stroked35,57004
+Gesture - Sit: 40,63517
+Gesture - Sit: 42,56812
+Dog Stroked51,43095
+Dog Stroked54,44116
+Gesture - Sit: 55,94031
+Gesture - Sit: 57,29508
+Gesture - Sit: 58,33813
+Gesture - Sit: 60,20375
+AI: Start Exploring: 72,26659
+Start Show Grove: 77,27471
+Grove Found89,30888
+Gesture - Returned to Player: 89,35002
+Dog Stroked102,3195
+AI: Start Exploring: 108,3212
+Gesture Obeyed: 116,3591
+Start Chase Ball: 134,0315
+Dog Stroked147,3116
+AI - Play: 153,3298
+AI: Start Exploring: 163,4388
+Start Chase Ball: 163,7045
+Start Running Away: 170,0216
+Crash: 192,1017
+By Body: 197,1311
+Stroked: 202,1071
+Crash: 202,1071
+Final Bond Value: 2,649999
+Num Interactions: 21
+== Vet Start: 203,5576

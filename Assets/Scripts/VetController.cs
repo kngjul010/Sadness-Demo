@@ -90,7 +90,7 @@ public class VetController : MonoBehaviour
                 if (timer > 2f)
                 {
                     Application.Quit();
-                    UnityEditor.EditorApplication.isPlaying = false;
+                    //UnityEditor.EditorApplication.isPlaying = false;
                 }
             }
 

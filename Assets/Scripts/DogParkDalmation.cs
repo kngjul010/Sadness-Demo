@@ -226,13 +226,38 @@ public class DogParkDalmation : MonoBehaviour
         //Check if the player has used a gesture
         else if (gestureDetect)
         {
-            WriteString("AI: Gesture Obeyed: ");
-            numInteractions += 1;
-            bond += 0.05f;
-            gestureDetect = false;
+            //Return to Player if far away
+            if (Vector3.Distance(transform.position, idlePoint.position) > 3)
+            {
+                WriteString("Gesture - Returned to Player: ");
+                numInteractions += 1;
+                bond += 0.05f;
+                gestureDetect = false;
 
-            state = "return";
-            StateReturn(true);
+                state = "return";
+                StateReturn(true);
+            }
+            //Dog sits down
+            else
+            {
+                int chanceSit = Random.Range(0, 100);
+                float totalSit = obedience * bond * 30;
+
+                if (chanceSit <= totalSit)
+                {
+                    anim.SetInteger("State", 2);
+                    animationTime = Time.time;
+
+                    WriteString("Gesture - Sit: ");
+                    numInteractions += 1;
+                    bond += 0.05f;
+                    gestureDetect = false;
+
+                    obedience += 0.05f;
+                }
+                
+
+            }
         }
         //Check for throw
         else if (CheckThrow())
@@ -268,7 +293,7 @@ public class DogParkDalmation : MonoBehaviour
                 animationTime = Time.time;
                 strokeTouch = false;
                 //Log Stroke
-                WriteString("Dog Stroked");
+                WriteString("Dog Stroked: ");
                 numInteractions += 1;
                 bond += 0.05f;
             }
@@ -797,7 +822,7 @@ public class DogParkDalmation : MonoBehaviour
         }
         else if (Vector3.Distance(groveLocation.position, transform.position) < 2)
         {
-            WriteString("Grove Found");
+            WriteString("Grove Found: ");
             numInteractions += 1;
             bond += 0.5f;
             anim.SetInteger("State", -1);
@@ -812,11 +837,8 @@ public class DogParkDalmation : MonoBehaviour
     }
 
     public void DetectGesture()
-    {
-        if (Vector3.Distance(idlePoint.position, transform.position) > 4)
-        {
-            gestureDetect = true;
-        }
+    { 
+        gestureDetect = true;
     }
 
     // Our text doc for recording times
