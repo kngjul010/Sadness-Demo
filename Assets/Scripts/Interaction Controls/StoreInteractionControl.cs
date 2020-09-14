@@ -48,6 +48,7 @@ public class StoreInteractionControl : MonoBehaviour
         lDogC.interactionStage = level;
         midDogC.interactionStage = level;
         rDogC.interactionStage = level;
+        Puppy_Controller.WriteString("== Pet Store start: ");
     }
 
     // Update is called once per frame

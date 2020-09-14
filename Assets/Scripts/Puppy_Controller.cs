@@ -43,7 +43,6 @@ public class Puppy_Controller : MonoBehaviour
         startfightIdle = false;
         startStandingBark = false;
         loadCheck = false;
-        WriteString("== Pet Store start: ");
         chosen = false;
         strokeTouch = false;
         puppySpot = GameObject.FindGameObjectWithTag("MainCamera").transform;
@@ -78,7 +77,7 @@ public class Puppy_Controller : MonoBehaviour
 
     }
     // Our text doc for recording times
-    static void WriteString(string ident)
+    public static void WriteString(string ident)
     {
         string path = "Times.txt";
         StreamWriter writer = new StreamWriter(path, true);
@@ -89,7 +88,7 @@ public class Puppy_Controller : MonoBehaviour
     void Update()
     {
          //Stroke animation
-        if (strokeTouch && interactionStage == 2)
+        if (strokeTouch && interactionStage == 2 && !anim.GetCurrentAnimatorStateInfo(0).IsName("Walking"))
         {
             
             if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Stroking"))
@@ -180,6 +179,7 @@ public class Puppy_Controller : MonoBehaviour
         {
             endScene = Time.time;
             GetComponent<AICharacterControl>().SetTarget(null);
+            anim.SetInteger("Next", -5);
         }
         //fade to blaclk
         if (endScene < 9999.0f)
@@ -187,7 +187,7 @@ public class Puppy_Controller : MonoBehaviour
             lighting.intensity = 1 / (1 + Time.time - endScene);
         }
         //load next scene
-        if (Time.time - endScene > 2.0f && !loadCheck)
+        if (endScene < 9999.0f && !loadCheck)
         {
             PlayerPrefs.SetInt("Dog", dogChosen);
             PlayerPrefs.SetInt("NumInteractions", numInteractions);

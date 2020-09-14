@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: FantasyWings 25
-  m_Shader: {fileID: 4800000, guid: d2c1f33968cd46b46bebb2396c19653d, type: 3}
+  m_Shader: {fileID: 4800000, guid: 14d410013963635448b4de210c9bc541, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 1

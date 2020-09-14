@@ -253,3 +253,43 @@ Start Show Grove: 11,01179
 Dog Stroked: 17,17321
 AI: Start Exploring: 35,23837
 Fetch Teddy: 42,43028
+====== Level Chosen: 2 ======
+Tutorial Start: 6,432226
+Tutorial End: 112,4619
+== Pet Store start: 113,7969
+Puppy Stroked: 131,0691
+Puppy Stroked: 135,056
+Puppy Stroked: 140,9412
+Puppy Chosen: 163,0776
+== Park Start: 168,8703
+Dog Stroked: 188,274
+Start Chase Ball: 188,4949
+Start Chase Ball: 197,9903
+Dog Stroked: 208,8527
+Start Chase Ball: 224,5031
+Dog Stroked: 236,4976
+Director Incrased Bond: 253,8762
+AI: Start Exploring: 266,571
+Fetch Teddy: 273,5013
+Dog Stroked: 291,2887
+Start Chase Ball: 292,252
+Dog Stroked: 304,3485
+AI - Play: 310,3683
+Gesture - Sit: 310,4586
+Dog Stroked: 321,1181
+Gesture - Sit: 321,6727
+Gesture - Sit: 325,8161
+Start Running Away: 338,9094
+Crash: 361,9322
+By Body: 366,9524
+Stroked: 371,9592
+Crash: 371,9592
+Final Bond Value: 2,099999
+Num Interactions: 15
+== Vet Start: 373,4061
+Teddy Used: 373,4061
+Vet Speech: 396,1725
+Handed Object: 402,2802
+==== End of Experience ====
+
+
