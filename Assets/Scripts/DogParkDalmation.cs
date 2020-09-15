@@ -38,6 +38,7 @@ public class DogParkDalmation : MonoBehaviour
     public GameObject butterflies;
     public int numInteractions;
     public Transform [] bones;
+    public GameObject barrier;
 
     [Header("Emotion Values")]
     public float bond;
@@ -440,6 +441,7 @@ public class DogParkDalmation : MonoBehaviour
             charController.SetTarget(deathspots[0]);
             agent.speed = 4;
             anim.SetInteger("State", 0);
+            Teleport.instance.reset = 5;
         }
         else if (Vector3.Distance(deathspots[0].position, transform.position) < 1)
         {
@@ -448,6 +450,7 @@ public class DogParkDalmation : MonoBehaviour
         else if (Vector3.Distance(deathspots[1].position, transform.position) < 1)
         {
             charController.SetTarget(deathspots[2]);
+            barrier.SetActive(true);
         }
         //When the dog arrives at the final spot play the crash sounds and record te event in our text doc
         else if (Vector3.Distance(deathspots[2].position, transform.position) < 5 && timeOfDeath < 1)
