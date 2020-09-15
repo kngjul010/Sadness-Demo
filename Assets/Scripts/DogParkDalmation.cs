@@ -70,7 +70,7 @@ public class DogParkDalmation : MonoBehaviour
     private float boneTimer;
     private bool chanceBone;
     private bool deadStroke;
-
+    private bool deathFade;
 
     // Use this for initialization
     void Start()
@@ -111,6 +111,7 @@ public class DogParkDalmation : MonoBehaviour
         boneTimer = Time.time;
         chanceBone = false;
         deadStroke = true;
+        deathFade = false;
     }
     //Used to play the dog bark sounds at specific times
     IEnumerator BarkWithDelay(float time, int clip) 
@@ -474,12 +475,12 @@ public class DogParkDalmation : MonoBehaviour
         }
         else if (interactionStage == 2)
         {
-            if (timeOfDeath > 1 && Time.time - timeOfDeath > 4 && Time.time - timeOfDeath < 5)
+            if (timeOfDeath > 1 && Time.time - timeOfDeath > 4 && !deathFade)
             {
 
                 SteamVR_Fade.Start(Color.clear, 0);
                 SteamVR_Fade.Start(Color.black, 1);
-                //lighting.intensity = 2 / (1 + ((Time.time - (timeOfDeath + 4)) * .5f));
+                deathFade = true;
 
             }
             if (!deathMove && timeOfDeath > 1 && Time.time - timeOfDeath > 5)
@@ -495,11 +496,11 @@ public class DogParkDalmation : MonoBehaviour
                 
             }
             //load next scene
-            if (timeOfDeath > 1 && Time.time - timeOfDeath > 10 && !loadCheck)
+            if (timeOfDeath > 1 && Time.time - timeOfDeath > 12 && !loadCheck)
             {
                 if (strokeTouch && !deadStroke)
                 {
-                    WriteString("Stroked: ");
+                    WriteString("Injured & Stroked: ");
                     numInteractions += 1;
                     deadStroke = true;
                 }
@@ -509,7 +510,6 @@ public class DogParkDalmation : MonoBehaviour
 
                 string path = "Times.txt";
                 StreamWriter writer = new StreamWriter(path, true);
-                writer.WriteLine("Crash: " + Time.time);
                 writer.WriteLine("Final Bond Value: " + bond);
                 writer.WriteLine("Num Interactions: " + numInteractions);
                 writer.Close();
