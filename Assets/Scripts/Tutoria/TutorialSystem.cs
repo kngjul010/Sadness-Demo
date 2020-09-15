@@ -48,7 +48,7 @@ public class TutorialSystem : MonoBehaviour
     private Coroutine LCoroutine;
     private Coroutine RCoroutine;
     private bool gestureDone;
-
+    private Transform camera;
 
 
     // Start is called before the first frame update
@@ -67,6 +67,7 @@ public class TutorialSystem : MonoBehaviour
         leftHand =  GameObject.FindWithTag("Left Hand").GetComponent<Hand>();
         rightHand = GameObject.FindWithTag("Right Hand").GetComponent<Hand>();
         gestureDone = false;
+        camera = GameObject.FindGameObjectWithTag("MainCamera").transform;
     }
 
     // Update is called once per frame
@@ -103,6 +104,7 @@ public class TutorialSystem : MonoBehaviour
                 ShowHint(rightHand, leftSnap, "Click Left Side to Snap Left", ref LCoroutine);
                 snaps[0] = false;
                 snaps[1] = false;
+                timer = 0;
             }
             else if (stagePart1)
             {
@@ -110,11 +112,13 @@ public class TutorialSystem : MonoBehaviour
                 {
                     CancelHint(rightHand, leftSnap, ref LCoroutine);
                     snaps[0] = true;
+                    timer = 0;
                 }
                 if (rightSnap.GetStateDown(rightHand.handType))
                 {
                     CancelHint(rightHand, rightSnap, ref RCoroutine);
                     snaps[1] = true;
+                    timer = 0;
                 }
                 if (snaps[0] == true && snaps[1] == true)
                 {
@@ -122,6 +126,12 @@ public class TutorialSystem : MonoBehaviour
                     stage = 2;
                     timer = 0;
                     stagePart1 = false;
+                }
+                //Repeat if they take a while
+                if (timer > 10)
+                {
+                    timer = 0;
+                    PlayAudioClip(vlSource, snapA);
                 }
             }
         }
@@ -135,6 +145,7 @@ public class TutorialSystem : MonoBehaviour
                 ShowHint(rightHand, grab, "Hold Trigger to Grab", ref RCoroutine);
                 ShowHint(leftHand, grab, "Hold Trigger to Grab", ref LCoroutine);
                 stagePart1 = true;
+                timer = 0;
             }
             else if (stagePart2 == false && stagePart1 == true)
             {
@@ -145,6 +156,13 @@ public class TutorialSystem : MonoBehaviour
                     stagePart2 = true;
                     timer = 0;
                 }
+                //Repeat if they take a while
+                if (timer > 10)
+                {
+                    timer = 0;
+                    PlayAudioClip(vlSource, grabA);
+                }
+
             }
             else if (stagePart2 && stagePart3 == false)
             {
@@ -166,6 +184,13 @@ public class TutorialSystem : MonoBehaviour
                     targetObj.SetActive(false);
                     PlayAudioClip(audioSource, tutCompleteSound);
                 }
+                //Repeat if they take a while
+                if (timer > 10)
+                {
+                    timer = 0;
+                    PlayAudioClip(vlSource, throwA);
+                }
+
             }
         }
         //Teleport
@@ -184,6 +209,7 @@ public class TutorialSystem : MonoBehaviour
                 ShowHint(leftHand, teleport, "Click and Hold to Aim, Release to Teleport", ref hintCoroutine);
 
                 stagePart1 = true;
+                timer = 0;
             }
             else if (stagePart1 == true)
             {
@@ -195,9 +221,15 @@ public class TutorialSystem : MonoBehaviour
                     stage = 4;
                     PlayAudioClip(audioSource, tutCompleteSound);
                 }
+                //Repeat if they take a while
+                if (timer > 10)
+                {
+                    timer = 0;
+                    PlayAudioClip(vlSource, teleportA);
+                }
             }
         }
-        //TODO: Stroke Sphere
+        //Stroke Sphere
         else if (stage == 4)
         {
             if (level == 1)
@@ -212,6 +244,7 @@ public class TutorialSystem : MonoBehaviour
                 PlayAudioClip(vlSource, strokeA);
                 stagePart1 = true;
                 stroked = false;
+                timer = 0;
             }
             else if (stagePart1 == true && stagePart2 == false)
             {
@@ -219,6 +252,12 @@ public class TutorialSystem : MonoBehaviour
                 {
                     stagePart2 = true;
                     timer = 0;
+                }
+                //Repeat if they take a while
+                if (timer > 10)
+                {
+                    timer = 0;
+                    PlayAudioClip(vlSource, strokeA);
                 }
 
             }
@@ -232,7 +271,7 @@ public class TutorialSystem : MonoBehaviour
             }
 
         }
-        //TODO: Gesture Recognition
+        //Gesture Recognition
         else if (stage == 5)
         {
             if (stagePart1 == false && timer > 2)
@@ -246,6 +285,7 @@ public class TutorialSystem : MonoBehaviour
                 ShowHint(rightHand, gesture, "Hold to Start, Release to Complete Gesture", ref hintCoroutine);
                 gestureDone = false;
                 stagePart1 = true;
+                timer = 0;
             }
             else if (stagePart1 && !stagePart2)
             {
@@ -263,6 +303,12 @@ public class TutorialSystem : MonoBehaviour
                     timer = 0;
                     PlayAudioClip(audioSource, tutCompleteSound);
                     stage = 6;
+                }
+                //Repeat if they take a while
+                if (timer > 10)
+                {
+                    timer = 0;
+                    PlayAudioClip(vlSource, gestureA);
                 }
             }
             
@@ -296,6 +342,13 @@ public class TutorialSystem : MonoBehaviour
                     //SteamVR_Fade.Start(Color.clear, 0);
                     // SteamVR_Fade.Start(Color.black, 1);
                     //StartCoroutine(LoadYourAsyncScene());
+                }
+
+                //Repeat if they take a while
+                if (Vector3.Distance(handSelectObj.transform.position, camera.position) > 4 && timer > 10)
+                {
+                    timer = 0;
+                    PlayAudioClip(vlSource, handsA);
                 }
             }
         }
