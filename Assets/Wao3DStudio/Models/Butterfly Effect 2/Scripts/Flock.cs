@@ -19,6 +19,7 @@ public class Flock : MonoBehaviour {
 		GlobalFlock=transform.parent.GetComponent<GlobalFlock>();
 		speed = Random.Range (1f, 2);
         GetComponent<Animator>().Play("Butterfly Effect 2 Fly Idle", -1, Random.Range(0f, 0.9f));
+		GetComponent<Animator>().speed = 2.5f;
 
     }
 	

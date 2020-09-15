@@ -293,3 +293,38 @@ Handed Object: 402,2802
 ==== End of Experience ====
 
 
+== Park Start: 0
+AI: Start Exploring: 18,05474
+Fetch Teddy: 30,12536
+AI: Start Exploring: 54,30491
+AI: Start Exploring: 76,42684
+Director Incrased Bond: 85,03358
+== Park Start: 0
+AI: Start Exploring: 6,013579
+Fetch Teddy: 13,1892
+Start Chase Ball: 19,87892
+Start Chase Ball: 28,45224
+== Park Start: 0
+AI: Start Exploring: 6,017993
+Start Chase Ball: 6,21647
+Dog Stroked: 25,53024
+Dog Stroked: 31,91649
+AI: Start Exploring: 37,94663
+Start Chase Ball: 62,85817
+AI - Play: 73,20994
+Start Chase Ball: 76,69664
+Director Incrased Bond: 85,00262
+Start Chase Ball: 88,23637
+AI: Gesture Obeyed: 131,9152
+Dog Stroked: 138,3217
+Dog Stroked: 144,6977
+Dog Stroked: 154,3839
+Dog Stroked: 160,7489
+AI: Start Exploring: 166,7551
+Gesture Obeyed: 167,153
+Start Running Away: 170,0194
+Crash: 197,2069
+By Body: 202,2703
+Final Bond Value: 1,799999
+Num Interactions: 12
+== Vet Start: 210,5057

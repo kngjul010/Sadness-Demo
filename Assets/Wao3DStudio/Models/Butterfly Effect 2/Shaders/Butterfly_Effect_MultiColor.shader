@@ -59,7 +59,7 @@ Shader "Wao3DStudio/Butterfly Effect/MultiColor" {
                 float4 tangent : TANGENT;
                 float2 texcoord0 : TEXCOORD0;
 
-                UNITY_VERTEX_INPUT_INSTANCE_ID
+                UNITY_VERTEX_INPUT_INSTANCE_ID //Insert
             };
             struct VertexOutput {
                 float4 pos : SV_POSITION;
@@ -71,7 +71,7 @@ Shader "Wao3DStudio/Butterfly Effect/MultiColor" {
                 LIGHTING_COORDS(5,6)
                 UNITY_FOG_COORDS(7)
 
-                UNITY_VERTEX_OUTPUT_STEREO
+                UNITY_VERTEX_OUTPUT_STEREO //Insert
             };
             VertexOutput vert (VertexInput v) {
                 VertexOutput o = (VertexOutput)0;
@@ -150,6 +150,8 @@ Shader "Wao3DStudio/Butterfly Effect/MultiColor" {
                 float3 normal : NORMAL;
                 float4 tangent : TANGENT;
                 float2 texcoord0 : TEXCOORD0;
+
+                UNITY_VERTEX_INPUT_INSTANCE_ID //Insert
             };
             struct VertexOutput {
                 float4 pos : SV_POSITION;
@@ -160,9 +162,16 @@ Shader "Wao3DStudio/Butterfly Effect/MultiColor" {
                 float3 bitangentDir : TEXCOORD4;
                 LIGHTING_COORDS(5,6)
                 UNITY_FOG_COORDS(7)
+
+                UNITY_VERTEX_OUTPUT_STEREO //Insert
             };
             VertexOutput vert (VertexInput v) {
                 VertexOutput o = (VertexOutput)0;
+
+                UNITY_SETUP_INSTANCE_ID(v); //Insert
+                UNITY_INITIALIZE_OUTPUT(VertexOutput, o); //Insert
+                UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o); //Insert
+
                 o.uv0 = v.texcoord0;
                 o.normalDir = UnityObjectToWorldNormal(v.normal);
                 o.tangentDir = normalize( mul( unity_ObjectToWorld, float4( v.tangent.xyz, 0.0 ) ).xyz );
@@ -222,13 +231,22 @@ Shader "Wao3DStudio/Butterfly Effect/MultiColor" {
             struct VertexInput {
                 float4 vertex : POSITION;
                 float2 texcoord0 : TEXCOORD0;
+
+                UNITY_VERTEX_INPUT_INSTANCE_ID //Insert
             };
             struct VertexOutput {
                 V2F_SHADOW_CASTER;
                 float2 uv0 : TEXCOORD1;
+
+                UNITY_VERTEX_OUTPUT_STEREO //Insert
             };
             VertexOutput vert (VertexInput v) {
                 VertexOutput o = (VertexOutput)0;
+
+                UNITY_SETUP_INSTANCE_ID(v); //Insert
+                UNITY_INITIALIZE_OUTPUT(VertexOutput, o); //Insert
+                UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o); //Insert
+
                 o.uv0 = v.texcoord0;
                 o.pos = UnityObjectToClipPos( v.vertex );
                 TRANSFER_SHADOW_CASTER(o)

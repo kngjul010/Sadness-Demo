@@ -71,6 +71,7 @@ public class DogParkDalmation : MonoBehaviour
     private bool chanceBone;
     private bool deadStroke;
     private bool deathFade;
+    private Transform closest;
 
     // Use this for initialization
     void Start()
@@ -112,6 +113,7 @@ public class DogParkDalmation : MonoBehaviour
         chanceBone = false;
         deadStroke = true;
         deathFade = false;
+        closest = null;
     }
     //Used to play the dog bark sounds at specific times
     IEnumerator BarkWithDelay(float time, int clip) 
@@ -853,7 +855,7 @@ public class DogParkDalmation : MonoBehaviour
     private void SearchBone()
     {
         //Dont need to do it the entirety of it
-        Transform closest = null;
+        
         if (Time.time - boneTimer > 1.5f)
         {
             //check closest digspot
@@ -888,7 +890,7 @@ public class DogParkDalmation : MonoBehaviour
             bond += 0.05f;
             StateChase(true);
         }
-       
+        boneTimer += Time.deltaTime;
 
 
     }
