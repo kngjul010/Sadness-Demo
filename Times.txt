@@ -161,3 +161,52 @@ Start Chase Ball: 120,2075
 AI: Disobey return: 125,0855
 AI: Start Exploring: 125,0855
 Start Running Away: 130,0033
+====== Level Chosen: 0 ======
+Tutorial Start: 9,398566
+Tutorial End: 45,51482
+== Pet Store start: 46,77116
+Puppy Chosen: 56,8269
+== Park Start: 68,93805
+Start Chase Ball: 74,69117
+AI: Disobey return: 79,5216
+AI: Start Exploring: 79,5216
+Start Chase Ball: 83,95525
+====== Level Chosen: 0 ======
+Tutorial Start: 4,504571
+Tutorial End: 26,41659
+== Pet Store start: 27,668
+Puppy Chosen: 37,74079
+== Park Start: 49,9059
+Start Chase Ball: 55,86339
+Start Chase Ball: 63,16098
+Start Chase Ball: 73,73124
+AI: Disobey return: 81,89442
+AI: Start Exploring: 81,89442
+Start Chase Ball: 101,6299
+AI: Disobey return: 108,1359
+AI: Start Exploring: 108,1359
+Start Chase Ball: 110,8622
+AI Director - Incrased Bond: 114,9281
+AI: Disobey return: 116,5955
+AI: Start Exploring: 116,5955
+Start Chase Ball: 126,7795
+AI: Disobey return: 138,3181
+AI: Start Exploring: 138,3181
+Start Chase Ball: 142,3376
+AI: Disobey return: 147,6012
+AI: Start Exploring: 147,6012
+Start Chase Ball: 151,0562
+AI: Disobey return: 157,1203
+AI: Start Exploring: 157,1203
+Start Chase Ball: 160,4967
+AI - Play: 173,9346
+Start Running Away: 179,921
+Crash: 201,9099
+Crash: 208,9734
+Final Bond Value: 1,65
+Num Interactions: 9
+== Vet Start: 210,3741
+Vet Speech: 233,1097
+==== End of Experience ====
+
+

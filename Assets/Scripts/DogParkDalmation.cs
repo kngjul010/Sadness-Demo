@@ -570,7 +570,6 @@ public class DogParkDalmation : MonoBehaviour
 
                 string path = "Times.txt";
                 StreamWriter writer = new StreamWriter(path, true);
-                writer.WriteLine("Crash: " + Time.time);
                 writer.WriteLine("Final Bond Value: " + bond);
                 writer.WriteLine("Num Interactions: " + numInteractions);
                 writer.Close();
@@ -597,7 +596,13 @@ public class DogParkDalmation : MonoBehaviour
             }
             else disobedient = false;
         }
-
+        //Check for throw
+        else if (CheckThrow())
+        {
+            state = "chase";
+            StateChase(true);
+        }
+        //Go back to Idle State
         else if (Vector3.Distance(idlePoint.position, transform.position) < 2)
         {
             anim.SetInteger("State", -1); //transition to idle
@@ -607,6 +612,7 @@ public class DogParkDalmation : MonoBehaviour
             state = "idle";
             StateIdle(true);
         }
+        //Possible Disobey - go explore instead
         else if (disobedient && Time.time - animationTime > 3)
         {
             WriteString("AI: Disobey Return: ");

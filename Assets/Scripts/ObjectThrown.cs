@@ -53,9 +53,9 @@ public class ObjectThrown : MonoBehaviour
             }
         }
         //ensure object doesnt fall through ground
-        if (transform.position.y < -10)
+        if (transform.position.y < 40)
         {
-            transform.position = new Vector3(transform.position.x, 1, transform.position.z);
+            transform.position = new Vector3(transform.position.x, 51, transform.position.z);
         }
     }
 
