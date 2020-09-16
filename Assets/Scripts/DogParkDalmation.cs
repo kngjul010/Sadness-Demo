@@ -551,6 +551,13 @@ public class DogParkDalmation : MonoBehaviour
                 writer.WriteLine("Num Interactions: " + numInteractions);
                 writer.Close();
 
+                //Wipe all objects: Ensure thrown objects don't appear in next scene
+                GameObject[] interactables = GameObject.FindGameObjectsWithTag("Interactable");
+                foreach (GameObject obj in interactables)
+                {
+                    Destroy(obj);
+                }
+
             }
 
         }

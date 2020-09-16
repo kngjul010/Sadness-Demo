@@ -339,9 +339,14 @@ public class TutorialSystem : MonoBehaviour
                     PlayerPrefs.SetInt("Level", level);
                     levelLoader.SetActive(true);
                     WriteString("Tutorial End: ");
-                    //SteamVR_Fade.Start(Color.clear, 0);
-                    // SteamVR_Fade.Start(Color.black, 1);
-                    //StartCoroutine(LoadYourAsyncScene());
+
+                    //Wipe all objects: Ensure thrown objects don't appear in next scene
+                    GameObject[] interactables = GameObject.FindGameObjectsWithTag("Interactable");
+                    foreach (GameObject obj in interactables)
+                    {
+                        Destroy(obj);
+                    }
+                  
                 }
 
                 //Repeat if they take a while

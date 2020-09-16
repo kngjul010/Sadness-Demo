@@ -12,6 +12,7 @@ TagManager:
   - rMesh
   - lCollider
   - rCollider
+  - Interactable
   layers:
   - Default
   - TransparentFX

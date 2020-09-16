@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityStandardAssets.Characters.ThirdPerson;
 using System.IO;
 using UnityEditor;
+using Valve.VR;
 //Controls the puppy behaviour in the pet stor (PSA I didn't name the animations and never got around to renaming them :| )
 public class Puppy_Controller : MonoBehaviour
 {
@@ -181,20 +182,24 @@ public class Puppy_Controller : MonoBehaviour
             GetComponent<AICharacterControl>().SetTarget(null);
             anim.SetInteger("Next", -5);
         }
-        //fade to blaclk
-        if (endScene < 9999.0f)
-        {
-            lighting.intensity = 1 / (1 + Time.time - endScene);
-        }
         //load next scene
         if (endScene < 9999.0f && !loadCheck)
         {
+            SteamVR_Fade.Start(Color.clear, 0);
+            SteamVR_Fade.Start(Color.black, 1);
             PlayerPrefs.SetInt("Dog", dogChosen);
             PlayerPrefs.SetInt("NumInteractions", numInteractions);
             PlayerPrefs.SetFloat("Bond", bond);
             loadObject.SetActive(true);
             //StartCoroutine(LoadYourAsyncScene());
-            loadCheck = true;               
+            loadCheck = true;
+
+            //Wipe all objects: Ensure thrown objects don't appear in next scene
+            GameObject[] interactables = GameObject.FindGameObjectsWithTag("Interactable");
+            foreach (GameObject obj in interactables)
+            {
+                Destroy(obj);
+            }
         }
     }
 

@@ -148,7 +148,7 @@ public class ParkInteractionControl : MonoBehaviour
             }
         }
         //Fetch TennisBall if no interactions have occurred in a while
-        else if (timeSinceLastInteraction > 20)
+        else if (Time.time - timeSinceLastInteraction > 20)
         {
             if (numLastInteractions == dogScript.numInteractions)
             {
@@ -163,6 +163,7 @@ public class ParkInteractionControl : MonoBehaviour
             {
                 numLastInteractions = dogScript.numInteractions;
             }
+            timeSinceLastInteraction = Time.time;
         }
             
     }
