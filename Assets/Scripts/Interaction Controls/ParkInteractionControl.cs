@@ -25,6 +25,8 @@ public class ParkInteractionControl : MonoBehaviour
     private float bondBoostTime;
     private float groveForceTime;
     private float tennisBallCheckDelay;
+    private int numLastInteractions;
+    private float timeSinceLastInteraction;
 
     // Start is called before the first frame update
     void Start()
@@ -101,6 +103,9 @@ public class ParkInteractionControl : MonoBehaviour
         groveForceTime = (dogScript.dogLife * 3) / 4;
 
         tennisBallCheckDelay = Time.time;
+
+        numLastInteractions = dogScript.numInteractions;
+        timeSinceLastInteraction = Time.time;
     }
 
     private void Update()
@@ -140,6 +145,23 @@ public class ParkInteractionControl : MonoBehaviour
                 StreamWriter writer = new StreamWriter(path, true);
                 writer.WriteLine("Director Forced DogFetch: " + Time.time);
                 writer.Close();
+            }
+        }
+        //Fetch TennisBall if no interactions have occurred in a while
+        else if (timeSinceLastInteraction > 20)
+        {
+            if (numLastInteractions == dogScript.numInteractions)
+            {
+                tennisball.GetComponent<ObjectThrown>().SendMessage();
+
+                string path = "Times.txt";
+                StreamWriter writer = new StreamWriter(path, true);
+                writer.WriteLine("Director Forced DogFetch: " + Time.time);
+                writer.Close();
+            }
+            else
+            {
+                numLastInteractions = dogScript.numInteractions;
             }
         }
             
