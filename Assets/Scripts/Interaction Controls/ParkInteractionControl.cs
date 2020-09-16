@@ -116,7 +116,7 @@ public class ParkInteractionControl : MonoBehaviour
             dogScript.bond += 0.2f;
             string path = "Times.txt";
             StreamWriter writer = new StreamWriter(path, true);
-            writer.WriteLine("Director Incrased Bond: " + Time.time);
+            writer.WriteLine("AI Director - Incrased Bond: " + Time.time);
             writer.Close();
             bondBoost = true;
         }
@@ -125,7 +125,7 @@ public class ParkInteractionControl : MonoBehaviour
         {
             string path = "Times.txt";
             StreamWriter writer = new StreamWriter(path, true);
-            writer.WriteLine("Director Forced Grove Interaction: " + Time.time);
+            writer.WriteLine("AI Director - Forced Grove Interaction: " + Time.time);
             writer.Close();
 
             dogScript.SetGroveStarted();
@@ -143,7 +143,7 @@ public class ParkInteractionControl : MonoBehaviour
 
                 string path = "Times.txt";
                 StreamWriter writer = new StreamWriter(path, true);
-                writer.WriteLine("Director Forced DogFetch: " + Time.time);
+                writer.WriteLine("AI Director - Forced DogFetch: " + Time.time);
                 writer.Close();
             }
         }
@@ -156,7 +156,7 @@ public class ParkInteractionControl : MonoBehaviour
 
                 string path = "Times.txt";
                 StreamWriter writer = new StreamWriter(path, true);
-                writer.WriteLine("Director Forced DogFetch: " + Time.time);
+                writer.WriteLine("AI Director - Forced DogFetch: " + Time.time);
                 writer.Close();
             }
             else

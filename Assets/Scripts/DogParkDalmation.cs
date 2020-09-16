@@ -299,8 +299,9 @@ public class DogParkDalmation : MonoBehaviour
                     anim.SetInteger("State", 1);
                     animationTime = Time.time;
                     //Start Barking
-                    StartCoroutine(BarkWithDelay(.7f, 0));
+                    StartCoroutine(BarkWithDelay(.8f, 0));
                     StartCoroutine(BarkWithDelay(2, 0));
+                    StartCoroutine(BarkWithDelay(3, 0));
 
                 }
                 else
