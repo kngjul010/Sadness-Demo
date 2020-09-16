@@ -77,6 +77,7 @@ public class DogParkDalmation : MonoBehaviour
     private string stateToSet;
     private bool setState;
     private Transform tDigSpot;
+    private Transform nextSphere;
 
     // Use this for initialization
     void Start()
@@ -122,6 +123,7 @@ public class DogParkDalmation : MonoBehaviour
         pickupball = false;
         stateToSet = "";
         setState = false;
+        nextSphere = null;
     }
 
     //Used to play the dog bark sounds at specific times
@@ -205,7 +207,14 @@ public class DogParkDalmation : MonoBehaviour
     {
         targetObj = thrownObj;
         objType = thrownObj.GetComponent<ObjectThrown>().objType;
-        sphere = targetObj.GetComponent<Transform>();
+        if (state != "fetch")
+        {
+            sphere = targetObj.GetComponent<Transform>();
+        }
+        else
+        {
+            nextSphere = targetObj.GetComponent<Transform>();
+        }
     }
 
     //Check when the dog is stroked
@@ -647,7 +656,11 @@ public class DogParkDalmation : MonoBehaviour
             sphere.GetComponent<Rigidbody>().isKinematic = false;
             sphere.GetComponent<Rigidbody>().useGravity = true;
             animationTime = Time.time;
-
+            if (nextSphere != null)
+            {
+                sphere = nextSphere;
+                nextSphere = null;
+            }
             //next state
             state = "idle";
             StateIdle(true);
@@ -660,6 +673,11 @@ public class DogParkDalmation : MonoBehaviour
             sphere.GetComponent<Rigidbody>().isKinematic = false;
             sphere.GetComponent<Rigidbody>().useGravity = true;
             animationTime = Time.time;
+            if (nextSphere != null)
+            {
+                sphere = nextSphere;
+                nextSphere = null;
+            }
 
             WriteString("AI: Disobey return: ");
 
@@ -716,6 +734,15 @@ public class DogParkDalmation : MonoBehaviour
                 WriteString("Fetch Teddy: ");
                 numInteractions += 1;
                 bond += 0.25f;
+
+                StartCoroutine(BarkWithDelay(.7f, 0));
+                StartCoroutine(BarkWithDelay(2, 0));
+                StartCoroutine(BarkWithDelay(2.8f, 0));
+                StartCoroutine(BarkWithDelay(3.4f, 0));
+                StartCoroutine(BarkWithDelay(4.8f, 0));
+                StartCoroutine(BarkWithDelay(5.6f, 0));
+                StartCoroutine(BarkWithDelay(6.2f, 0));
+                StartCoroutine(BarkWithDelay(7.5f, 0));
             }
             else
             {
@@ -943,6 +970,7 @@ public class DogParkDalmation : MonoBehaviour
         if (chanceBone && Vector3.Distance(closest.position, transform.position) < 3)
         {
             sphere = closest;
+            objType = 1;
             state = "chase";
             WriteString("Bone Toy Found: ");
             numInteractions += 1;

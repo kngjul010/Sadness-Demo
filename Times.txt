@@ -38,3 +38,99 @@ Handed Object: 279,6887
 ==== End of Experience ====
 
 
+====== Level Chosen: 1 ======
+Tutorial Start: 11,02292
+Tutorial End: 33,81142
+== Pet Store start: 35,07904
+Puppy Chosen: 39,45477
+== Park Start: 47,34571
+AI: Start Exploring: 53,37711
+Fetch Teddy: 60,86018
+Start Chase Ball: 67,0833
+Start Chase Ball: 77,38938
+AI: Start Exploring: 93,36998
+Bone Toy Found: 96,40216
+Start Chase Ball: 96,40216
+AI: Disobey return: 100,5328
+AI: Start Exploring: 100,5328
+Start Chase Ball: 107,9098
+AI: Disobey return: 114,1386
+AI: Start Exploring: 114,1386
+Start Chase Ball: 121,2128
+AI Director - Incrased Bond: 122,3553
+Start Chase Ball: 129,0099
+Start Chase Ball: 139,8265
+AI: Disobey return: 149,8333
+AI: Start Exploring: 149,8333
+Start Chase Ball: 164,6246
+Start Chase Ball: 175,8524
+AI: Disobey return: 181,9514
+AI: Start Exploring: 181,9514
+Start Chase Ball: 188,8697
+Start Running Away: 197,3667
+Crash: 219,422
+Final Bond Value: 2
+Num Interactions: 12
+== Vet Start: 227,9225
+Vet Speech: 249,3467
+Handed Object: 255,4987
+==== End of Experience ====
+
+
+Handed Object: 259,8531
+==== End of Experience ====
+
+
+====== Level Chosen: 1 ======
+Tutorial Start: 13,39115
+Tutorial End: 33,25895
+== Pet Store start: 34,53169
+Puppy Chosen: 41,40219
+== Park Start: 47,62829
+AI: Start Exploring: 53,64397
+Bone Toy Found: 56,6549
+Start Chase Ball: 56,6549
+Start Chase Ball: 62,90815
+AI: Disobey return: 73,01093
+AI: Start Exploring: 73,01093
+Fetch Teddy: 85,89605
+AI: Start Exploring: 99,27306
+Bone Toy Found: 102,294
+Start Chase Ball: 102,294
+Start Chase Ball: 107,5899
+Start Chase Ball: 113,2772
+Start Chase Ball: 122,0287
+AI Director - Incrased Bond: 122,6586
+AI: Disobey return: 133,9671
+AI: Start Exploring: 133,9671
+Bone Toy Found: 136,9985
+Start Chase Ball: 136,9985
+Start Chase Ball: 141,0396
+Start Chase Ball: 146,5397
+Start Chase Ball: 155,2136
+AI: Start Exploring: 166,5744
+Start Chase Ball: 168,4077
+AI - Play: 181,568
+Start Chase Ball: 185,8311
+Start Running Away: 197,6371
+Crash: 220,2823
+Final Bond Value: 2,199999
+Num Interactions: 16
+== Vet Start: 228,7259
+Vet Speech: 249,9309
+Handed Object: 250,8829
+==== End of Experience ====
+
+
+Handed Object: 251,0853
+==== End of Experience ====
+
+
+Handed Object: 251,9275
+==== End of Experience ====
+
+
+Handed Object: 255,0845
+==== End of Experience ====
+
+
