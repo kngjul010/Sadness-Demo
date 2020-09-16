@@ -50,6 +50,7 @@ public class Puppy_Controller : MonoBehaviour
         anim = GetComponent<Animator>();
         numInteractions = 0;
         bond = 0;
+        
     }
     // Used to play puppy barking noises
     IEnumerator BarkWithDelay(float time, float length, int clip)
@@ -157,9 +158,12 @@ public class Puppy_Controller : MonoBehaviour
             source.Stop();
             startStandingBark = false;
         }
-
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Walking") && GetComponent<AICharacterControl>().target == null)
+        {
+            GetComponent<AICharacterControl>().SetTarget(GameObject.FindGameObjectWithTag("MainCamera").transform);
+        }
         //set animation speed if we have a character controller
-        if (GetComponent<NavMeshAgent>() != null && GetComponent<AICharacterControl>() != null)
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Walking") && GetComponent<NavMeshAgent>() != null && GetComponent<AICharacterControl>() != null)
         {
             speed = GetComponent<NavMeshAgent>().velocity.magnitude;
             anim.SetFloat("Speed", speed);

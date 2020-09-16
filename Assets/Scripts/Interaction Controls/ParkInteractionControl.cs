@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR.InteractionSystem;
 using System.IO;
+using Valve.VR;
 
 public class ParkInteractionControl : MonoBehaviour
 {
@@ -34,8 +35,8 @@ public class ParkInteractionControl : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         level = PlayerPrefs.GetInt("Level");
         dogChosen = PlayerPrefs.GetInt("Dog");
-        dogChosen = 1; //test Line
-        level = 2; //test Line
+        //dogChosen = 1; //test Line
+        //level = 2; //test Line
         dogScript = dog.GetComponent<DogParkDalmation>();
         //Happy & Inquisitive
         if (dogChosen == 0)
@@ -106,6 +107,7 @@ public class ParkInteractionControl : MonoBehaviour
 
         numLastInteractions = dogScript.numInteractions;
         timeSinceLastInteraction = Time.time;
+        SteamVR_Fade.Start(Color.clear, 0);
     }
 
     private void Update()
@@ -133,11 +135,11 @@ public class ParkInteractionControl : MonoBehaviour
 
         }
         //Fetch ball in stage 0 if it is out of reach
-        else if (level == 0 && Time.time - tennisBallCheckDelay > 10)
+        else if (level == 0 && Time.time - tennisBallCheckDelay > 5)
         {
             tennisBallCheckDelay = Time.time;
 
-            if (Vector3.Distance(tennisball.transform.position, player.transform.position) > 3 && dogScript.GetState() == "idle")
+            if (Vector3.Distance(tennisball.transform.position, player.transform.position) > 2 && dogScript.GetState() == "idle")
             {
                 tennisball.GetComponent<ObjectThrown>().SendMessage();
 
@@ -148,7 +150,7 @@ public class ParkInteractionControl : MonoBehaviour
             }
         }
         //Fetch TennisBall if no interactions have occurred in a while
-        else if (Time.time - timeSinceLastInteraction > 20)
+        else if (Time.time - timeSinceLastInteraction > 20 && dogScript.GetState() == "idle")
         {
             if (numLastInteractions == dogScript.numInteractions)
             {

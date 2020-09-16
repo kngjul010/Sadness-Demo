@@ -62,5 +62,6 @@ public class ObjectThrown : MonoBehaviour
     public void SendMessage()
     {
         doggo.SendMessage("onObjectThrown", this.gameObject);
+        thrown = true;
     }
 }
