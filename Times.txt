@@ -1,212 +1,198 @@
-====== Level Chosen: 0 ======
-Tutorial Start: 7,108647
-Tutorial End: 25,93297
-== Pet Store start: 27,18073
-Puppy Chosen: 37,2107
-== Park Start: 49,3301
-Start Chase Ball: 53,82859
-Start Chase Ball: 61,02514
-Start Chase Ball: 72,60708
-Start Chase Ball: 81,18045
-Start Chase Ball: 89,867
-AI: Start Exploring: 102,1712
-AI Director - Incrased Bond: 114,3763
-AI: Start Exploring: 130,7253
-AI Director - Forced DogFetch: 151,4145
-Start Chase Ball: 151,4366
-AI Director - Forced DogFetch: 159,4992
-Start Chase Ball: 159,5336
-Start Chase Ball: 168,2728
-Start Running Away: 179,3681
-Crash: 201,4581
-Crash: 208,4869
-Final Bond Value: 1,6
-Num Interactions: 8
-== Vet Start: 209,9779
-Vet Speech: 232,8459
+====== Level Chosen: 1 ======
+Tutorial Start: 14,84621
+Tutorial End: 72,97367
+== Pet Store start: 74,23769
+Puppy Chosen: 104,3165
+== Park Start: 112,1004
+AI - Play: 130,1628
+AI Director - Forced DogFetch: 132,1171
+Start Chase Ball: 132,1407
+Start Chase Ball: 141,0374
+AI: Start Exploring: 154,3412
+Fetch Teddy: 161,4277
+AI - Play: 170,8121
+Start Chase Ball: 172,3675
+AI Director - Incrased Bond: 187,1143
+AI - Play: 197,4769
+Start Chase Ball: 206,2427
+AI: Start Exploring: 224,5426
+Start Chase Ball: 240,0795
+Start Chase Ball: 250,1971
+Start Running Away: 262,1244
+Crash: 286,7459
+Final Bond Value: 1,75
+Num Interactions: 7
+== Vet Start: 295,1717
+Vet Speech: 317,7053
+Handed Object: 345,259
 ==== End of Experience ====
 
 
-====== Level Chosen: 0 ======
-Tutorial Start: 5,189442
-Tutorial End: 23,01365
-== Pet Store start: 24,30193
-Puppy Chosen: 34,31773
-== Park Start: 46,65696
-Start Chase Ball: 50,24644
-Start Chase Ball: 59,64335
-Start Chase Ball: 72,00386
-AI: Start Exploring: 84,84055
-Start Chase Ball: 91,85007
-AI: Start Exploring: 105,5544
-AI Director - Incrased Bond: 111,6633
-AI Director - Forced DogFetch: 129,1888
-Start Chase Ball: 129,2241
-AI Director - Forced DogFetch: 136,9065
-Start Chase Ball: 136,9418
-AI: Start Exploring: 145,5694
-AI: Start Exploring: 174,6454
-Start Running Away: 176,6654
-Crash: 199,2997
-Crash: 206,3293
-Final Bond Value: 1,5
-Num Interactions: 6
-== Vet Start: 207,7458
-Vet Speech: 229,4692
+Handed Object: 352,5675
 ==== End of Experience ====
 
 
-====== Level Chosen: 0 ======
-Tutorial Start: 23,59168
-Tutorial End: 65,60619
-== Pet Store start: 66,88391
-Puppy Chosen: 76,92933
-== Park Start: 88,99223
-Start Chase Ball: 93,76987
-Start Chase Ball: 103,5653
-Start Chase Ball: 112,9836
-Start Chase Ball: 124,1449
-Start Chase Ball: 131,222
-Start Chase Ball: 142,1705
-AI - Play: 153,7416
-AI Director - Incrased Bond: 154,0077
-AI - Play: 163,7923
-AI Director - Forced DogFetch: 169,3231
-Start Chase Ball: 169,3584
-Start Chase Ball: 181,9288
-Start Chase Ball: 193,9228
-Start Running Away: 219,0228
-Crash: 240,8771
-Crash: 247,9084
-Final Bond Value: 1,65
-Num Interactions: 9
-== Vet Start: 249,4389
-Vet Speech: 272,2574
+Handed Object: 354,5667
 ==== End of Experience ====
 
 
-AI Director - Incrased Bond: 0,02
-AI - Play: 6,005412
-== Park Start: 0
-Start Chase Ball: 4,278372
-Start Chase Ball: 11,85405
-Start Chase Ball: 21,33823
-AI: Start Exploring: 34,14318
-AI Director - Incrased Bond: 65,01637
-AI: Start Exploring: 72,14806
-AI Director - Forced DogFetch: 95,7692
-Start Chase Ball: 95,83764
-Start Chase Ball: 103,4557
-AI: Start Exploring: 111,8511
-AI: Start Exploring: 128,2654
-Start Running Away: 130,0317
-== Park Start: 0
-Start Chase Ball: 6,141725
-AI: Disobey return: 11,06882
-AI: Start Exploring: 11,06882
-Start Chase Ball: 20,12012
-AI: Disobey return: 23,55302
-AI: Start Exploring: 23,55302
-== Park Start: 0
-Start Chase Ball: 2,619124
-Start Chase Ball: 10,79262
-AI - Play: 22,64322
-Start Chase Ball: 23,67498
-Start Chase Ball: 33,56146
-Start Chase Ball: 40,57891
-AI: Disobey return: 45,33223
-AI: Start Exploring: 45,33223
-AI Director - Forced DogFetch: 60,24835
-Start Chase Ball: 60,28189
-AI Director - Incrased Bond: 65,02252
-AI - Play: 68,66692
-AI Director - Forced DogFetch: 70,26528
-Start Chase Ball: 70,29948
-Start Chase Ball: 78,05199
-AI Director - Forced DogFetch: 104,9504
-Start Chase Ball: 104,9851
-Start Chase Ball: 108,6591
-Start Chase Ball: 117,1209
-AI: Disobey return: 124,5851
-AI: Start Exploring: 124,5851
-Start Running Away: 130,0149
-== Park Start: 0
-Start Chase Ball: 2,607823
-AI Director - Forced DogFetch: 10,03803
-Start Chase Ball: 10,06109
-AI: Disobey return: 18,38862
-AI: Start Exploring: 18,38862
-== Park Start: 0
-Start Chase Ball: 4,050459
-AI: Disobey return: 10,27991
-AI: Start Exploring: 10,27991
-Start Chase Ball: 29,56004
-AI: Disobey return: 38,3898
-AI: Start Exploring: 38,3898
-Start Chase Ball: 43,39807
-AI: Disobey return: 48,69518
-AI: Start Exploring: 48,69518
-Start Chase Ball: 53,24856
-AI: Disobey return: 58,4467
-AI: Start Exploring: 58,4467
-Start Chase Ball: 61,60068
-AI Director - Incrased Bond: 65,02155
-Start Chase Ball: 72,37469
-AI: Disobey return: 80,59216
-AI: Start Exploring: 80,59216
-Start Chase Ball: 85,75534
-Start Chase Ball: 101,6609
-Start Chase Ball: 109,112
-Start Chase Ball: 120,2075
-AI: Disobey return: 125,0855
-AI: Start Exploring: 125,0855
-Start Running Away: 130,0033
-====== Level Chosen: 0 ======
-Tutorial Start: 9,398566
-Tutorial End: 45,51482
-== Pet Store start: 46,77116
-Puppy Chosen: 56,8269
-== Park Start: 68,93805
-Start Chase Ball: 74,69117
-AI: Disobey return: 79,5216
-AI: Start Exploring: 79,5216
-Start Chase Ball: 83,95525
-====== Level Chosen: 0 ======
-Tutorial Start: 4,504571
-Tutorial End: 26,41659
-== Pet Store start: 27,668
-Puppy Chosen: 37,74079
-== Park Start: 49,9059
-Start Chase Ball: 55,86339
-Start Chase Ball: 63,16098
-Start Chase Ball: 73,73124
-AI: Disobey return: 81,89442
-AI: Start Exploring: 81,89442
-Start Chase Ball: 101,6299
-AI: Disobey return: 108,1359
-AI: Start Exploring: 108,1359
-Start Chase Ball: 110,8622
-AI Director - Incrased Bond: 114,9281
-AI: Disobey return: 116,5955
-AI: Start Exploring: 116,5955
-Start Chase Ball: 126,7795
-AI: Disobey return: 138,3181
-AI: Start Exploring: 138,3181
-Start Chase Ball: 142,3376
-AI: Disobey return: 147,6012
-AI: Start Exploring: 147,6012
-Start Chase Ball: 151,0562
-AI: Disobey return: 157,1203
-AI: Start Exploring: 157,1203
-Start Chase Ball: 160,4967
-AI - Play: 173,9346
-Start Running Away: 179,921
-Crash: 201,9099
-Crash: 208,9734
-Final Bond Value: 1,65
-Num Interactions: 9
-== Vet Start: 210,3741
-Vet Speech: 233,1097
+Handed Object: 355,444
+==== End of Experience ====
+
+
+Handed Object: 356,2086
+==== End of Experience ====
+
+
+Handed Object: 356,6763
+==== End of Experience ====
+
+
+Handed Object: 357,009
+==== End of Experience ====
+
+
+Handed Object: 357,5232
+==== End of Experience ====
+
+
+== Vet Start: 0
+Vet Speech: 21,88609
+Handed Object: 33,50274
+==== End of Experience ====
+
+
+== Vet Start: 0
+Vet Speech: 21,52708
+== Vet Start: 0
+Vet Speech: 22,34511
+Handed Object: 28,90874
+==== End of Experience ====
+
+
+Handed Object: 35,94972
+==== End of Experience ====
+
+
+Handed Object: 37,01357
+==== End of Experience ====
+
+
+Handed Object: 37,83522
+==== End of Experience ====
+
+
+Handed Object: 38,59164
+==== End of Experience ====
+
+
+Handed Object: 39,38995
+==== End of Experience ====
+
+
+Handed Object: 41,32246
+==== End of Experience ====
+
+
+Handed Object: 42,47826
+==== End of Experience ====
+
+
+== Vet Start: 0
+Vet Speech: 22,44731
+== Vet Start: 0
+Vet Speech: 22,56825
+== Vet Start: 0
+Vet Speech: 22,36933
+Handed Object: 30,60965
+==== End of Experience ====
+
+
+Handed Object: 37,00694
+==== End of Experience ====
+
+
+Handed Object: 40,49359
+==== End of Experience ====
+
+
+Handed Object: 42,13437
+==== End of Experience ====
+
+
+Handed Object: 43,35575
+==== End of Experience ====
+
+
+== Vet Start: 0
+Vet Speech: 21,44981
+Handed Object: 27,49207
+==== End of Experience ====
+
+
+Handed Object: 34,17731
+==== End of Experience ====
+
+
+Handed Object: 35,79576
+==== End of Experience ====
+
+
+Handed Object: 37,06186
+==== End of Experience ====
+
+
+== Vet Start: 0
+Vet Speech: 21,61543
+Handed Object: 28,05688
+==== End of Experience ====
+
+
+Handed Object: 40,1959
+==== End of Experience ====
+
+
+== Vet Start: 0
+Vet Speech: 21,55146
+Handed Object: 27,30293
+==== End of Experience ====
+
+
+Handed Object: 31,78999
+==== End of Experience ====
+
+
+Handed Object: 33,14883
+==== End of Experience ====
+
+
+Handed Object: 34,83035
+==== End of Experience ====
+
+
+Handed Object: 36,5628
+==== End of Experience ====
+
+
+Handed Object: 39,05396
+==== End of Experience ====
+
+
+Handed Object: 41,03829
+==== End of Experience ====
+
+
+Handed Object: 44,6062
+==== End of Experience ====
+
+
+Handed Object: 46,25824
+==== End of Experience ====
+
+
+== Vet Start: 0
+Vet Speech: 21,48099
+Handed Object: 27,87814
 ==== End of Experience ====
 
 

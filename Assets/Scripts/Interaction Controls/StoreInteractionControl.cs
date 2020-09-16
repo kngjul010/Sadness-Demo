@@ -16,6 +16,7 @@ public class StoreInteractionControl : MonoBehaviour
     
     public GameObject lvl0Door;
     public GameObject teleportObj;
+    public GameObject instructionPoster;
 
     [Header ("Dog Scripts")]
     public Puppy_Controller midDogC;
@@ -82,5 +83,6 @@ public class StoreInteractionControl : MonoBehaviour
         rightPen.SetActive(false);
         rightDog.SetActive(false);
         teleportObj.SetActive(false);
+        instructionPoster.SetActive(false);
     }
 }
