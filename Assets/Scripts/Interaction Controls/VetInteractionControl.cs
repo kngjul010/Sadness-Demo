@@ -45,7 +45,7 @@ public class VetInteractionControl : MonoBehaviour
             }
         }
         player = GameObject.FindGameObjectWithTag("Player");
-        player.transform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
+        player.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
         player.transform.position = new Vector3(-0.581f, 0.39f, 0.071f);
         player.transform.rotation = Quaternion.Euler(0, 0, 0);
 

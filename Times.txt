@@ -1,198 +1,40 @@
 ====== Level Chosen: 1 ======
-Tutorial Start: 14,84621
-Tutorial End: 72,97367
-== Pet Store start: 74,23769
-Puppy Chosen: 104,3165
-== Park Start: 112,1004
-AI - Play: 130,1628
-AI Director - Forced DogFetch: 132,1171
-Start Chase Ball: 132,1407
-Start Chase Ball: 141,0374
-AI: Start Exploring: 154,3412
-Fetch Teddy: 161,4277
-AI - Play: 170,8121
-Start Chase Ball: 172,3675
-AI Director - Incrased Bond: 187,1143
-AI - Play: 197,4769
-Start Chase Ball: 206,2427
-AI: Start Exploring: 224,5426
-Start Chase Ball: 240,0795
-Start Chase Ball: 250,1971
-Start Running Away: 262,1244
-Crash: 286,7459
-Final Bond Value: 1,75
-Num Interactions: 7
-== Vet Start: 295,1717
-Vet Speech: 317,7053
-Handed Object: 345,259
+Tutorial Start: 9,99743
+Tutorial End: 37,77262
+== Pet Store start: 39,05717
+Puppy Chosen: 51,12067
+== Park Start: 58,24471
+Start Chase Ball: 63,05648
+AI - Play: 74,89422
+AI - Play: 97,02843
+AI Director - Forced DogFetch: 98,28328
+Start Chase Ball: 98,3062
+Start Chase Ball: 102,2724
+Start Chase Ball: 125,2723
+AI Director - Incrased Bond: 133,257
+AI - Play: 148,9401
+Start Chase Ball: 153,2708
+AI: Start Exploring: 165,8969
+Fetch Teddy: 173,1391
+AI - Play: 182,493
+Start Chase Ball: 183,3573
+Start Chase Ball: 191,9341
+Start Chase Ball: 204,3163
+Start Running Away: 208,2574
+Crash: 231,9923
+Final Bond Value: 1,85
+Num Interactions: 9
+== Vet Start: 240,4433
+Vet Speech: 262,4858
+Handed Object: 269,1046
 ==== End of Experience ====
 
 
-Handed Object: 352,5675
+Handed Object: 274,9577
 ==== End of Experience ====
 
 
-Handed Object: 354,5667
-==== End of Experience ====
-
-
-Handed Object: 355,444
-==== End of Experience ====
-
-
-Handed Object: 356,2086
-==== End of Experience ====
-
-
-Handed Object: 356,6763
-==== End of Experience ====
-
-
-Handed Object: 357,009
-==== End of Experience ====
-
-
-Handed Object: 357,5232
-==== End of Experience ====
-
-
-== Vet Start: 0
-Vet Speech: 21,88609
-Handed Object: 33,50274
-==== End of Experience ====
-
-
-== Vet Start: 0
-Vet Speech: 21,52708
-== Vet Start: 0
-Vet Speech: 22,34511
-Handed Object: 28,90874
-==== End of Experience ====
-
-
-Handed Object: 35,94972
-==== End of Experience ====
-
-
-Handed Object: 37,01357
-==== End of Experience ====
-
-
-Handed Object: 37,83522
-==== End of Experience ====
-
-
-Handed Object: 38,59164
-==== End of Experience ====
-
-
-Handed Object: 39,38995
-==== End of Experience ====
-
-
-Handed Object: 41,32246
-==== End of Experience ====
-
-
-Handed Object: 42,47826
-==== End of Experience ====
-
-
-== Vet Start: 0
-Vet Speech: 22,44731
-== Vet Start: 0
-Vet Speech: 22,56825
-== Vet Start: 0
-Vet Speech: 22,36933
-Handed Object: 30,60965
-==== End of Experience ====
-
-
-Handed Object: 37,00694
-==== End of Experience ====
-
-
-Handed Object: 40,49359
-==== End of Experience ====
-
-
-Handed Object: 42,13437
-==== End of Experience ====
-
-
-Handed Object: 43,35575
-==== End of Experience ====
-
-
-== Vet Start: 0
-Vet Speech: 21,44981
-Handed Object: 27,49207
-==== End of Experience ====
-
-
-Handed Object: 34,17731
-==== End of Experience ====
-
-
-Handed Object: 35,79576
-==== End of Experience ====
-
-
-Handed Object: 37,06186
-==== End of Experience ====
-
-
-== Vet Start: 0
-Vet Speech: 21,61543
-Handed Object: 28,05688
-==== End of Experience ====
-
-
-Handed Object: 40,1959
-==== End of Experience ====
-
-
-== Vet Start: 0
-Vet Speech: 21,55146
-Handed Object: 27,30293
-==== End of Experience ====
-
-
-Handed Object: 31,78999
-==== End of Experience ====
-
-
-Handed Object: 33,14883
-==== End of Experience ====
-
-
-Handed Object: 34,83035
-==== End of Experience ====
-
-
-Handed Object: 36,5628
-==== End of Experience ====
-
-
-Handed Object: 39,05396
-==== End of Experience ====
-
-
-Handed Object: 41,03829
-==== End of Experience ====
-
-
-Handed Object: 44,6062
-==== End of Experience ====
-
-
-Handed Object: 46,25824
-==== End of Experience ====
-
-
-== Vet Start: 0
-Vet Speech: 21,48099
-Handed Object: 27,87814
+Handed Object: 279,6887
 ==== End of Experience ====
 
 

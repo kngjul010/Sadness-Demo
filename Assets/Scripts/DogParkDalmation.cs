@@ -705,6 +705,7 @@ public class DogParkDalmation : MonoBehaviour
                 teddyBear.SetActive(true);
                 sphere = teddyBear.transform;
                 charController.SetTarget(sphere);
+                objType = 2;
                 anim.SetInteger("State", 0); //Transition to running fast
                 //Chase the teddy, which really just fetches it
                 state = "chase";
@@ -939,7 +940,7 @@ public class DogParkDalmation : MonoBehaviour
             
 
         }
-        if (chanceBone && Vector3.Distance(closest.position, transform.position) < 2)
+        if (chanceBone && Vector3.Distance(closest.position, transform.position) < 3)
         {
             sphere = closest;
             state = "chase";
