@@ -8098,7 +8098,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 184734929}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.09618759, y: 0.86530685, z: -0.6090851}
+  m_LocalPosition: {x: 53.92276, y: 50.281635, z: -123.3168}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 833845745}
@@ -8106,8 +8106,8 @@ Transform:
   - {fileID: 1656934068}
   - {fileID: 1744082238}
   - {fileID: 1927568230}
-  m_Father: {fileID: 1815700677}
-  m_RootOrder: 11
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &184836706
 PrefabInstance:
@@ -43158,6 +43158,7 @@ MonoBehaviour:
   - {fileID: 833845744}
   teleportObj: {fileID: 246063398}
   gestureObjs: {fileID: 390402067}
+  tennisball: {fileID: 1744082239}
 --- !u!1001 &1065198802
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51142,7 +51143,7 @@ PrefabInstance:
     - target: {fileID: 2110440731262588865, guid: 1d59c85af6eb5d8468d9f5f9d4a48625,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2110440731262588865, guid: 1d59c85af6eb5d8468d9f5f9d4a48625,
         type: 3}
@@ -53091,6 +53092,16 @@ PrefabInstance:
         type: 3}
       propertyPath: previewRightInstance
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961427478729415045, guid: 495aa41ea987dd842bf250a3d46f86de,
+        type: 3}
+      propertyPath: showRightPreview
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961427478729415045, guid: 495aa41ea987dd842bf250a3d46f86de,
+        type: 3}
+      propertyPath: showLeftPreview
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2477288149391558433, guid: 495aa41ea987dd842bf250a3d46f86de,
         type: 3}
@@ -66482,21 +66493,6 @@ MonoBehaviour:
   doggo: {fileID: 690486364}
   thrown: 0
   objType: -1
---- !u!114 &1715269175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715269167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fb59ad41b0a1a944ab6118e586b9a50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doggo: {fileID: 0}
-  thrown: 0
-  objType: 0
 --- !u!1001 &1715838908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70859,7 +70855,6 @@ Transform:
   - {fileID: 624038360}
   - {fileID: 778648660}
   - {fileID: 432925147}
-  - {fileID: 184734930}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -82378,7 +82373,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7649188562472554035}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7418c7dd8f977d4e969202d3fa7e926, type: 3}
   m_Name: 

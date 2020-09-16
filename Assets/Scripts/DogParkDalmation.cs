@@ -73,6 +73,9 @@ public class DogParkDalmation : MonoBehaviour
     private bool deadStroke;
     private bool deathFade;
     private Transform closest;
+    private bool pickupball;
+    private string stateToSet;
+    private bool setState;
 
     // Use this for initialization
     void Start()
@@ -115,6 +118,9 @@ public class DogParkDalmation : MonoBehaviour
         deadStroke = true;
         deathFade = false;
         closest = null;
+        pickupball = false;
+        stateToSet = "";
+        setState = false;
     }
     //Used to play the dog bark sounds at specific times
     IEnumerator BarkWithDelay(float time, int clip) 
@@ -197,9 +203,16 @@ public class DogParkDalmation : MonoBehaviour
             StateDead();
         }
 
+        //Check for AI Director State Changes
+        if (setState)
+        {
+            state = stateToSet;
+            setState = false;
+            OutsideChangeState();
+        }
         //make sure our animations sync with the dog's movement speed
         anim.SetFloat("Speed", speed);
-
+        print(state);
     }
 
     private void onObjectThrown(GameObject thrownObj)
@@ -285,7 +298,10 @@ public class DogParkDalmation : MonoBehaviour
                 {
                     anim.SetInteger("State", 1);
                     animationTime = Time.time;
-                    
+                    //Start Barking
+                    StartCoroutine(BarkWithDelay(.7f, 0));
+                    StartCoroutine(BarkWithDelay(2, 0));
+
                 }
                 else
                 {
@@ -300,6 +316,7 @@ public class DogParkDalmation : MonoBehaviour
                 WriteString("Dog Stroked: ");
                 numInteractions += 1;
                 bond += 0.05f;
+                StopAllCoroutines();
             }
         }
         //Other Idle Animations
@@ -399,27 +416,41 @@ public class DogParkDalmation : MonoBehaviour
             }
             
         }
+        
         //Pick up the ball when the dog gets close enough
-        else if (Vector3.Distance(sphere.position, transform.position) < .8)
+        else if (Vector3.Distance(sphere.position, transform.position) < 1 || pickupball)
         {
+
+            pickupball = true;
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("Runing Fast"))
+            {
+                anim.SetInteger("State", 1); //Transition to running with ball
+                anim.SetBool("DroppedBall", false);
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("Pickup2"))
+            {
+                //Set the ball in the mouth
+                sphere.SetParent(dogMouth.transform);
+                sphere.localPosition = mouthPositions[1 + objType];
+                sphere.localRotation = Quaternion.Euler(mouthRotations[1 + objType]);
+                sphere.GetComponent<ObjectThrown>().thrown = false;
+                sphere.GetComponent<Rigidbody>().isKinematic = true;
+                sphere.GetComponent<Rigidbody>().useGravity = false;
+            }
+           if (anim.GetCurrentAnimatorStateInfo(0).IsName("RunningWithBall"))
+            {
+                charController.SetTarget(approachPoint);
+                agent.speed = 2.8f;
+
+                pickupball = false;
+                state = "fetch";
+                StateFetch(true);
+            }
+
             StopAllCoroutines();
 
-            anim.SetInteger("State", 1); //Transition to running with ball
-            anim.SetBool("DroppedBall", false);
-            //Set the ball in the mouth
-            sphere.SetParent(dogMouth.transform);
-            sphere.localPosition = mouthPositions[1 + objType];
-            sphere.localRotation = Quaternion.Euler(mouthRotations[1 + objType]);
-            charController.SetTarget(approachPoint);
-            agent.speed = 2.8f;
-  
-            sphere.GetComponent<ObjectThrown>().thrown = false;
-            sphere.GetComponent<Rigidbody>().isKinematic = true;
-            sphere.GetComponent<Rigidbody>().useGravity = false;
-
-            state = "fetch";
-            StateFetch(true);
         }
+        print(Vector3.Distance(sphere.position, transform.position));
     }
 
     private void StateDeathStart(bool first = false)
@@ -896,6 +927,70 @@ public class DogParkDalmation : MonoBehaviour
         boneTimer += Time.deltaTime;
 
 
+    }
+
+    //Return Current State
+    public string GetState()
+    {
+        return state;
+    }
+
+    //Set State of the Dog (For The AI Director)
+    public void SetState(string state)
+    {
+        stateToSet = state;
+        setState = true;
+    }
+
+    //Set the state (Based on an outside change - From AI Director)
+    public void OutsideChangeState()
+    {
+        if (state == "idle")
+        {
+            StateIdle(true);
+        }
+        else if (state == "chase")
+        {
+            StateChase(true);
+        }
+        else if (state == "fetch")
+        {
+            StateFetch(true);
+        }
+        else if (state == "explore")
+        {
+            StateExplore(true);
+        }
+        else if (state == "startDeath")
+        {
+            StateDeathStart(true);
+        }
+        else if (state == "showGrove")
+        {
+            StateShowGrove(true);
+        }
+        else if (state == "return")
+        {
+            StateReturn(true);
+        }
+        else if (state == "dig")
+        {
+            StateDig(true);
+        }
+        else if (state == "dead")
+        {
+            StateDead(true);
+        }
+    }
+
+    public bool GetGroveStarted()
+    {
+        return groveFound;
+    }
+
+    public void SetGroveStarted(bool started = true)
+    {
+        groveFound = started;
     }
 }
 

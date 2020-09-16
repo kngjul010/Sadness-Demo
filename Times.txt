@@ -328,3 +328,79 @@ By Body: 202,2703
 Final Bond Value: 1,799999
 Num Interactions: 12
 == Vet Start: 210,5057
+== Park Start: 0
+AI - Play: 6,015491
+Start Chase Ball: 13,21998
+Dog Stroked: 19,86189
+Dog Stroked: 26,2147
+Start Chase Ball: 29,64566
+Start Chase Ball: 38,7653
+Gesture - Sit: 55,81245
+Gesture - Sit: 56,87715
+Gesture - Sit: 57,87643
+Gesture - Sit: 59,57566
+Gesture - Sit: 61,97645
+Gesture - Sit: 63,14125
+Dog Stroked: 66,16376
+== Park Start: 0
+Dog Stroked: 6,343999
+Start Chase Ball: 11,64074
+== Park Start: 0
+Dog Stroked: 6,359355
+Start Chase Ball: 11,57905
+== Park Start: 0
+AI: Start Exploring: 6,033781
+Gesture Obeyed: 15,23527
+Start Chase Ball: 27,87381
+Start Chase Ball: 37,63747
+Director Incrased Bond: 85,02641
+Start Chase Ball: 89,30203
+== Park Start: 0
+Start Chase Ball: 3,403084
+Start Chase Ball: 15,53174
+Start Chase Ball: 26,9592
+== Park Start: 0
+Start Chase Ball: 14,62102
+== Park Start: 0
+Start Chase Ball: 5,977678
+== Park Start: 0
+Start Chase Ball: 3,894792
+== Park Start: 0
+AI: Start Exploring: 6,002183
+Start Chase Ball: 8,027442
+== Park Start: 0
+AI: Start Exploring: 6,01712
+Start Chase Ball: 7,651347
+Start Chase Ball: 14,84771
+Start Chase Ball: 21,10145
+Start Chase Ball: 27,76414
+Start Chase Ball: 33,96105
+== Park Start: 0
+AI: Start Exploring: 6,005693
+Start Chase Ball: 7,570802
+Start Chase Ball: 16,33651
+Director Incrased Bond: 85,00246
+Start Chase Ball: 90,38792
+== Park Start: 0
+Start Chase Ball: 2,972933
+Start Chase Ball: 11,2996
+Start Chase Ball: 25,3836
+== Park Start: 0
+AI - Play: 6,008995
+Start Chase Ball: 6,998324
+== Park Start: 0
+Start Chase Ball: 3,615463
+== Park Start: 0
+Start Chase Ball: 3,242473
+Start Chase Ball: 10,48473
+Start Chase Ball: 21,11521
+Start Chase Ball: 28,3872
+Director Incrased Bond: 85,01132
+== Park Start: 0
+Start Chase Ball: 2,912051
+Start Chase Ball: 11,12007
+Start Chase Ball: 18,95938
+Start Chase Ball: 24,87096
+Start Chase Ball: 32,82124
+Start Chase Ball: 45,13829
+Start Chase Ball: 55,75796

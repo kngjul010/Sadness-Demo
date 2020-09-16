@@ -44,7 +44,7 @@ public class ObjectThrown : MonoBehaviour
                     timer = 0;
                     thrown = true;
                     detached = false;
-                    doggo.SendMessage("onObjectThrown", this.gameObject);
+                    SendMessage();
                 }
                 else
                 {
@@ -57,5 +57,10 @@ public class ObjectThrown : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, 1, transform.position.z);
         }
+    }
+
+    public void SendMessage()
+    {
+        doggo.SendMessage("onObjectThrown", this.gameObject);
     }
 }

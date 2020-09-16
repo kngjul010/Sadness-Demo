@@ -13,6 +13,7 @@ public class ParkInteractionControl : MonoBehaviour
     public GameObject[] interactableObjects;
     public GameObject teleportObj;
     public GameObject gestureObjs;
+    public GameObject tennisball;
 
     private int level;
     private int dogChosen;
@@ -21,6 +22,9 @@ public class ParkInteractionControl : MonoBehaviour
     private DogParkDalmation dogScript;
     private float dogSpan;
     private bool bondBoost;
+    private float bondBoostTime;
+    private float groveForceTime;
+    private float tennisBallCheckDelay;
 
     // Start is called before the first frame update
     void Start()
@@ -91,11 +95,18 @@ public class ParkInteractionControl : MonoBehaviour
         StreamWriter writer = new StreamWriter(path, true);
         writer.WriteLine("== Park Start: " + Time.time);
         writer.Close();
+
+        //Sums for optimization
+        bondBoostTime = dogScript.dogLife / 2;
+        groveForceTime = (dogScript.dogLife * 3) / 4;
+
+        tennisBallCheckDelay = Time.time;
     }
 
     private void Update()
     {
-        if (!bondBoost && dogScript.numInteractions < 10 && Time.time - dogSpan > dogScript.dogLife / 2)
+        //Boost bond to encourage positive interactions
+        if (!bondBoost && dogScript.numInteractions < 10 && Time.time - dogSpan > bondBoostTime)
         {
             dogScript.bond += 0.2f;
             string path = "Times.txt";
@@ -104,6 +115,34 @@ public class ParkInteractionControl : MonoBehaviour
             writer.Close();
             bondBoost = true;
         }
+        //Show grove if it hasn't already (To force more interaction)
+        else if (level == 2 && !dogScript.GetGroveStarted() && Time.time - dogSpan > groveForceTime && dogScript.bond > 1.5f)
+        {
+            string path = "Times.txt";
+            StreamWriter writer = new StreamWriter(path, true);
+            writer.WriteLine("Director Forced Grove Interaction: " + Time.time);
+            writer.Close();
+
+            dogScript.SetGroveStarted();
+            dogScript.SetState("showGrove");
+
+        }
+        //Fetch ball in stage 0 if it is out of reach
+        else if (level == 0 && Time.time - tennisBallCheckDelay > 10)
+        {
+            tennisBallCheckDelay = Time.time;
+
+            if (Vector3.Distance(tennisball.transform.position, player.transform.position) > 3 && dogScript.GetState() == "idle")
+            {
+                tennisball.GetComponent<ObjectThrown>().SendMessage();
+
+                string path = "Times.txt";
+                StreamWriter writer = new StreamWriter(path, true);
+                writer.WriteLine("Director Forced DogFetch: " + Time.time);
+                writer.Close();
+            }
+        }
+            
     }
 
 }
