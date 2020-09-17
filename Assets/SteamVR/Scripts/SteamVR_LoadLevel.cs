@@ -8,6 +8,8 @@ using UnityEngine;
 using System.Collections;
 using Valve.VR;
 using System.IO;
+using System.Threading.Tasks;
+using System;
 
 namespace Valve.VR
 {
@@ -365,6 +367,7 @@ namespace Valve.VR
 
                     // Performing this in a while loop instead seems to help smooth things out.
                     //yield return async;
+                   // yield return new await(() => async.done);
                     while (!async.isDone)
                     {
                         yield return null;
@@ -378,11 +381,11 @@ namespace Valve.VR
 
             yield return null;
 
-            System.GC.Collect();
+            //System.GC.Collect();
 
             yield return null;
 
-            Shader.WarmupAllShaders();
+            //Shader.WarmupAllShaders();
 
             // Optionally wait a short period of time after loading everything back in, but before we start rendering again
             // in order to give everything a change to settle down to avoid any hitching at the start of the new level.
