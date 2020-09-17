@@ -207,7 +207,7 @@ public class DogParkDalmation : MonoBehaviour
     {
         targetObj = thrownObj;
         objType = thrownObj.GetComponent<ObjectThrown>().objType;
-        if (state != "fetch")
+        if (state != "fetch" && !anim.GetCurrentAnimatorStateInfo(0).IsName("RunningWithBall") && !anim.GetCurrentAnimatorStateInfo(0).IsName("Pickup2"))
         {
             sphere = targetObj.GetComponent<Transform>();
         }

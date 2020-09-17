@@ -47738,12 +47738,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bone Toy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7210327710822993127, guid: 495aa41ea987dd842bf250a3d46f86de,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7259843923722035999, guid: 495aa41ea987dd842bf250a3d46f86de,
         type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 2ec0e14254efe4040b7ae3a0da46d5a6, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5912606038716900316, guid: 495aa41ea987dd842bf250a3d46f86de, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 495aa41ea987dd842bf250a3d46f86de, type: 3}
 --- !u!4 &1175483198 stripped
 Transform:
@@ -47751,6 +47757,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1175483197}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1175483199 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 202546156358697755, guid: 495aa41ea987dd842bf250a3d46f86de,
+    type: 3}
+  m_PrefabInstance: {fileID: 1175483197}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1175483200
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175483199}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 630, y: 58.2, z: 60}
+  m_Center: {x: 37.44, y: 157.8753, z: -25.04438}
 --- !u!1001 &1177193390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53116,7 +53141,7 @@ PrefabInstance:
     - target: {fileID: 3614759577055870030, guid: 495aa41ea987dd842bf250a3d46f86de,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2927
+      value: 0.2937
       objectReference: {fileID: 0}
     - target: {fileID: 3614759577055870030, guid: 495aa41ea987dd842bf250a3d46f86de,
         type: 3}
@@ -53168,12 +53193,28 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bone Toy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5912606038716900316, guid: 495aa41ea987dd842bf250a3d46f86de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912606038716900316, guid: 495aa41ea987dd842bf250a3d46f86de,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 56.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7210327710822993127, guid: 495aa41ea987dd842bf250a3d46f86de,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7259843923722035999, guid: 495aa41ea987dd842bf250a3d46f86de,
         type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 2ec0e14254efe4040b7ae3a0da46d5a6, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5912606038716900316, guid: 495aa41ea987dd842bf250a3d46f86de, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 495aa41ea987dd842bf250a3d46f86de, type: 3}
 --- !u!4 &1323812424 stripped
 Transform:
@@ -53181,6 +53222,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1323812423}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1323812425 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 202546156358697755, guid: 495aa41ea987dd842bf250a3d46f86de,
+    type: 3}
+  m_PrefabInstance: {fileID: 1323812423}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1323812426
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323812425}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 630, y: 58.2, z: 60}
+  m_Center: {x: 37.44, y: 157.8753, z: -25.04438}
 --- !u!1001 &1323818928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64523,7 +64583,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bone Toy (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7210327710822993127, guid: 495aa41ea987dd842bf250a3d46f86de,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5912606038716900316, guid: 495aa41ea987dd842bf250a3d46f86de, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 495aa41ea987dd842bf250a3d46f86de, type: 3}
 --- !u!4 &1676024560 stripped
 Transform:
@@ -64531,6 +64597,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1676024559}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1676024561 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 202546156358697755, guid: 495aa41ea987dd842bf250a3d46f86de,
+    type: 3}
+  m_PrefabInstance: {fileID: 1676024559}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1676024562
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676024561}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 630, y: 58.2, z: 60}
+  m_Center: {x: 37.44, y: 157.8753, z: -25.04438}
 --- !u!4 &1680431837 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 3f5975f5c6fe02240aa268f82fca654e,
@@ -82607,5 +82692,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bone Toy
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7210327710822993127, guid: 495aa41ea987dd842bf250a3d46f86de,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5912606038716900316, guid: 495aa41ea987dd842bf250a3d46f86de, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 495aa41ea987dd842bf250a3d46f86de, type: 3}
+--- !u!1 &7843308714896844213 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 202546156358697755, guid: 495aa41ea987dd842bf250a3d46f86de,
+    type: 3}
+  m_PrefabInstance: {fileID: 7843308714896844212}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &7843308714896844214
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7843308714896844213}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 630, y: 58.2, z: 60}
+  m_Center: {x: 37.44, y: 157.8753, z: -25.04438}

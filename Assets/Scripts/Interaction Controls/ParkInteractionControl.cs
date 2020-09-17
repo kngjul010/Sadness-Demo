@@ -113,7 +113,7 @@ public class ParkInteractionControl : MonoBehaviour
     private void Update()
     {
         //Boost bond to encourage positive interactions
-        if (!bondBoost && dogScript.numInteractions < 10 && Time.time - dogSpan > bondBoostTime)
+        if (!bondBoost && dogScript.bond < 1.4 && Time.time - dogSpan > bondBoostTime)
         {
             dogScript.bond += 0.2f;
             string path = "Times.txt";
