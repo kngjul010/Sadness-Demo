@@ -10,7 +10,7 @@ public class VetObjGrabbed : MonoBehaviour
 
 
         
-
+    //When the Ball/Teddy is grabbed - Trigger the end of the vet scene
     private void HandHoverUpdate(Hand hand)
     {
         GrabTypes startingGrabType = hand.GetGrabStarting();

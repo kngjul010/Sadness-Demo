@@ -41,6 +41,7 @@ public class ObjectThrown : MonoBehaviour
             {
                 if (rigidbody.velocity.magnitude > 3)
                 {
+                    //Let dog know object has been thrown
                     timer = 0;
                     thrown = true;
                     detached = false;
@@ -59,6 +60,7 @@ public class ObjectThrown : MonoBehaviour
         }
     }
 
+    //Tells dog the ball was thrown
     public void SendMessage()
     {
         doggo.SendMessage("onObjectThrown", this.gameObject);

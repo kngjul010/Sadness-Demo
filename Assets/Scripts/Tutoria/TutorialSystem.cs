@@ -36,7 +36,7 @@ public class TutorialSystem : MonoBehaviour
 
     [Header("Voice Lines")]
     public AudioSource vlSource;
-    public AudioClip welcomeA, lookAroundA, snapA, grabA, throwA, teleportA, strokeA, gestureA, handsA;
+    public AudioClip welcomeA, lookAroundA, snapA, grabA, throwA, teleportA, strokeA, gestureA, handsA, hands0A;
 
 
     private float timer;
@@ -164,6 +164,7 @@ public class TutorialSystem : MonoBehaviour
                 }
 
             }
+            //Throw
             else if (stagePart2 && stagePart3 == false)
             {
                 tutText.text = "Throw a Ball or Cube at the Bricks in Front of You";
@@ -222,7 +223,7 @@ public class TutorialSystem : MonoBehaviour
                     PlayAudioClip(audioSource, tutCompleteSound);
                 }
                 //Repeat if they take a while
-                if (timer > 10)
+                if (timer > 12)
                 {
                     timer = 0;
                     PlayAudioClip(vlSource, teleportA);
@@ -254,7 +255,7 @@ public class TutorialSystem : MonoBehaviour
                     timer = 0;
                 }
                 //Repeat if they take a while
-                if (timer > 10)
+                if (timer > 12)
                 {
                     timer = 0;
                     PlayAudioClip(vlSource, strokeA);
@@ -305,7 +306,7 @@ public class TutorialSystem : MonoBehaviour
                     stage = 6;
                 }
                 //Repeat if they take a while
-                if (timer > 10)
+                if (timer > 18)
                 {
                     timer = 0;
                     PlayAudioClip(vlSource, gestureA);
@@ -318,13 +319,18 @@ public class TutorialSystem : MonoBehaviour
         {
             if (stagePart1 == false && timer > 2)
             {
-                tutText.text = "Go to the Right Side of the Room to Select Your Hand Style and End the Tutorial";
-                PlayAudioClip(vlSource, handsA);
+                
                 if (level == 0)
                 {
                     tutText.text = "Select Your Hand Style and End the Tutorial";
                     handSelectObj.transform.rotation = Quaternion.Euler(0, 0, 0);
                     handSelectObj.transform.localPosition = new Vector3(-0.886f, -0.6366583f, -3.217f);
+                    PlayAudioClip(vlSource, hands0A);
+                }
+                else
+                {
+                    tutText.text = "Go to the Right Side of the Room to Select Your Hand Style and End the Tutorial";
+                    PlayAudioClip(vlSource, handsA);
                 }
                 stagePart1 = true;
                 handSelectObj.SetActive(true);
@@ -350,10 +356,11 @@ public class TutorialSystem : MonoBehaviour
                 }
 
                 //Repeat if they take a while
-                if (Vector3.Distance(handSelectObj.transform.position, camera.position) > 4 && timer > 10)
+                if (Vector3.Distance(handSelectObj.transform.position, camera.position) > 4 && timer > 12)
                 {
                     timer = 0;
-                    PlayAudioClip(vlSource, handsA);
+                    if (level == 0) PlayAudioClip(vlSource, hands0A);
+                    else PlayAudioClip(vlSource, handsA);
                 }
             }
         }
@@ -361,12 +368,14 @@ public class TutorialSystem : MonoBehaviour
         timer += Time.deltaTime;
     }
 
+    //Start Showing a hint on the controller
     public void ShowHint(Hand hand, SteamVR_Action_Boolean action, string msg, ref Coroutine cor)
     {
         CancelHint(hand, action, ref cor);
         cor = StartCoroutine(HintCoroutine(hand,action,msg));
     }
 
+    //Stop showing a hint on the controller
     public void CancelHint(Hand hand, SteamVR_Action_Boolean action, ref Coroutine cor)
     {
         if (cor != null)
@@ -378,6 +387,7 @@ public class TutorialSystem : MonoBehaviour
         }
     }
 
+    //The Coroutine for the hint
     private IEnumerator HintCoroutine(Hand hand, SteamVR_Action_Boolean action, string msg)
     {
         float prevBreakTime = Time.time;
@@ -422,6 +432,7 @@ public class TutorialSystem : MonoBehaviour
         }
     }
 
+    //Legacy scene Change
     IEnumerator LoadYourAsyncScene()
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Pet Store", LoadSceneMode.Single);

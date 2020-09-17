@@ -6,6 +6,7 @@ using Valve.VR.InteractionSystem;
 using UnityEngine.SceneManagement;
 using System.IO;
 
+
 public class StoreInteractionControl : MonoBehaviour
 {
     [Header("Level 0 Object to Disable")]
@@ -55,6 +56,7 @@ public class StoreInteractionControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //For level 0: Open the door to get the dog to go to the player
         if (level == 0 && doggo0 && timer > 10 )
         {
             DogDoor doorScript = lvl0Door.GetComponent<DogDoor>();
@@ -76,6 +78,7 @@ public class StoreInteractionControl : MonoBehaviour
         timer += Time.deltaTime;
     }
 
+    //Disabling the left and right pens
     public void SetLevel0()
     {
         leftPen.SetActive(false);

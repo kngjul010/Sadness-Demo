@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HandModels : MonoBehaviour
 {
-    // Start is called before the first frame update
+    //Store certain objects for hand personalisation
     public GameObject maleLeft;
     public GameObject maleRight;
     public GameObject femaleLeft;

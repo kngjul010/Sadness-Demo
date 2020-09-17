@@ -28,6 +28,7 @@ public class ParkInteractionControl : MonoBehaviour
     private float tennisBallCheckDelay;
     private int numLastInteractions;
     private float timeSinceLastInteraction;
+    private bool forceExplore;
 
     // Start is called before the first frame update
     void Start()
@@ -35,9 +36,9 @@ public class ParkInteractionControl : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         level = PlayerPrefs.GetInt("Level");
         dogChosen = PlayerPrefs.GetInt("Dog");
-        //dogChosen = 1; //test Line
-        //level = 2; //test Line
         dogScript = dog.GetComponent<DogParkDalmation>();
+
+        // === Set Dog Behaviours === //
         //Happy & Inquisitive
         if (dogChosen == 0)
         {
@@ -46,6 +47,7 @@ public class ParkInteractionControl : MonoBehaviour
             dogScript.inquisitive = 2;
             dogScript.obedience = 0.8f;
         }
+
         //Shy & Obedient
         else if (dogChosen == 1)
         {
@@ -53,6 +55,7 @@ public class ParkInteractionControl : MonoBehaviour
             dogScript.inquisitive = 1.2f;
             dogScript.obedience = 2f;
         }
+
         //Playful
         else if (dogChosen == 2)
         {
@@ -72,6 +75,7 @@ public class ParkInteractionControl : MonoBehaviour
         rightHand.fingerJointHoverRadius = 0.5f;
         rightHand.hoverSphereRadius = 0.4f;
 
+        //Set environment changes in the environment
         if (level == 0)
         {
             interactableObjects[0].SetActive(false);
@@ -108,6 +112,8 @@ public class ParkInteractionControl : MonoBehaviour
         numLastInteractions = dogScript.numInteractions;
         timeSinceLastInteraction = Time.time;
         SteamVR_Fade.Start(Color.clear, 0);
+
+        forceExplore = false;
     }
 
     private void Update()
@@ -122,18 +128,23 @@ public class ParkInteractionControl : MonoBehaviour
             writer.Close();
             bondBoost = true;
         }
+
         //Show grove if it hasn't already (To force more interaction)
         else if (level == 2 && !dogScript.GetGroveStarted() && Time.time - dogSpan > groveForceTime && dogScript.bond > 1.5f)
         {
-            string path = "Times.txt";
-            StreamWriter writer = new StreamWriter(path, true);
-            writer.WriteLine("AI Director - Forced Grove Interaction: " + Time.time);
-            writer.Close();
+            if (dogScript.GetState() == "idle")
+            {
+                string path = "Times.txt";
+                StreamWriter writer = new StreamWriter(path, true);
+                writer.WriteLine("AI Director - Forced Grove Interaction: " + Time.time);
+                writer.Close();
 
-            dogScript.SetGroveStarted();
-            dogScript.SetState("showGrove");
+                dogScript.SetGroveStarted();
+                dogScript.SetState("showGrove");
+            }
 
         }
+    
         //Fetch ball in stage 0 if it is out of reach
         else if (level == 0 && Time.time - tennisBallCheckDelay > 5)
         {
@@ -149,6 +160,7 @@ public class ParkInteractionControl : MonoBehaviour
                 writer.Close();
             }
         }
+
         //Fetch TennisBall if no interactions have occurred in a while
         else if (Time.time - timeSinceLastInteraction > 20 && dogScript.GetState() == "idle")
         {
@@ -167,7 +179,28 @@ public class ParkInteractionControl : MonoBehaviour
             }
             timeSinceLastInteraction = Time.time;
         }
+
+        //Go Get the teddy If it hasn't been found
+        else if (level == 2 && Time.time - dogSpan > bondBoostTime + 10 && !forceExplore && !dogScript.teddyBear.activeSelf)
+        {
+
+            if (dogScript.GetState() == "idle")
+            {
+                string path = "Times.txt";
+                StreamWriter writer = new StreamWriter(path, true);
+                writer.WriteLine("AI Director - Forced Get Teddy: " + Time.time);
+                writer.Close();
+
+                dogScript.ForceFindTeddy();
+                dogScript.SetState("explore");
+
+                forceExplore = true;
+
+            }
             
+
+        }
+
     }
 
 }

@@ -60,7 +60,7 @@ public class Puppy_Controller : MonoBehaviour
         source.time = length;
         source.Play();
     }
-    // loads next scene
+    // loads next scene (Legacy)
     IEnumerator LoadYourAsyncScene()
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Park", LoadSceneMode.Single);
@@ -101,7 +101,7 @@ public class Puppy_Controller : MonoBehaviour
                 
 
             }
-            else if (Time.time - animationTime > 3)
+            else if (Time.time - animationTime > 2.5f)
             {
                 anim.SetInteger("Next", 0);
                 animationTime = Time.time;
@@ -207,6 +207,7 @@ public class Puppy_Controller : MonoBehaviour
         }
     }
 
+    //Collision for stroking
     void OnCollisionEnter(Collision other)
     {
         if (interactionStage == 2)

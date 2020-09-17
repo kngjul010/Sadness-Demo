@@ -28,6 +28,7 @@ public class InteractionLevel : MonoBehaviour
         level = 0;
     }
 
+    //Set the Level based on the slider
     public void value() {
         int val = (int)slider.value;
         level = val;
@@ -67,6 +68,7 @@ public class InteractionLevel : MonoBehaviour
         }
 
     }
+    //Set all the values for the environment
     public void confirm()
     {
         canvas.SetActive(false);

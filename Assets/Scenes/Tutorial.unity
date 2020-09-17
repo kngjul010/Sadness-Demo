@@ -5140,8 +5140,9 @@ MonoBehaviour:
   throwA: {fileID: 8300000, guid: 1934ac417ded4cc41a32d292b3b7eff3, type: 3}
   teleportA: {fileID: 8300000, guid: 9e922af7255139647ac37289a24a69c5, type: 3}
   strokeA: {fileID: 8300000, guid: 328ccdf6d47748349827578cdb503930, type: 3}
-  gestureA: {fileID: 8300000, guid: e16d8cfd788aef044a10b3f796d32ccf, type: 3}
+  gestureA: {fileID: 8300000, guid: 9539a1683c05f184eb1cde360e43421f, type: 3}
   handsA: {fileID: 8300000, guid: ec0ae6fe7cffe614dbf282c3492b01f3, type: 3}
+  hands0A: {fileID: 8300000, guid: d8500049915b1aa4b97f8e2c2e47acde, type: 3}
 --- !u!82 &783088700
 AudioSource:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Move the hand models to the Hand colliders - Ensures they do not move through objects
 public class HandMoveToCollider : MonoBehaviour
 {
     public Transform hand;
@@ -24,7 +25,5 @@ public class HandMoveToCollider : MonoBehaviour
             if (!isStartHand) gameObject.SetActive(false);
 
         }
-        //hand.position = (collider.position + positionOffset);
-        //hand.rotation = Quaternion.Euler(new Vector3(collider.rotation.eulerAngles.x + rotationOffset.x, collider.rotation.eulerAngles.y + rotationOffset.y, collider.rotation.eulerAngles.z + rotationOffset.z));
     }
 }

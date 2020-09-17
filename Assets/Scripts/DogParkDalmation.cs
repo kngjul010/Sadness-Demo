@@ -78,6 +78,7 @@ public class DogParkDalmation : MonoBehaviour
     private bool setState;
     private Transform tDigSpot;
     private Transform nextSphere;
+    private bool forceTeddy;
 
     // Use this for initialization
     void Start()
@@ -124,6 +125,7 @@ public class DogParkDalmation : MonoBehaviour
         stateToSet = "";
         setState = false;
         nextSphere = null;
+        forceTeddy = false;
     }
 
     //Used to play the dog bark sounds at specific times
@@ -196,13 +198,14 @@ public class DogParkDalmation : MonoBehaviour
             setState = false;
             OutsideChangeState();
         }
+
         //make sure our animations sync with the dog's movement speed
         if (speed < 0.5) speed = 1.5f;
         anim.SetFloat("Speed", speed);
         //print(state);
     }
 
-    //Called when an object is thrown 
+    //Called when an object is thrown  - make dog chase after it
     private void onObjectThrown(GameObject thrownObj)
     {
         targetObj = thrownObj;
@@ -248,6 +251,7 @@ public class DogParkDalmation : MonoBehaviour
                 bond += 0.05f;
                 gestureDetect = false;
 
+
                 state = "return";
                 StateReturn(true);
             }
@@ -267,7 +271,7 @@ public class DogParkDalmation : MonoBehaviour
                     bond += 0.05f;
                     gestureDetect = false;
 
-                    obedience += 0.05f;
+                    obedience += 0.025f;
                 }
                 
 
@@ -295,6 +299,7 @@ public class DogParkDalmation : MonoBehaviour
                 {
                     anim.SetInteger("State", 1);
                     animationTime = Time.time;
+                    StopAllCoroutines();
                     //Start Barking
                     StartCoroutine(BarkWithDelay(.8f, 0));
                     StartCoroutine(BarkWithDelay(2, 0));
@@ -306,7 +311,8 @@ public class DogParkDalmation : MonoBehaviour
                     anim.SetInteger("State", 6); //exit current animation loop
                 }
             }
-            else if (Time.time - animationTime > 3){
+            //End the Stroke animation
+            else if (Time.time - animationTime > 2.5f){
                 anim.SetInteger("State", 6);
                 animationTime = Time.time;
                 strokeTouch = false;
@@ -412,6 +418,8 @@ public class DogParkDalmation : MonoBehaviour
                 bond += 0.05f;
                 gestureDetect = false;
 
+                StopAllCoroutines();
+
                 state = "return";
                 StateReturn(true);
             }
@@ -514,6 +522,7 @@ public class DogParkDalmation : MonoBehaviour
         }
         else if (interactionStage == 2)
         {
+            //Fade and teleport to the dog lying down
             if (timeOfDeath > 1 && Time.time - timeOfDeath > 4 && !deathFade)
             {
 
@@ -525,8 +534,8 @@ public class DogParkDalmation : MonoBehaviour
             if (!deathMove && timeOfDeath > 1 && Time.time - timeOfDeath > 5)
             {
                 charController.SetTarget(null);
-                transform.position = (new Vector3(8.19498634f, 50.1063004f, -134.298294f));
-                GameObject.FindGameObjectWithTag("Player").transform.position = (new Vector3(8.19498634f, 50.1063004f, -135.298294f));
+                transform.position = (new Vector3(8.19498634f, 50.05f, -134.298294f));
+                GameObject.FindGameObjectWithTag("Player").transform.position = (new Vector3(8.6f, 50.05f, -134.5f));
                 SteamVR_Fade.Start(Color.clear, 1);
                 deathMove = true;
                 WriteString("By Body: ");
@@ -543,7 +552,6 @@ public class DogParkDalmation : MonoBehaviour
                     numInteractions += 1;
                     deadStroke = true;
                 }
-                Debug.Log("NextScene");
                 levelLoader.SetActive(true);
                 loadCheck = true;
 
@@ -715,8 +723,10 @@ public class DogParkDalmation : MonoBehaviour
             state = "return";
             StateReturn(true);
         }
+        //After digging for a small amount of time
         else if (Time.time - animationTime > 4)
-        {
+        {   
+            //Dig up the Teddybear
             if (interactionStage > 0 && !teddyBear.activeSelf)
             {
                 teddyBear.transform.position = transform.position;
@@ -724,6 +734,12 @@ public class DogParkDalmation : MonoBehaviour
                 sphere = teddyBear.transform;
                 charController.SetTarget(sphere);
                 objType = 2;
+
+                StartCoroutine(BarkWithDelay(0f, 0));
+                StartCoroutine(BarkWithDelay(0.7f, 0));
+
+
+                forceTeddy = false;
                 anim.SetInteger("State", 0); //Transition to running fast
                 //Chase the teddy, which really just fetches it
                 state = "chase";
@@ -735,14 +751,7 @@ public class DogParkDalmation : MonoBehaviour
                 numInteractions += 1;
                 bond += 0.25f;
 
-                StartCoroutine(BarkWithDelay(.7f, 0));
-                StartCoroutine(BarkWithDelay(2, 0));
-                StartCoroutine(BarkWithDelay(2.8f, 0));
-                StartCoroutine(BarkWithDelay(3.4f, 0));
-                StartCoroutine(BarkWithDelay(4.8f, 0));
-                StartCoroutine(BarkWithDelay(5.6f, 0));
-                StartCoroutine(BarkWithDelay(6.2f, 0));
-                StartCoroutine(BarkWithDelay(7.5f, 0));
+                
             }
             else
             {
@@ -759,6 +768,7 @@ public class DogParkDalmation : MonoBehaviour
         {
             WriteString("AI: Start Exploring: ");
 
+            //Chances of behaviour
             int chancePlay = Random.Range(0, 100);
             if (chancePlay <= inquisitive * 30) longExpl = true;
             else longExpl = false;
@@ -777,6 +787,15 @@ public class DogParkDalmation : MonoBehaviour
             tDigSpot =  diggingSpots[chancePlay];
             agent.speed = 2f;
             animationTime = Time.time;
+
+            //Force explore to not be interupted
+            if (forceTeddy)
+            {
+                longExpl = true;
+                ignoreThrow = true;
+                findGrove = false;
+
+            }
 
             
         }
@@ -803,7 +822,7 @@ public class DogParkDalmation : MonoBehaviour
         if (CheckThrow())
         {
             int chancePlay = Random.Range(0, 100);
-            if (chancePlay <= ((inquisitive - (playfulness + obedience) * bond) * 30) - (5 * objType))
+            if (chancePlay <= ((inquisitive - (playfulness + obedience) * bond) * 30) - (5 * objType) || forceTeddy)
             {
                 ignoreThrow = true;
                 sphere.GetComponent<ObjectThrown>().thrown = false;
@@ -820,7 +839,7 @@ public class DogParkDalmation : MonoBehaviour
         else if (gestureDetect)
         {
             int chancePlay = Random.Range(0, 100);
-            if (chancePlay <= ((inquisitive - (obedience) * bond) * 30))
+            if (chancePlay <= ((inquisitive - (obedience) * bond) * 30) || forceTeddy)
             {
                 WriteString("Gesture Ignored: ");
                 gestureDetect = false;
@@ -866,7 +885,7 @@ public class DogParkDalmation : MonoBehaviour
             StateReturn(true);
         }
         //Look at nearby Bone Toys
-        else if (Time.time - animationTime > 3 && interactionStage > 0) SearchBone();
+        else if (Time.time - animationTime > 3 && interactionStage > 0 && !forceTeddy) SearchBone();
     }
 
     private void StateShowGrove(bool first = false)
@@ -891,6 +910,7 @@ public class DogParkDalmation : MonoBehaviour
             StartCoroutine(BarkWithDelay(6.2f, 0));
             StartCoroutine(BarkWithDelay(7.5f, 0));
         }
+        //Wait for player when too far
         else if (Vector3.Distance(idlePoint.position, transform.position) > 11)
         {
             anim.SetInteger("State", -2);
@@ -898,6 +918,7 @@ public class DogParkDalmation : MonoBehaviour
             agent.speed = 1.25f;
 
         }
+        //Move to grove when player is near enough
         else if (charController.target != groveLocation)
         {
             anim.SetInteger("State", 0); //Transition to running fast
@@ -905,16 +926,27 @@ public class DogParkDalmation : MonoBehaviour
             agent.speed = 3.3f;
 
         }
+        //Arrived by the grove
         else if (Vector3.Distance(groveLocation.position, transform.position) < 2)
         {
-            WriteString("Grove Found: ");
-            numInteractions += 1;
-            bond += 0.5f;
-            anim.SetInteger("State", -1);
-            state = "idle";
-            StateIdle(true);
+            anim.SetInteger("State", -2);
+            agent.speed = 1.25f;
+
+            //If they player is closer to the grove, return to them
+            if (Vector3.Distance(idlePoint.position, transform.position) < 6)
+            {
+                WriteString("Grove Found: ");
+                numInteractions += 1;
+                bond += 0.5f;
+                
+                state = "return";
+                StateReturn(true);
+            }
+           
         }
     }
+
+    // = = = End States = = = //
 
     //Check if the target object has actually been thrown
     private bool CheckThrow()
@@ -967,6 +999,7 @@ public class DogParkDalmation : MonoBehaviour
             
 
         }
+        //If the bone is close - fetch it
         if (chanceBone && Vector3.Distance(closest.position, transform.position) < 3)
         {
             sphere = closest;
@@ -1046,5 +1079,11 @@ public class DogParkDalmation : MonoBehaviour
     public void SetGroveStarted(bool started = true)
     {
         groveFound = started;
+    }
+
+    //Force Dog to find the teddy
+    public void ForceFindTeddy()
+    {
+        forceTeddy = true;
     }
 }

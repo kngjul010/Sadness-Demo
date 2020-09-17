@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Steam VR Collider adapted for specific models
 namespace Valve.VR.InteractionSystem
 {
     public class HandCollider : MonoBehaviour

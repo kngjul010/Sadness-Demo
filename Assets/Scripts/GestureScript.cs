@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using AirSig;
 
+//Manages the Gesture Recognition in the environment
 public class GestureScript : MonoBehaviour
 {
     
@@ -24,6 +25,7 @@ public class GestureScript : MonoBehaviour
         airsigManager.SetClassifier("SampleGestureProfile", "");
     }
 
+    //Check the gesture matches the one shown in the tut scene
     void HandleOnDeveloperDefinedMatch(long gestureId, string gesture, float score)
     {
         if (gesture.Trim() == "DOWN" && score > 0.6f)
@@ -33,7 +35,7 @@ public class GestureScript : MonoBehaviour
         }
     }
     
-
+    //Send a message to the correct game object when the gesture succeeds
     public void detectGestureMatch()
     {
         if (tut)

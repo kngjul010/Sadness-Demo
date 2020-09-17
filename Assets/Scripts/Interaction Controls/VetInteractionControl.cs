@@ -22,6 +22,7 @@ public class VetInteractionControl : MonoBehaviour
             Teleport.instance.CancelTeleportHint();
         }
 
+        //Set the object the vet carries (nothing, ball or teddy)
         if (level == 0)
         {
             ball.SetActive(false);
@@ -37,7 +38,6 @@ public class VetInteractionControl : MonoBehaviour
             else if (item == 1)
             {
                 teddy.SetActive(true);
-                //ball.SetActive(false);
                 ball.GetComponent<MeshRenderer>().enabled = false;
                 ball.GetComponent<Interactable>().enabled = false;
                 ball.GetComponent<SphereCollider>().enabled = false;
