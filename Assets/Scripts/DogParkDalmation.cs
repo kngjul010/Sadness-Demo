@@ -607,7 +607,7 @@ public class DogParkDalmation : MonoBehaviour
 
             //See if dog will be obedient or not
             int chancePlay = Random.Range(0, 100);
-            if (chancePlay <= 25 - (obedience * 25))
+            if (chancePlay <= inquisitive * 25 - (obedience * 25) * bond)
             {
                 disobedient = true;
             }
@@ -646,7 +646,7 @@ public class DogParkDalmation : MonoBehaviour
         if (first)
         {
             int chancePlay = Random.Range(0, 100);
-            if (chancePlay <= inquisitive * 25 - (obedience * 25))
+            if (chancePlay <= inquisitive * 25 - (obedience * 25) * bond)
             {
                 disobedient = true;
             }
@@ -773,7 +773,7 @@ public class DogParkDalmation : MonoBehaviour
             if (chancePlay <= inquisitive * 30) longExpl = true;
             else longExpl = false;
             chancePlay = Random.Range(0, 100);
-            if (chancePlay <= ((inquisitive - (playfulness + obedience) * bond) * 30) - (5 * objType))
+            if (chancePlay <= ((inquisitive - (playfulness + obedience) * bond * 0.5f) * 30) - (5 * objType))
             {
                 ignoreThrow = true;
             }
@@ -822,7 +822,7 @@ public class DogParkDalmation : MonoBehaviour
         if (CheckThrow())
         {
             int chancePlay = Random.Range(0, 100);
-            if (chancePlay <= ((inquisitive - (playfulness + obedience) * bond) * 30) - (5 * objType) || forceTeddy)
+            if (chancePlay <= ((inquisitive - (playfulness + obedience) * bond * 0.5f) * 30) - (5 * objType) || forceTeddy)
             {
                 ignoreThrow = true;
                 sphere.GetComponent<ObjectThrown>().thrown = false;
