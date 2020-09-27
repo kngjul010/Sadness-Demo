@@ -488,6 +488,7 @@ public class DogParkDalmation : MonoBehaviour
         else if (Vector3.Distance(deathspots[0].position, transform.position) < 1)
         {
             charController.SetTarget(deathspots[1]);
+            barrier.SetActive(false);
         }
         else if (Vector3.Distance(deathspots[1].position, transform.position) < 1)
         {
@@ -653,7 +654,7 @@ public class DogParkDalmation : MonoBehaviour
             else disobedient = false;
         }
         //Drop the ball when we reach the player
-        if (Vector3.Distance(approachPoint.position, transform.position) < 2)
+        if (Vector3.Distance(approachPoint.position, transform.position) < 2.2)
         {
             anim.SetInteger("State", -1); //transition to idle
             anim.SetBool("DroppedBall", true);
@@ -674,7 +675,7 @@ public class DogParkDalmation : MonoBehaviour
             StateIdle(true);
         }
         //Dog is disobedient
-        else if (disobedient && Vector3.Distance(approachPoint.position, transform.position) < 2.2f)
+        else if (disobedient && Vector3.Distance(approachPoint.position, transform.position) < 2.4f)
         {
             //Drop
             sphere.SetParent(null);

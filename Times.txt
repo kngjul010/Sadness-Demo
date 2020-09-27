@@ -62,3 +62,61 @@ Handed Object: 289,2134
 
 ====== Level Chosen: 0 ======
 Tutorial Start: 15,73531
+====== Level Chosen: 2 ======
+Tutorial Start: 5,18729
+Tutorial End: 71,52855
+== Pet Store start: 72,79285
+Puppy Chosen: 82,24744
+== Park Start: 90,04752
+AI: Start Exploring: 96,10087
+Fetch Teddy: 109,0393
+Start Chase Ball: 121,5964
+Start Chase Ball: 136,9436
+Start Chase Ball: 147,4495
+Start Chase Ball: 158,1101
+Start Chase Ball: 170,3272
+AI: Disobey return: 179,9113
+AI: Start Exploring: 179,9113
+Start Chase Ball: 179,9113
+AI: Disobey return: 189,0408
+AI: Start Exploring: 189,0408
+Dog Stroked: 201,889
+Dog Stroked: 204,9546
+Start Chase Ball: 214,9866
+AI Director - Forced Grove Interaction: 221,2823
+Grove Found: 230,1343
+Dog Stroked: 236,2189
+Dog Stroked: 239,284
+AI: Start Exploring: 245,2917
+Bone Toy Found: 248,293
+Start Chase Ball: 248,293
+Dog Stroked: 255,324
+Start Chase Ball: 256,1565
+Start Running Away: 260,0659
+Crash: 286,8626
+By Body: 291,8938
+Final Bond Value: 2,499999
+Num Interactions: 17
+== Vet Start: 300,2338
+Teddy Used: 300,2338
+Vet Speech: 321,1978
+Handed Object: 327,8587
+==== End of Experience ====
+
+
+Handed Object: 329,6462
+==== End of Experience ====
+
+
+Handed Object: 330,8127
+==== End of Experience ====
+
+
+Handed Object: 331,991
+==== End of Experience ====
+
+
+Handed Object: 333,1338
+==== End of Experience ====
+
+

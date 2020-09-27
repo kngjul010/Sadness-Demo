@@ -29,6 +29,8 @@ public class ObjectThrown : MonoBehaviour
     private void OnDetachedFromHand(Hand hand)
     {
         detached = true;
+        rigidbody.useGravity = true;
+        rigidbody.isKinematic = false;
     }
 
     void Update()
