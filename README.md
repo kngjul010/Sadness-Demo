@@ -3,6 +3,7 @@
 Virtual Reality Environment created to test how interaction affects the elicitation of sadness in VR
 
 Demo:
+
 [![Sadness Demo](https://img.youtube.com/vi/7kQ2AbEr7-o/0.jpg)](https://www.youtube.com/watch?v=7kQ2AbEr7-o "Sadness Demo")
 
 
