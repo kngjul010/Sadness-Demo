@@ -120,3 +120,1048 @@ Handed Object: 333,1338
 ==== End of Experience ====
 
 
+====== Level Chosen: 2 ======
+Tutorial Start: 51,60079
+====== Level Chosen: 0 ======
+Tutorial Start: 12,62335
+Tutorial End: 87,04626
+== Pet Store start: 88,41051
+Puppy Chosen: 98,41641
+== Park Start: 110,0165
+AI: Start Exploring: 116,022
+AI: Disobey Return: 131,6958
+AI: Start Exploring: 131,6958
+AI Director - Forced DogFetch: 146,1453
+Start Chase Ball: 146,1566
+AI - Play: 165,1815
+AI Director - Incrased Bond: 175,0213
+AI: Start Exploring: 175,2104
+AI Director - Forced DogFetch: 196,2234
+Start Chase Ball: 196,2341
+AI - Play: 215,4301
+AI Director - Forced DogFetch: 236,2411
+Start Chase Ball: 236,2513
+Start Running Away: 240,0271
+Crash: 261,8624
+Final Bond Value: 1,35
+Num Interactions: 3
+== Vet Start: 270,1694
+Vet Speech: 291,65
+==== End of Experience ====
+
+
+====== Level Chosen: 1 ======
+Tutorial Start: 6,260715
+Tutorial End: 183,6143
+== Pet Store start: 184,8729
+Puppy Chosen: 303,2722
+== Park Start: 311,7498
+AI - Play: 317,7561
+AI - Play: 328,4325
+AI Director - Forced DogFetch: 331,7531
+Start Chase Ball: 331,7643
+Start Chase Ball: 356,7641
+AI: Start Exploring: 369,7138
+Fetch Teddy: 381,9083
+AI Director - Incrased Bond: 386,7541
+Start Chase Ball: 388,6978
+Start Chase Ball: 401,3696
+Start Chase Ball: 409,4994
+AI: Start Exploring: 422,6331
+Bone Toy Found: 426,0144
+Start Chase Ball: 426,0144
+AI - Play: 436,3065
+AI: Start Exploring: 446,3355
+Bone Toy Found: 449,345
+Start Chase Ball: 449,345
+AI - Play: 459,1408
+Start Running Away: 461,7513
+Crash: 483,5108
+Final Bond Value: 1,9
+Num Interactions: 10
+== Vet Start: 491,8103
+Vet Speech: 513,455
+Handed Object: 646,2429
+==== End of Experience ====
+
+
+Handed Object: 659,6584
+==== End of Experience ====
+
+
+Handed Object: 668,3436
+==== End of Experience ====
+
+
+Handed Object: 669,61
+==== End of Experience ====
+
+
+Handed Object: 670,4871
+==== End of Experience ====
+
+
+Handed Object: 670,838
+==== End of Experience ====
+
+
+Handed Object: 671,0739
+==== End of Experience ====
+
+
+Handed Object: 671,2525
+==== End of Experience ====
+
+
+Handed Object: 671,3867
+==== End of Experience ====
+
+
+Handed Object: 671,4979
+==== End of Experience ====
+
+
+Handed Object: 671,6312
+==== End of Experience ====
+
+
+Handed Object: 671,7423
+==== End of Experience ====
+
+
+Handed Object: 671,831
+==== End of Experience ====
+
+
+Handed Object: 671,9421
+==== End of Experience ====
+
+
+Handed Object: 672,0198
+==== End of Experience ====
+
+
+Handed Object: 672,1309
+==== End of Experience ====
+
+
+Handed Object: 672,231
+==== End of Experience ====
+
+
+Handed Object: 672,353
+==== End of Experience ====
+
+
+Handed Object: 672,4195
+==== End of Experience ====
+
+
+Handed Object: 672,515
+==== End of Experience ====
+
+
+Handed Object: 672,6149
+==== End of Experience ====
+
+
+Handed Object: 672,8713
+==== End of Experience ====
+
+
+Handed Object: 673,2081
+==== End of Experience ====
+
+
+Handed Object: 673,3413
+==== End of Experience ====
+
+
+Handed Object: 673,7078
+==== End of Experience ====
+
+
+Handed Object: 673,7746
+==== End of Experience ====
+
+
+Handed Object: 674,3409
+==== End of Experience ====
+
+
+Handed Object: 674,6964
+==== End of Experience ====
+
+
+Handed Object: 675,0297
+==== End of Experience ====
+
+
+Handed Object: 675,3622
+==== End of Experience ====
+
+
+Handed Object: 675,7625
+==== End of Experience ====
+
+
+Handed Object: 676,0512
+==== End of Experience ====
+
+
+Handed Object: 676,1401
+==== End of Experience ====
+
+
+Handed Object: 676,329
+==== End of Experience ====
+
+
+Handed Object: 676,4513
+==== End of Experience ====
+
+
+Handed Object: 676,5844
+==== End of Experience ====
+
+
+Handed Object: 676,7067
+==== End of Experience ====
+
+
+Handed Object: 676,851
+==== End of Experience ====
+
+
+Handed Object: 677,2731
+==== End of Experience ====
+
+
+Handed Object: 677,4063
+==== End of Experience ====
+
+
+Handed Object: 677,5396
+==== End of Experience ====
+
+
+Handed Object: 677,6843
+==== End of Experience ====
+
+
+Handed Object: 677,7952
+==== End of Experience ====
+
+
+Handed Object: 677,9789
+==== End of Experience ====
+
+
+Handed Object: 678,4026
+==== End of Experience ====
+
+
+Handed Object: 678,817
+==== End of Experience ====
+
+
+Handed Object: 679,1503
+==== End of Experience ====
+
+
+Handed Object: 679,2774
+==== End of Experience ====
+
+
+Handed Object: 679,5016
+==== End of Experience ====
+
+
+Handed Object: 679,7597
+==== End of Experience ====
+
+
+Handed Object: 679,8615
+==== End of Experience ====
+
+
+Handed Object: 679,9835
+==== End of Experience ====
+
+
+Handed Object: 680,1055
+==== End of Experience ====
+
+
+Handed Object: 680,2609
+==== End of Experience ====
+
+
+Handed Object: 680,3275
+==== End of Experience ====
+
+
+Handed Object: 680,4605
+==== End of Experience ====
+
+
+Handed Object: 680,5382
+==== End of Experience ====
+
+
+Handed Object: 680,649
+==== End of Experience ====
+
+
+Handed Object: 680,7461
+==== End of Experience ====
+
+
+Handed Object: 680,8237
+==== End of Experience ====
+
+
+Handed Object: 680,9572
+==== End of Experience ====
+
+
+Handed Object: 680,9903
+==== End of Experience ====
+
+
+Handed Object: 681,1483
+==== End of Experience ====
+
+
+Handed Object: 681,1635
+==== End of Experience ====
+
+
+Handed Object: 681,3243
+==== End of Experience ====
+
+
+Handed Object: 681,3466
+==== End of Experience ====
+
+
+Handed Object: 681,502
+==== End of Experience ====
+
+
+Handed Object: 681,547
+==== End of Experience ====
+
+
+Handed Object: 681,9599
+==== End of Experience ====
+
+
+Handed Object: 681,9932
+==== End of Experience ====
+
+
+Handed Object: 682,2371
+==== End of Experience ====
+
+
+Handed Object: 682,4265
+==== End of Experience ====
+
+
+Handed Object: 682,4818
+==== End of Experience ====
+
+
+Handed Object: 682,604
+==== End of Experience ====
+
+
+Handed Object: 682,7264
+==== End of Experience ====
+
+
+Handed Object: 682,7928
+==== End of Experience ====
+
+
+Handed Object: 682,9483
+==== End of Experience ====
+
+
+Handed Object: 683,0148
+==== End of Experience ====
+
+
+Handed Object: 683,1927
+==== End of Experience ====
+
+
+Handed Object: 683,2703
+==== End of Experience ====
+
+
+Handed Object: 683,3875
+==== End of Experience ====
+
+
+Handed Object: 683,4987
+==== End of Experience ====
+
+
+Handed Object: 683,6873
+==== End of Experience ====
+
+
+Handed Object: 683,7324
+==== End of Experience ====
+
+
+Handed Object: 683,8911
+==== End of Experience ====
+
+
+Handed Object: 683,9811
+==== End of Experience ====
+
+
+Handed Object: 684,1146
+==== End of Experience ====
+
+
+Handed Object: 684,3035
+==== End of Experience ====
+
+
+Handed Object: 684,3593
+==== End of Experience ====
+
+
+Handed Object: 684,515
+==== End of Experience ====
+
+
+Handed Object: 684,5482
+==== End of Experience ====
+
+
+Handed Object: 684,854
+==== End of Experience ====
+
+
+Handed Object: 684,8655
+==== End of Experience ====
+
+
+Handed Object: 685,1207
+==== End of Experience ====
+
+
+Handed Object: 685,3359
+==== End of Experience ====
+
+
+Handed Object: 685,3701
+==== End of Experience ====
+
+
+Handed Object: 685,5812
+==== End of Experience ====
+
+
+Handed Object: 685,5924
+==== End of Experience ====
+
+
+Handed Object: 685,8143
+==== End of Experience ====
+
+
+Handed Object: 685,8257
+==== End of Experience ====
+
+
+Handed Object: 686,0258
+==== End of Experience ====
+
+
+Handed Object: 686,0921
+==== End of Experience ====
+
+
+Handed Object: 686,2697
+==== End of Experience ====
+
+
+Handed Object: 686,5585
+==== End of Experience ====
+
+
+Handed Object: 686,5699
+==== End of Experience ====
+
+
+Handed Object: 686,6916
+==== End of Experience ====
+
+
+Handed Object: 686,7914
+==== End of Experience ====
+
+
+Handed Object: 686,8916
+==== End of Experience ====
+
+
+Handed Object: 687,025
+==== End of Experience ====
+
+
+Handed Object: 687,0692
+==== End of Experience ====
+
+
+Handed Object: 687,2466
+==== End of Experience ====
+
+
+Handed Object: 687,2466
+==== End of Experience ====
+
+
+Handed Object: 687,4246
+==== End of Experience ====
+
+
+Handed Object: 687,4759
+==== End of Experience ====
+
+
+Handed Object: 687,6086
+==== End of Experience ====
+
+
+Handed Object: 687,7529
+==== End of Experience ====
+
+
+Handed Object: 687,8751
+==== End of Experience ====
+
+
+Handed Object: 688,0214
+==== End of Experience ====
+
+
+Handed Object: 688,1244
+==== End of Experience ====
+
+
+Handed Object: 688,2575
+==== End of Experience ====
+
+
+Handed Object: 688,3132
+==== End of Experience ====
+
+
+Handed Object: 688,5024
+==== End of Experience ====
+
+
+Handed Object: 688,5355
+==== End of Experience ====
+
+
+Handed Object: 688,724
+==== End of Experience ====
+
+
+Handed Object: 688,7351
+==== End of Experience ====
+
+
+Handed Object: 688,957
+==== End of Experience ====
+
+
+Handed Object: 688,957
+==== End of Experience ====
+
+
+Handed Object: 689,1907
+==== End of Experience ====
+
+
+Handed Object: 689,4462
+==== End of Experience ====
+
+
+Handed Object: 689,5793
+==== End of Experience ====
+
+
+Handed Object: 689,701
+==== End of Experience ====
+
+
+Handed Object: 689,801
+==== End of Experience ====
+
+
+Handed Object: 689,9343
+==== End of Experience ====
+
+
+Handed Object: 690,0347
+==== End of Experience ====
+
+
+Handed Object: 690,146
+==== End of Experience ====
+
+
+Handed Object: 690,2639
+==== End of Experience ====
+
+
+Handed Object: 690,3415
+==== End of Experience ====
+
+
+Handed Object: 690,508
+==== End of Experience ====
+
+
+Handed Object: 690,6097
+==== End of Experience ====
+
+
+Handed Object: 690,7564
+==== End of Experience ====
+
+
+Handed Object: 691,1454
+==== End of Experience ====
+
+
+Handed Object: 691,1899
+==== End of Experience ====
+
+
+Handed Object: 691,4561
+==== End of Experience ====
+
+
+Handed Object: 691,6006
+==== End of Experience ====
+
+
+Handed Object: 691,7117
+==== End of Experience ====
+
+
+Handed Object: 691,845
+==== End of Experience ====
+
+
+Handed Object: 691,9785
+==== End of Experience ====
+
+
+Handed Object: 692,0783
+==== End of Experience ====
+
+
+Handed Object: 692,1895
+==== End of Experience ====
+
+
+Handed Object: 692,9985
+==== End of Experience ====
+
+
+Handed Object: 693,4218
+==== End of Experience ====
+
+
+Handed Object: 693,6998
+==== End of Experience ====
+
+
+====== Level Chosen: 2 ======
+Tutorial Start: 7,21589
+Tutorial End: 155,9157
+== Pet Store start: 157,1839
+Puppy Chosen: 177,8255
+== Park Start: 184,8909
+AI Director - Forced DogFetch: 204,893
+Start Chase Ball: 204,9046
+Dog Stroked: 212,4633
+AI: Start Exploring: 218,4645
+Start Show Grove: 223,4707
+Grove Found: 254,2719
+Start Chase Ball: 254,2831
+AI: Gesture Obeyed: 254,2943
+Dog Stroked: 260,913
+AI: Start Exploring: 278,9378
+Bone Toy Found: 284,7351
+Start Chase Ball: 284,7351
+AI Director - Forced Get Teddy: 295,3413
+AI: Start Exploring: 295,353
+Fetch Teddy: 310,8554
+AI: Disobey return: 349,3931
+AI: Start Exploring: 349,3931
+Start Running Away: 354,8917
+Crash: 383,4681
+By Body: 388,4724
+Final Bond Value: 2,1
+Num Interactions: 9
+== Vet Start: 396,7421
+Teddy Used: 396,7421
+Vet Speech: 418,4264
+Handed Object: 426,0119
+==== End of Experience ====
+
+
+Handed Object: 428,8216
+==== End of Experience ====
+
+
+AI Director - Incrased Bond: 0,02
+AI Director - Incrased Bond: 0,02
+====== Level Chosen: 0 ======
+Tutorial Start: 7,10077
+====== Level Chosen: 0 ======
+Tutorial Start: 9,035906
+====== Level Chosen: 1 ======
+Tutorial Start: 7,394682
+====== Level Chosen: 0 ======
+Tutorial Start: 6,940678
+AI Director - Incrased Bond: 0,02
+====== Level Chosen: 1 ======
+== Park Start: 5,579062
+AI: Start Exploring: 11,58266
+Fetch Teddy: 24,24367
+AI Director - Forced DogFetch: 50,07229
+Start Chase Ball: 50,08365
+AI: Disobey return: 53,22734
+AI: Start Exploring: 53,22734
+====== Level Chosen: 0 ======
+== Park Start: 3,65372
+AI - Play: 9,663491
+AI: Start Exploring: 20,91376
+AI Director - Forced DogFetch: 40,78626
+Start Chase Ball: 40,79747
+AI: Start Exploring: 47,4497
+AI: Disobey Return: 62,23183
+AI: Start Exploring: 62,23183
+====== Level Chosen: 0 ======
+Tutorial Start: 7,227894
+====== Level Chosen: 0 ======
+== Park Start: 5,473567
+====== Level Chosen: 0 ======
+Tutorial Start: 32,6175
+Tutorial End: 115,4698
+== Pet Store start: 116,7966
+Puppy Chosen: 126,8055
+== Park Start: 139,2681
+AI - Play: 145,2721
+AI: Start Exploring: 156,3222
+AI Director - Forced DogFetch: 177,3351
+Start Chase Ball: 177,3462
+Start Chase Ball: 180,8307
+AI - Play: 202,355
+AI Director - Incrased Bond: 204,2785
+AI Director - Forced DogFetch: 217,346
+Start Chase Ball: 217,3575
+Start Running Away: 269,2721
+Crash: 290,8357
+Final Bond Value: 1,35
+Num Interactions: 3
+== Vet Start: 299,0551
+Vet Speech: 320,8512
+==== End of Experience ====
+
+
+====== Level Chosen: 0 ======
+== Park Start: 5,141507
+AI: Start Exploring: 11,14799
+AI Director - Forced DogFetch: 25,14222
+Start Chase Ball: 25,15341
+AI - Play: 32,38319
+====== Level Chosen: 0 ======
+== Park Start: 7,195985
+AI Director - Forced DogFetch: 27,20227
+Start Chase Ball: 27,21379
+====== Level Chosen: 0 ======
+== Park Start: 8,081131
+AI: Start Exploring: 14,08364
+AI Director - Forced DogFetch: 34,73249
+Start Chase Ball: 34,74373
+== Vet Start: 0
+====== Level Chosen: 0 ======
+== Park Start: 9,092172
+AI - Play: 15,09618
+AI Director - Incrased Bond: 0,02
+AI - Play: 6,007325
+====== Level Chosen: 0 ======
+== Park Start: 4,494757
+====== Level Chosen: 0 ======
+== Park Start: 11,46875
+====== Level Chosen: 0 ======
+== Vet Start: 6,404803
+Vet Speech: 28,30182
+==== End of Experience ====
+
+
+====== Level Chosen: 0 ======
+== Vet Start: 6,751067
+Vet Speech: 28,7846
+==== End of Experience ====
+
+
+====== Level Chosen: 2 ======
+== Park Start: 20,86106
+AI: Start Exploring: 26,86963
+Fetch Teddy: 39,67165
+AI: Disobey return: 46,47014
+AI: Start Exploring: 46,47014
+Bone Toy Found: 49,47647
+Start Chase Ball: 49,47647
+AI: Start Exploring: 60,00457
+Bone Toy Found: 63,00698
+Start Chase Ball: 63,00698
+====== Level Chosen: 2 ======
+== Park Start: 25,3877
+Dog Stroked: 28,17052
+AI - Play: 34,18002
+AI - Play: 44,56474
+AI: Start Exploring: 54,59328
+Start Show Grove: 59,6084
+AI Director - Incrased Bond: 110,3917
+====== Level Chosen: 2 ======
+== Park Start: 8,932442
+Dog Stroked: 11,72554
+AI: Start Exploring: 17,74228
+Start Show Grove: 22,74463
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 4,207439
+AI - Play: 10,20764
+====== Level Chosen: 2 ======
+== Park Start: 4,611604
+Dog Stroked: 7,380531
+AI Director - Forced DogFetch: 44,62349
+Start Chase Ball: 44,6349
+AI - Play: 52,79273
+AI: Start Exploring: 63,23766
+Fetch Teddy: 70,59692
+====== Level Chosen: 0 ======
+== Park Start: 7,294765
+AI: Start Exploring: 13,29552
+====== Level Chosen: 2 ======
+== Park Start: 5,204207
+Dog Stroked: 7,951227
+AI: Start Exploring: 13,95944
+====== Level Chosen: 2 ======
+== Park Start: 6,130457
+Dog Stroked: 8,911002
+AI - Play: 14,91725
+AI: Disobey Return: 21,92696
+AI: Start Exploring: 21,92696
+====== Level Chosen: 0 ======
+== Park Start: 3,942813
+AI - Play: 9,960606
+AI: Start Exploring: 19,98795
+====== Level Chosen: 0 ======
+== Park Start: 9,323768
+AI: Start Exploring: 15,33818
+AI Director - Incrased Bond: 74,32664
+====== Level Chosen: 2 ======
+== Park Start: 4,17429
+Dog Stroked: 6,963456
+AI: Start Exploring: 12,9639
+====== Level Chosen: 2 ======
+AI Director - Incrased Bond: 13,45801
+AI Director - Forced Get Teddy: 13,45801
+AI: Start Exploring: 13,47801
+====== Level Chosen: 2 ======
+AI Director - Incrased Bond: 12,24693
+AI Director - Forced Get Teddy: 12,24693
+AI: Start Exploring: 12,26693
+====== Level Chosen: 0 ======
+== Park Start: 4,257556
+AI: Start Exploring: 10,26132
+====== Level Chosen: 2 ======
+AI Director - Incrased Bond: 10,67648
+AI Director - Forced Get Teddy: 10,67648
+AI: Start Exploring: 10,69648
+====== Level Chosen: 2 ======
+AI Director - Incrased Bond: 6,48225
+AI Director - Forced Get Teddy: 10,00012
+AI: Start Exploring: 10,01136
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 4,174623
+AI Director - Forced DogFetch: 5,006952
+Start Chase Ball: 5,018113
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 2,640202
+AI Director - Forced DogFetch: 5,008877
+Start Chase Ball: 5,019967
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 3,428194
+AI Director - Forced DogFetch: 5,009709
+Start Chase Ball: 5,020741
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 2,856154
+AI Director - Forced DogFetch: 5,007932
+Start Chase Ball: 5,019341
+AI Director - Incrased Bond: 0,02
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 4,302836
+AI Director - Forced DogFetch: 5,010331
+Start Chase Ball: 5,021511
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 3,843867
+AI Director - Forced DogFetch: 5,00693
+Start Chase Ball: 5,018137
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 3,489381
+AI Director - Forced DogFetch: 5,001014
+Start Chase Ball: 5,012205
+AI Director - Incrased Bond: 0,02
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 2,850698
+AI: Start Exploring: 8,851301
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 6,77894
+AI Director - Forced DogFetch: 6,77894
+Start Chase Ball: 6,79894
+====== Level Chosen: 0 ======
+Tutorial Start: 4,934401
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 7,018281
+AI Director - Forced DogFetch: 7,018281
+Start Chase Ball: 7,03828
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 3,474598
+AI Director - Forced DogFetch: 5,000803
+Start Chase Ball: 5,019189
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 4,334797
+AI Director - Forced DogFetch: 5,002815
+Start Chase Ball: 5,013793
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 5,927598
+AI Director - Forced DogFetch: 5,927598
+Start Chase Ball: 5,947598
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 2,557326
+AI Director - Forced DogFetch: 5,021438
+Start Chase Ball: 5,034107
+====== Level Chosen: 0 ======
+== Pet Store start: 2,572985
+Puppy Chosen: 12,58126
+====== Level Chosen: 0 ======
+== Pet Store start: 2,711668
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 7,532475
+AI Director - Forced DogFetch: 20,00482
+Start Chase Ball: 20,01631
+AI: Start Exploring: 28,36024
+Start Running Away: 137,5342
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 2,247857
+AI Director - Forced DogFetch: 20,00269
+Start Chase Ball: 20,01391
+AI: Start Exploring: 27,8816
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 3,786804
+AI Director - Forced DogFetch: 20,00797
+Start Chase Ball: 20,01936
+AI - Play: 27,77088
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 2,707064
+AI - Play: 8,716409
+AI: Start Exploring: 18,74547
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 1,940837
+AI - Play: 19,96432
+AI Director - Forced DogFetch: 20,00883
+Start Chase Ball: 20,01998
+AI: Disobey return: 21,61921
+AI: Start Exploring: 21,61921
+AI Director - Incrased Bond: 0,02
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 3,038979
+AI: Start Exploring: 9,048135
+AI Director - Incrased Bond: 0,02
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 3,422248
+AI Director - Incrased Bond: 0,02
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 7,111252
+AI Director - Forced DogFetch: 20,00969
+Start Chase Ball: 20,02101
+AI - Play: 28,02149
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 2,068741
+AI Director - Forced DogFetch: 5,008866
+Start Chase Ball: 5,020108
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 2,448531
+AI Director - Forced DogFetch: 5,008308
+Start Chase Ball: 5,019346
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 2,283379
+AI Director - Forced DogFetch: 5,008346
+Start Chase Ball: 5,01895
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 3,786369
+AI Director - Forced DogFetch: 20,00999
+Start Chase Ball: 20,02126
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 5,781215
+AI: Start Exploring: 11,78851
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 6,303813
+AI: Start Exploring: 12,30674
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 7,431939
+AI: Start Exploring: 13,44087
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 8,629338
+AI - Play: 14,6331
+AI Director - Forced DogFetch: 20,00898
+Start Chase Ball: 20,02025
+AI: Start Exploring: 27,74936
+AI Director - Incrased Bond: 0,02
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 27,79501
+AI Director - Forced DogFetch: 27,81501
+Start Chase Ball: 27,8225
+AI: Start Exploring: 35,70469
+====== Level Chosen: 0 ======
+Tutorial Start: 14,1008
+Tutorial End: 65,53363
+== Pet Store start: 66,79443
+Puppy Chosen: 76,81807
+AI Director - Incrased Bond: 99,32273
+AI Director - Forced DogFetch: 99,34273
+Start Chase Ball: 99,35305
+AI: Start Exploring: 106,4561
+AI Director - Incrased Bond: 0,02
+AI: Start Exploring: 6,005754
+====== Level Chosen: 0 ======
+AI Director - Incrased Bond: 12,9249
+AI Director - Forced DogFetch: 20,00701
+Start Chase Ball: 20,01829
+====== Level Chosen: 0 ======
+Tutorial Start: 8,783237
+Tutorial End: 39,71415
+== Pet Store start: 40,9958
+Puppy Chosen: 51,00475
+AI Director - Incrased Bond: 63,35857
+AI Director - Forced DogFetch: 63,37857
+Start Chase Ball: 63,38844
+AI: Start Exploring: 70,49426
